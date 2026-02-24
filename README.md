@@ -1,55 +1,37 @@
 # Fahimresearch - Portfolio
 
-Hello! I'm an Kazi Fahim. **Industrial Production Engineering Graduate** showcasing my projects and expertise.
+Hello! I'm an **Industrial Production Engineering Graduate** showcasing my projects and expertise.
 
 ---
 
-## 📊 My Projects
+## 📖 Navigation
 
-### Project 1: Manufacturing Process Optimization
-**Description:** Analyzed production workflow and identified bottlenecks to improve efficiency.
-- **Skills Used:** Process Analysis, Data Analysis, Lean Manufacturing
-- **Result:** Reduced production time by 20% and improved quality metrics
-- **Status:** ✅ Completed
-
-### Project 2: Supply Chain Management Study
-**Description:** Researched and optimized supplier networks to reduce costs and delivery time.
-- **Skills Used:** Logistics, Cost Analysis, Vendor Evaluation
-- **Result:** Achieved 15% cost reduction in procurement
-- **Status:** ✅ Completed
-
-### Project 3: Quality Control Dashboard
-**Description:** Developed a monitoring system to track production metrics in real-time.
-- **Skills Used:** Data Visualization, Quality Control, Problem Solving
-- **Result:** Improved defect detection speed by 40%
-- **Status:** ✅ Completed
-
-### Project 4: Inventory Management System
-**Description:** Created a system to optimize inventory levels and reduce waste.
-- **Skills Used:** Systems Thinking, Resource Planning, Analytics
-- **Result:** Reduced inventory holding costs by 25%
-- **Status:** ✅ Completed
+- [**About Me**](about.md) - Learn more about my background
+- [**My Projects**](projects.md) - See my work and accomplishments
+- [**Contact**](contact.md) - Get in touch with me
 
 ---
 
-## 🎯 Skills & Expertise
+## 🎯 Quick Overview
+
+### Skills & Expertise
 - Process Engineering
 - Lean Manufacturing
 - Data Analysis
 - Supply Chain Management
 - Quality Control
 - Project Management
-- Problem Solving
+
+### What I'm Looking For
+🎓 **MSc with Full Funding** in Production Engineering or related field
 
 ---
 
-## 📧 Contact
+## 📧 Quick Contact
 - **Email:** your.email@example.com
-- **LinkedIn:** [My LinkedIn Profile](#)
+- **LinkedIn:** [My Profile](#)
 - **GitHub:** [github.com/Fahimresearch](https://github.com/Fahimresearch)
 
 ---
 
-**Looking for:** MSc with Full Funding in Production Engineering or related field
-
-
+[Go to Projects →](projects.md)
