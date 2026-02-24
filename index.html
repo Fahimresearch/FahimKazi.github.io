@@ -1,0 +1,501 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fahimresearch - Industrial Engineering Portfolio</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+        }
+        
+        /* Navigation Bar */
+        nav {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            padding: 1rem 0;
+            position: sticky;
+            top: 0;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        
+        nav ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            flex-wrap: wrap;
+        }
+        
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-weight: 500;
+            transition: opacity 0.3s;
+        }
+        
+        nav a:hover {
+            opacity: 0.8;
+        }
+        
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 4rem 2rem;
+            text-align: center;
+            min-height: 500px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+        
+        .hero p {
+            font-size: 1.3rem;
+            margin-bottom: 2rem;
+            opacity: 0.9;
+        }
+        
+        .hero-buttons {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        
+        .btn {
+            padding: 0.8rem 2rem;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1rem;
+            text-decoration: none;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        
+        .btn-primary {
+            background: white;
+            color: #667eea;
+            font-weight: bold;
+        }
+        
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+        }
+        
+        .btn-secondary {
+            background: rgba(255,255,255,0.2);
+            color: white;
+            border: 2px solid white;
+        }
+        
+        .btn-secondary:hover {
+            background: white;
+            color: #667eea;
+        }
+        
+        /* Container */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+        
+        /* Section */
+        section {
+            padding: 4rem 2rem;
+        }
+        
+        section h2 {
+            font-size: 2.5rem;
+            margin-bottom: 3rem;
+            text-align: center;
+            color: #667eea;
+        }
+        
+        /* Projects Grid */
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+        
+        .project-card {
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            overflow: hidden;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        
+        .project-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+        }
+        
+        .project-header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 1.5rem;
+        }
+        
+        .project-header h3 {
+            margin-bottom: 0.5rem;
+        }
+        
+        .project-body {
+            padding: 1.5rem;
+        }
+        
+        .project-body p {
+            margin-bottom: 1rem;
+            color: #666;
+        }
+        
+        .tags {
+            display: flex;
+            gap: 0.5rem;
+            flex-wrap: wrap;
+            margin-top: 1rem;
+        }
+        
+        .tag {
+            background: #e0e7ff;
+            color: #667eea;
+            padding: 0.3rem 0.8rem;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            font-weight: 500;
+        }
+        
+        .result {
+            margin-top: 1rem;
+            padding-top: 1rem;
+            border-top: 2px solid #e0e7ff;
+            color: #667eea;
+            font-weight: bold;
+        }
+        
+        /* Skills Section */
+        .skills-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1.5rem;
+        }
+        
+        .skill-box {
+            background: #f8f9ff;
+            padding: 1.5rem;
+            border-radius: 10px;
+            border-left: 4px solid #667eea;
+        }
+        
+        .skill-box h3 {
+            color: #667eea;
+            margin-bottom: 0.5rem;
+        }
+        
+        .skill-box p {
+            color: #666;
+            font-size: 0.95rem;
+        }
+        
+        /* About Section */
+        .about {
+            background: #f8f9ff;
+        }
+        
+        .about-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+            align-items: center;
+        }
+        
+        .about-text h3 {
+            font-size: 1.8rem;
+            color: #667eea;
+            margin-bottom: 1rem;
+        }
+        
+        .about-text p {
+            margin-bottom: 1rem;
+            color: #666;
+            line-height: 1.8;
+        }
+        
+        .about-highlights {
+            list-style: none;
+            margin-top: 1.5rem;
+        }
+        
+        .about-highlights li {
+            padding: 0.5rem 0;
+            color: #667eea;
+            font-weight: 500;
+        }
+        
+        .about-highlights li:before {
+            content: "✓ ";
+            margin-right: 0.5rem;
+        }
+        
+        /* Contact Section */
+        .contact {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            text-align: center;
+        }
+        
+        .contact h2 {
+            color: white;
+        }
+        
+        .contact-info {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            flex-wrap: wrap;
+            margin-top: 2rem;
+        }
+        
+        .contact-item {
+            flex: 1;
+            min-width: 150px;
+        }
+        
+        .contact-item a {
+            color: white;
+            text-decoration: none;
+            font-weight: 500;
+            transition: opacity 0.3s;
+        }
+        
+        .contact-item a:hover {
+            opacity: 0.8;
+        }
+        
+        /* Footer */
+        footer {
+            background: #222;
+            color: white;
+            text-align: center;
+            padding: 2rem;
+        }
+        
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2rem;
+            }
+            
+            .about-content {
+                grid-template-columns: 1fr;
+            }
+            
+            section h2 {
+                font-size: 1.8rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav>
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <h1>👋 Welcome to My Portfolio</h1>
+        <p>Industrial Production Engineering Graduate | Process Optimization Specialist</p>
+        <div class="hero-buttons">
+            <a href="#projects" class="btn btn-primary">View My Work</a>
+            <a href="#contact" class="btn btn-secondary">Get In Touch</a>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about" id="about">
+        <div class="container">
+            <h2>About Me</h2>
+            <div class="about-content">
+                <div class="about-text">
+                    <h3>Industrial Production Engineer</h3>
+                    <p>I'm passionate about optimizing manufacturing processes and improving operational efficiency. With a strong foundation in process engineering, I focus on data-driven solutions that deliver measurable results.</p>
+                    <p>I'm currently seeking an MSc with full funding to deepen my expertise and contribute to advancing industrial practices globally.</p>
+                    <ul class="about-highlights">
+                        <li>Process Optimization & Lean Manufacturing</li>
+                        <li>Supply Chain Management</li>
+                        <li>Data Analysis & Visualization</li>
+                        <li>Quality Control Systems</li>
+                        <li>Project Management</li>
+                    </ul>
+                </div>
+                <div class="about-stats">
+                    <div class="skill-box">
+                        <h3>📊 Projects</h3>
+                        <p>Completed 4+ major production optimization projects with measurable impact</p>
+                    </div>
+                    <div class="skill-box" style="margin-top: 1rem;">
+                        <h3>🎓 Education</h3>
+                        <p>Industrial Production Engineering Graduate | MSc Candidate</p>
+                    </div>
+                    <div class="skill-box" style="margin-top: 1rem;">
+                        <h3>🚀 Focus</h3>
+                        <p>Continuous improvement and data-driven decision making</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects">
+        <div class="container">
+            <h2>Featured Projects</h2>
+            <div class="projects-grid">
+                <!-- Project 1 -->
+                <div class="project-card">
+                    <div class="project-header">
+                        <h3>🏭 Manufacturing Process Optimization</h3>
+                        <p style="opacity: 0.9;">Production Efficiency Improvement</p>
+                    </div>
+                    <div class="project-body">
+                        <p>Analyzed production workflow and identified critical bottlenecks. Implemented process improvements using lean manufacturing principles.</p>
+                        <div class="tags">
+                            <span class="tag">Process Analysis</span>
+                            <span class="tag">Lean Manufacturing</span>
+                            <span class="tag">Data Analysis</span>
+                        </div>
+                        <div class="result">✅ Result: 20% reduction in production time</div>
+                    </div>
+                </div>
+
+                <!-- Project 2 -->
+                <div class="project-card">
+                    <div class="project-header">
+                        <h3>📦 Supply Chain Optimization</h3>
+                        <p style="opacity: 0.9;">Cost Reduction & Efficiency</p>
+                    </div>
+                    <div class="project-body">
+                        <p>Researched supplier networks and optimized procurement strategies. Evaluated vendor performance metrics and negotiated better terms.</p>
+                        <div class="tags">
+                            <span class="tag">Logistics</span>
+                            <span class="tag">Cost Analysis</span>
+                            <span class="tag">Vendor Management</span>
+                        </div>
+                        <div class="result">✅ Result: 15% cost reduction achieved</div>
+                    </div>
+                </div>
+
+                <!-- Project 3 -->
+                <div class="project-card">
+                    <div class="project-header">
+                        <h3>📈 Quality Control Dashboard</h3>
+                        <p style="opacity: 0.9;">Real-time Monitoring System</p>
+                    </div>
+                    <div class="project-body">
+                        <p>Developed real-time monitoring system for production metrics. Integrated multiple data sources for comprehensive quality tracking.</p>
+                        <div class="tags">
+                            <span class="tag">Data Visualization</span>
+                            <span class="tag">Quality Control</span>
+                            <span class="tag">Analytics</span>
+                        </div>
+                        <div class="result">✅ Result: 40% faster defect detection</div>
+                    </div>
+                </div>
+
+                <!-- Project 4 -->
+                <div class="project-card">
+                    <div class="project-header">
+                        <h3>📊 Inventory Management System</h3>
+                        <p style="opacity: 0.9;">Waste Reduction & Optimization</p>
+                    </div>
+                    <div class="project-body">
+                        <p>Created inventory optimization system to balance supply levels. Reduced waste through predictive analysis and better resource allocation.</p>
+                        <div class="tags">
+                            <span class="tag">Systems Thinking</span>
+                            <span class="tag">Resource Planning</span>
+                            <span class="tag">Optimization</span>
+                        </div>
+                        <div class="result">✅ Result: 25% cost reduction</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills">
+        <div class="container">
+            <h2>Core Competencies</h2>
+            <div class="skills-container">
+                <div class="skill-box">
+                    <h3>🔧 Technical Skills</h3>
+                    <p>Process Engineering, Equipment Analysis, CAD Software, Manufacturing Systems</p>
+                </div>
+                <div class="skill-box">
+                    <h3>📊 Analytics</h3>
+                    <p>Data Analysis, Statistical Methods, Trend Analysis, Performance Metrics</p>
+                </div>
+                <div class="skill-box">
+                    <h3>💼 Management</h3>
+                    <p>Project Management, Process Improvement, Team Coordination, Problem Solving</p>
+                </div>
+                <div class="skill-box">
+                    <h3>🏢 Domain Expertise</h3>
+                    <p>Lean Manufacturing, Supply Chain, Quality Control, Cost Optimization</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact" id="contact">
+        <div class="container">
+            <h2>Let's Connect</h2>
+            <p>Interested in discussing opportunities or collaborating on projects?</p>
+            <div class="contact-info">
+                <div class="contact-item">
+                    <h3>📧 Email</h3>
+                    <a href="mailto:your.email@example.com">your.email@example.com</a>
+                </div>
+                <div class="contact-item">
+                    <h3>💼 LinkedIn</h3>
+                    <a href="https://linkedin.com/in/yourprofile" target="_blank">Connect with me</a>
+                </div>
+                <div class="contact-item">
+                    <h3>🐙 GitHub</h3>
+                    <a href="https://github.com/Fahimresearch" target="_blank">My Repositories</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2026 Fahimresearch. All rights reserved. | Looking for MSc with Full Funding</p>
+    </footer>
+</body>
+</html>
