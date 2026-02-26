@@ -115,7 +115,7 @@
       text-align: center;
     }
     .hero h1{
-      font-size: clamp(1.9rem, 6vw, 3.1rem);
+      font-size: clamp(2.4rem, 7vw, 3.8rem);
       margin-bottom: .5rem;
       font-weight: 900;
       letter-spacing: -1px;
@@ -123,10 +123,16 @@
     }
     .hero .subtitle{
       font-size: clamp(.92rem, 3vw, 1.18rem);
-      margin-bottom: 1rem;
+      margin-bottom: 2.2rem;
       color: #e6f2ff;
       font-weight: 500;
-      line-height: 1.5;
+      line-height: 1.7;
+    }
+    .tagline-mobile{ display: none; }
+
+    @media (max-width: 639px){
+      .tagline-desktop{ display: none; }
+      .tagline-mobile{ display: block; }
     }
     .hero .tagline{
       font-size: clamp(.9rem, 2.5vw, 1.05rem);
@@ -135,6 +141,7 @@
       max-width: 80ch;
       line-height: 1.85;
       font-weight: 520;
+      text-align: center;
     }
     .hero-badges{
       max-width: 980px;
@@ -480,8 +487,7 @@
     .flip-inner{
       position: relative;
       width: 100%;
-      height: auto;          /* AUTO height on mobile — grows with content */
-      min-height: 520px;
+      height: 480px;
       transform-style: preserve-3d;
       transition: transform .55s ease;
     }
@@ -796,7 +802,7 @@
       .research-grid{ grid-template-columns: repeat(2, 1fr); }
 
       .projects-grid{ grid-template-columns: repeat(auto-fit, minmax(330px, 1fr)); }
-      .flip-inner{ min-height: 560px; }
+      .flip-inner{ height: 500px; }
 
       .skills-grid{ grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); }
       .cert-grid{ grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); }
@@ -877,9 +883,13 @@
     <div class="container">
       <h1>Kazi Fahim</h1>
       <p class="subtitle">Industrial &amp; Manufacturing Engineer<br>Lean 4.0 • DVSM • IIoT • Decision Engineering</p>
-      <p class="tagline">
+      <p class="tagline tagline-desktop">
         I design and implement practical, data-informed manufacturing improvements—integrating Lean methodologies, IIoT-enabled visibility,
         ERP-connected workflows, and machine learning–assisted decision systems to strengthen productivity, quality assurance, and operational control in modern manufacturing environments.
+      </p>
+      <p class="tagline tagline-mobile">
+        I design and implement data-informed manufacturing improvements using Lean 4.0, IIoT, and ERP-connected workflows.
+        Focused on measurable productivity, quality, and operational control.
       </p>
       <div class="hero-badges">
         <div class="badge-card">
@@ -1407,36 +1417,36 @@
       <p class="section-subtitle">A focused capability set for industrial execution, digital manufacturing enablement, and improvement leadership.</p>
       <div class="skills-grid">
         <div class="skill-category">
-          <h3>🏭 Industrial Engineering Methods</h3>
-          <p>SIPOC • Value Stream Mapping (VSM) • Standard Work • Work Measurement • Method Study • Bottleneck &amp; Constraint Analysis • Process Capability Basics • Control Plans</p>
+          <h3>🏭 Operations &amp; Process Engineering</h3>
+          <p>Production Planning • Capacity Planning • Line Balancing • RPW/Kilbridge • Method Study • Workflow Optimization • SIPOC • VSM • Work Standardization • SOP &amp; KPI Systems</p>
         </div>
         <div class="skill-category">
-          <h3>🔧 Flow, Balance &amp; Execution</h3>
-          <p>RPW • Kilbridge Method • Workstation Allocation • Throughput Stability • WIP Control Concepts • Heuristic-Based Workflow Structuring • Scheduling Discipline (CPM)</p>
+          <h3>🔄 Simulation &amp; Optimization</h3>
+          <p>Discrete Event Simulation (Arena) • Optimization Methods • Algorithmic Thinking in Python • Constraint-based Planning • Scenario Evaluation for Robust Decision Making</p>
         </div>
         <div class="skill-category">
-          <h3>🌐 Digital Manufacturing Systems</h3>
-          <p>ERP Integration • Real-time Monitoring • IIoT Visibility • Traceability Design • QR-Based Material Control • Digital Reporting • Data Governance for Shop-floor Decisions</p>
+          <h3>🌐 ERP &amp; Digital Manufacturing Systems</h3>
+          <p>ERP Integration • Real-time Production Monitoring • QR-Code Traceability • Digital Reporting • Data Collection Workflows • Process Digitization • Database Concepts</p>
         </div>
         <div class="skill-category">
-          <h3>📊 Operational Analytics</h3>
-          <p>Power BI • Looker Studio • Advanced Excel • KPI Architecture • OEE Systems • Loss Analysis • Trend Tracking • Root Cause Support</p>
+          <h3>📊 Analytics &amp; Business Intelligence</h3>
+          <p>Power BI • Looker Studio • Advanced Excel • Performance Metrics • KPI Development • Trend Analysis • Operational Dashboards • Root Cause Support</p>
         </div>
         <div class="skill-category">
-          <h3>🤖 Machine Learning (Applied)</h3>
-          <p>Learning-Curve Modeling • Anomaly Detection (Isolation Forest, LOF, HDBSCAN) • Pattern Signals for Predictive Decisions • Data Preparation in Python</p>
+          <h3>⚡ Lean, CI &amp; Industry 4.0</h3>
+          <p>Lean Six Sigma • Lean 4.0 • Kaizen • 5S • Quick Changeover (QCO) • Cost Per Minute (CPM) • Smart Manufacturing Principles</p>
         </div>
         <div class="skill-category">
-          <h3>🎯 Decision Engineering</h3>
-          <p>MCDM (TOPSIS, VIKOR) • CRITIC &amp; Entropy Weighting • Risk Assessment • Structured Prioritization • Decision Robustness via Scenario Testing</p>
+          <h3>🎯 Decision Frameworks &amp; Problem Solving</h3>
+          <p>MCDM (TOPSIS, VIKOR) • CRITIC/Entropy Weighting • Risk Assessment • Critical Path Method • Structured Problem Solving &amp; Control Plans</p>
         </div>
         <div class="skill-category">
-          <h3>🔄 Simulation (Validation)</h3>
-          <p>Discrete Event Simulation (Arena) • Model Validation Concepts • "What-if" Scenario Evaluation • Improvement Verification before Deployment</p>
+          <h3>💻 Programming &amp; Tools</h3>
+          <p>Python • Algorithm Development • Automation • Microsoft Office Suite • ERP Tools • Professional Documentation</p>
         </div>
         <div class="skill-category">
-          <h3>💼 Leadership &amp; Delivery</h3>
-          <p>Cross-functional Coordination • Stakeholder Communication • Improvement Governance • SOP Development • KPI Ownership • Change Management Discipline</p>
+          <h3>💼 Project &amp; Stakeholder Management</h3>
+          <p>Project Planning • Cross-functional Collaboration • Stakeholder Communication • Change Management • Process Documentation • Execution Governance</p>
         </div>
       </div>
     </div>
@@ -1489,14 +1499,14 @@
           <h4>Sohedul Islam Shahin</h4>
           <p class="position">Senior A.G.M, Operational Project &amp; CI — Snowtex Group</p>
           <p><strong>Snowtex Group, Dhaka</strong></p>
-          <p>📧 <a href="mailto:Shahin.ci@gmail.com">Shahin.ci@gmail.com</a></p>
+          <p>📧 <a href="/cdn-cgi/l/email-protection#0d5e656c656463236e644d6a606c6461236e6260"><span class="__cf_email__" data-cfemail="a8fbc0c9c0c1c686cbc1e8cfc5c9c1c486cbc7c5">[email&#160;protected]</span></a></p>
           <p>📱 <a href="tel:+8801833300697">+880 183 330 0697</a></p>
         </div>
         <div class="reference-card">
           <h4>Md. Mahabub Hasan</h4>
           <p class="position">Academic In-Charge, Assistant Professor — NITER</p>
           <p><strong>National Institute of Textile Engineering &amp; Research (NITER)</strong></p>
-          <p>📧 <a href="mailto:merajtex20@gmail.com">merajtex20@gmail.com</a></p>
+          <p>📧 <a href="/cdn-cgi/l/email-protection#c1aca4b3a0abb5a4b9f3f181a6aca0a8adefa2aeac"><span class="__cf_email__" data-cfemail="a0cdc5d2c1cad4c5d89290e0c7cdc1c9cc8ec3cfcd">[email&#160;protected]</span></a></p>
           <p>📱 <a href="tel:+8801916146208">+880 1916 146 208</a></p>
         </div>
       </div>
@@ -1513,7 +1523,7 @@
       <div class="contact-info">
         <div class="contact-item">
           <h4>📧 Email</h4>
-          <a href="mailto:kazifahim.ipe@gmail.com">kazifahim.ipe@gmail.com</a>
+          <a href="/cdn-cgi/l/email-protection#274c465d4e41464f4e4a094e574267404a464e4b0944484a"><span class="__cf_email__" data-cfemail="aec5cfd4c7c8cfc6c7c380c7decbeec9c3cfc7c280cdc1c3">[email&#160;protected]</span></a>
         </div>
         <div class="contact-item">
           <h4>📱 Phone</h4>
@@ -1539,7 +1549,7 @@
 
   <button class="to-top" id="toTop" aria-label="Back to top">↑</button>
 
-  <script>
+  <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
     /* NAV ACTIVE */
     const sections = document.querySelectorAll("section[id]");
     const navLinks = document.querySelectorAll(".nav-link");
@@ -1585,24 +1595,7 @@
       const card = document.getElementById(btn.getAttribute("data-flip-target"));
       if (!card) return;
       card.classList.toggle("flipped");
-      // Sync card height when flipping
-      const inner = card.querySelector(".flip-inner");
-      const faces = card.querySelectorAll(".flip-face");
-      let maxH = 0;
-      faces.forEach(f => { f.style.position = "relative"; maxH = Math.max(maxH, f.offsetHeight); f.style.position = ""; });
-      inner.style.minHeight = maxH + "px";
-    });
-
-    /* Auto-size flip cards on load */
-    window.addEventListener("load", () => {
-      document.querySelectorAll(".flip-card").forEach(card => {
-        const inner = card.querySelector(".flip-inner");
-        const faces = card.querySelectorAll(".flip-face");
-        let maxH = 0;
-        faces.forEach(f => { f.style.position = "relative"; maxH = Math.max(maxH, f.offsetHeight); f.style.position = ""; });
-        inner.style.minHeight = Math.max(maxH, 480) + "px";
-      });
-    });
+        });
   </script>
 </body>
 </html>
