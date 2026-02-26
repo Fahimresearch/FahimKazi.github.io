@@ -1,18 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <!-- =========================================================
-    DOCUMENT / META
-  ========================================================== -->
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Kazi Fahim — Industrial & Manufacturing Engineer | Lean 4.0 • DVSM • IIoT • Decision Engineering</title>
-
   <meta name="description" content="Kazi Fahim — Industrial & Manufacturing Engineer focused on Lean 4.0, DVSM, IIoT-enabled visibility, ERP-integrated workflows, machine learning–assisted decision systems, and measurable operational improvement." />
 
   <style>
     /* =========================================================
-      DESIGN SYSTEM (COLORS / SHADOWS / RADIUS)
+      DESIGN SYSTEM
     ========================================================== */
     :root{
       --primary:#0b66c3;
@@ -40,67 +36,100 @@
     .container{
       max-width: 1180px;
       margin: 0 auto;
-      padding: 0 2rem;
+      padding: 0 1.25rem;
     }
 
     /* =========================================================
-      NAVIGATION
+      NAVIGATION — Mobile first
     ========================================================== */
     nav{
       background: linear-gradient(135deg, #ffffff 0%, #f5f6f8 100%);
-      padding: 1rem 0;
+      padding: .65rem 0;
       position: sticky;
       top: 0;
       box-shadow: 0 2px 10px rgba(0,0,0,0.08);
       border-bottom: 3px solid var(--primary);
       z-index: 1000;
     }
-    nav ul{
-      list-style:none;
-      display:flex;
-      justify-content:center;
-      gap: 1.25rem;
-      flex-wrap:wrap;
-      max-width:1400px;
-      margin:0 auto;
-      padding:0 1.5rem;
+
+    /* Hamburger button */
+    .nav-toggle{
+      display: none;
+      background: none;
+      border: 2px solid var(--primary);
+      border-radius: 8px;
+      padding: .45rem .65rem;
+      cursor: pointer;
+      color: var(--primary);
+      font-size: 1.3rem;
+      font-weight: 900;
+      line-height: 1;
     }
+
+    .nav-inner{
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      max-width: 1400px;
+      margin: 0 auto;
+      padding: 0 1.25rem;
+    }
+
+    .nav-brand{
+      font-weight: 900;
+      font-size: .95rem;
+      color: var(--primary);
+      white-space: nowrap;
+      display: none;
+    }
+
+    nav ul{
+      list-style: none;
+      display: flex;
+      justify-content: center;
+      gap: 1.1rem;
+      flex-wrap: wrap;
+    }
+
     nav a{
       color: var(--text);
-      text-decoration:none;
-      font-weight:800;
-      font-size:0.92rem;
+      text-decoration: none;
+      font-weight: 800;
+      font-size: .88rem;
       transition: all .2s ease;
-      padding: .45rem 0;
+      padding: .4rem 0;
       border-bottom: 2px solid transparent;
       opacity: .9;
+      white-space: nowrap;
     }
     nav a:hover{ color: var(--primary); border-bottom-color: var(--primary); opacity:1; }
     nav a.active{ color: var(--primary); border-bottom-color: var(--primary); opacity:1; }
 
     /* =========================================================
-      HERO
+      HERO — Mobile first
     ========================================================== */
     .hero{
       background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
-      color:#fff;
-      padding: 5.2rem 2rem 4.2rem;
-      text-align:center;
+      color: #fff;
+      padding: 3.5rem 1.25rem 3rem;
+      text-align: center;
     }
     .hero h1{
-      font-size: 3.1rem;
-      margin-bottom:.5rem;
+      font-size: clamp(1.9rem, 6vw, 3.1rem);
+      margin-bottom: .5rem;
       font-weight: 900;
       letter-spacing: -1px;
+      line-height: 1.2;
     }
     .hero .subtitle{
-      font-size: 1.18rem;
+      font-size: clamp(.92rem, 3vw, 1.18rem);
       margin-bottom: 1rem;
       color: #e6f2ff;
       font-weight: 500;
+      line-height: 1.5;
     }
     .hero .tagline{
-      font-size: 1.05rem;
+      font-size: clamp(.9rem, 2.5vw, 1.05rem);
       margin: 0 auto 1.9rem;
       color: #d2e9ff;
       max-width: 80ch;
@@ -110,10 +139,10 @@
     .hero-badges{
       max-width: 980px;
       margin: 0 auto 2.2rem;
-      display:grid;
-      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-      gap: 1rem;
-      text-align:left;
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: .85rem;
+      text-align: left;
     }
     .badge-card{
       background: rgba(255,255,255,0.12);
@@ -122,235 +151,233 @@
       padding: 1rem 1.15rem;
     }
     .badge-card h3{
-      font-size: .98rem;
-      margin-bottom:.35rem;
-      color:#ffffff;
+      font-size: .96rem;
+      margin-bottom: .35rem;
+      color: #ffffff;
       font-weight: 900;
-      letter-spacing:.2px;
     }
     .badge-card p{
-      font-size: .92rem;
-      color:#e6f2ff;
-      line-height:1.65;
-      font-weight: 520;
+      font-size: .88rem;
+      color: #e6f2ff;
+      line-height: 1.6;
     }
     .hero-buttons{
-      display:flex;
-      gap: 1rem;
-      justify-content:center;
-      flex-wrap:wrap;
+      display: flex;
+      gap: .75rem;
+      justify-content: center;
+      flex-wrap: wrap;
     }
     .btn{
-      padding: .92rem 2rem;
-      border:none;
+      padding: .85rem 1.5rem;
+      border: none;
       border-radius: 10px;
-      cursor:pointer;
-      font-size: 1rem;
-      text-decoration:none;
+      cursor: pointer;
+      font-size: .95rem;
+      text-decoration: none;
       transition: all .2s ease;
       font-weight: 850;
-      display:inline-flex;
-      align-items:center;
-      justify-content:center;
-      gap:.55rem;
-      user-select:none;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: .55rem;
+      user-select: none;
+      min-width: 140px;
     }
     .btn:focus-visible{ outline: none; box-shadow: var(--focus-ring); }
-    .btn-primary{ background:#fff; color: var(--primary); }
+    .btn-primary{ background: #fff; color: var(--primary); }
     .btn-primary:hover{ transform: translateY(-3px); box-shadow: 0 14px 30px rgba(0,0,0,0.25); }
     .btn-secondary{
       background: rgba(255,255,255,0.14);
-      color:#fff;
+      color: #fff;
       border: 2px solid rgba(255,255,255,0.92);
     }
-    .btn-secondary:hover{ background:#fff; color: var(--primary); }
+    .btn-secondary:hover{ background: #fff; color: var(--primary); }
 
     /* =========================================================
       GLOBAL SECTION STYLES
     ========================================================== */
-    section{ padding: 4.8rem 2rem; background: var(--bg); }
+    section{ padding: 3.5rem 1.25rem; background: var(--bg); }
     section.light-bg{ background: #fff; }
     section h2{
-      font-size: 2.35rem;
-      margin-bottom: 2.2rem;
-      text-align:center;
+      font-size: clamp(1.55rem, 5vw, 2.35rem);
+      margin-bottom: 1.8rem;
+      text-align: center;
       color: var(--primary);
       font-weight: 950;
-      position:relative;
+      position: relative;
       padding-bottom: .9rem;
+      line-height: 1.25;
     }
     section h2::after{
       content:'';
-      position:absolute;
-      bottom:0;
-      left:50%;
+      position: absolute;
+      bottom: 0;
+      left: 50%;
       transform: translateX(-50%);
-      width: 92px;
+      width: 72px;
       height: 3px;
       background: var(--primary);
       border-radius: 99px;
     }
     .section-subtitle{
-      text-align:center;
+      text-align: center;
       color: var(--muted);
-      margin: -1.1rem auto 2.6rem;
-      font-size: 1.02rem;
+      margin: -1rem auto 2.2rem;
+      font-size: clamp(.88rem, 2.5vw, 1.02rem);
       font-weight: 650;
       max-width: 95ch;
+      line-height: 1.7;
     }
 
     /* =========================================================
-      REUSABLE CARD + PILLS
-      (This prevents any "plain text" look if something shifts.)
+      CARD + PILLS
     ========================================================== */
     .card{
       background: var(--card);
       border: 1px solid var(--border);
       border-radius: var(--radius);
       box-shadow: var(--shadow);
-      padding: 2.1rem;
+      padding: 1.5rem;
     }
     .card h3{
-      font-size: 1.25rem;
+      font-size: 1.12rem;
       color: var(--primary);
       margin-bottom: .75rem;
       font-weight: 950;
-      letter-spacing: -.2px;
     }
     .card p{
-      color:#3d4a5a;
-      line-height: 1.9;
+      color: #3d4a5a;
+      line-height: 1.85;
       font-weight: 560;
       margin-bottom: 1rem;
-      max-width: 95ch;
     }
     .pill-list{
-      list-style:none;
-      display:flex;
-      flex-wrap:wrap;
-      gap: .55rem;
+      list-style: none;
+      display: flex;
+      flex-wrap: wrap;
+      gap: .5rem;
       margin-top: .65rem;
     }
     .pill{
       background: #e6f2ff;
       color: var(--primary);
-      padding: .38rem .85rem;
+      padding: .35rem .8rem;
       border-radius: 999px;
-      font-size: .86rem;
+      font-size: .84rem;
       font-weight: 900;
       border: 1px solid rgba(11,102,195,0.18);
       white-space: nowrap;
     }
-    .highlights{
-      list-style:none;
-      margin-top: .9rem;
-    }
+    .highlights{ list-style: none; margin-top: .9rem; }
     .highlights li{
-      padding: .6rem 0;
+      padding: .55rem 0;
       color: var(--text);
       font-weight: 650;
-      display:flex;
-      align-items:flex-start;
-      gap: .75rem;
+      display: flex;
+      align-items: flex-start;
+      gap: .7rem;
       border-top: 1px dashed rgba(0,0,0,0.08);
+      font-size: .94rem;
+      line-height: 1.65;
     }
     .highlights li:first-child{ border-top: none; }
     .highlights li:before{
       content:"▸";
       color: var(--primary);
-      font-size: 1.25rem;
-      line-height: 1.2;
-      margin-top: .05rem;
+      font-size: 1.1rem;
+      line-height: 1.3;
+      flex-shrink: 0;
       font-weight: 950;
     }
 
     /* =========================================================
-      VISION SECTION LAYOUT
+      VISION SECTION
     ========================================================== */
     .vision-wrap{
-      display:grid;
-      grid-template-columns: 1.2fr .8fr;
-      gap: 1.4rem;
-      align-items: start;
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 1.2rem;
     }
 
     /* =========================================================
-      ABOUT SECTION LAYOUT
+      ABOUT SECTION
     ========================================================== */
     .about-grid{
-      display:grid;
-      grid-template-columns: .9fr 1.1fr;
-      gap: 1.4rem;
-      align-items:start;
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 1.2rem;
     }
-    .profile{
-      display:flex;
-      flex-direction:column;
-      gap: 1rem;
-    }
+    .profile{ display: flex; flex-direction: column; gap: 1rem; }
     .profile-figure{
       border-radius: var(--radius);
-      overflow:hidden;
+      overflow: hidden;
       border: 1px solid var(--border);
       box-shadow: var(--shadow);
-      background:#fff;
+      background: #fff;
     }
-    .profile-figure img{ width:100%; height:auto; display:block; }
+    .profile-figure img{
+      width: 100%;
+      height: auto;
+      display: block;
+      max-height: 380px;
+      object-fit: cover;
+      object-position: top;
+    }
     .profile-figure figcaption{
-      padding: .9rem 1rem;
+      padding: .75rem 1rem;
       color: var(--muted);
-      font-size: .92rem;
+      font-size: .88rem;
       font-weight: 700;
     }
 
     /* =========================================================
-      HIGHLIGHTS / STATS
+      STATS
     ========================================================== */
     .stats-grid{
-      display:grid;
-      grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
-      gap: 1.2rem;
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 1rem;
       margin-bottom: .5rem;
     }
     .stat-box{
       background: var(--card);
-      padding: 1.8rem 1.6rem;
+      padding: 1.4rem 1rem;
       border-radius: var(--radius);
-      text-align:center;
+      text-align: center;
       box-shadow: var(--shadow);
       border-top: 4px solid var(--primary);
-      transition: all .2s ease;
       border: 1px solid var(--border);
+      transition: all .2s ease;
     }
-    .stat-box:hover{ transform: translateY(-5px); box-shadow: var(--shadow-strong); }
-    .stat-number{ font-size: 2.1rem; color: var(--primary); font-weight: 950; margin-bottom: .35rem; }
-    .stat-label{ color: var(--muted); font-size: .95rem; font-weight: 750; }
+    .stat-box:hover{ transform: translateY(-4px); box-shadow: var(--shadow-strong); }
+    .stat-number{ font-size: clamp(1.6rem, 5vw, 2.1rem); color: var(--primary); font-weight: 950; margin-bottom: .3rem; }
+    .stat-label{ color: var(--muted); font-size: .88rem; font-weight: 750; line-height: 1.4; }
 
     /* =========================================================
-      EDUCATION (CARD STYLE)
+      EDUCATION
     ========================================================== */
     .education-item{
       background: var(--card);
-      padding: 1.9rem 1.8rem;
-      margin-bottom: 1.2rem;
+      padding: 1.4rem 1.25rem;
+      margin-bottom: 1rem;
       border-radius: var(--radius);
       border-left: 5px solid var(--primary);
       border: 1px solid var(--border);
       box-shadow: var(--shadow);
       transition: all .2s ease;
     }
-    .education-item:hover{ transform: translateX(5px); box-shadow: var(--shadow-strong); }
-    .education-item h3{ color: var(--primary); margin-bottom:.25rem; font-size: 1.15rem; font-weight: 950; }
-    .education-item .institution{ color: var(--muted); font-size: .95rem; margin-bottom:.45rem; font-weight: 800; }
-    .education-item .details{ color: #7c8797; font-size: .92rem; font-weight: 650; }
+    .education-item:hover{ box-shadow: var(--shadow-strong); }
+    .education-item h3{ color: var(--primary); margin-bottom: .25rem; font-size: 1.05rem; font-weight: 950; line-height: 1.35; }
+    .education-item .institution{ color: var(--muted); font-size: .9rem; margin-bottom: .4rem; font-weight: 800; }
+    .education-item .details{ color: #7c8797; font-size: .88rem; font-weight: 650; }
 
     /* =========================================================
-      EXPERIENCE (CARD STYLE)
+      EXPERIENCE
     ========================================================== */
     .experience-item{
       background: var(--card);
-      padding: 2.2rem 2rem;
-      margin-bottom: 1.6rem;
+      padding: 1.6rem 1.4rem;
+      margin-bottom: 1.4rem;
       border-radius: var(--radius);
       border-left: 5px solid var(--primary);
       border: 1px solid var(--border);
@@ -358,106 +385,94 @@
       transition: all .2s ease;
     }
     .experience-item:hover{ box-shadow: var(--shadow-strong); }
-    .experience-item h3{ color: var(--primary); font-size: 1.22rem; margin-bottom:.25rem; font-weight: 950; }
-    .experience-item .company{ color: var(--muted); font-size: .95rem; margin-bottom:.35rem; font-weight: 800; }
-    .experience-item .duration{ color: #7c8797; font-size: .92rem; margin-bottom: 1.2rem; font-weight: 650; }
-    .experience-item ul{ list-style:none; }
+    .experience-item h3{ color: var(--primary); font-size: 1.12rem; margin-bottom: .25rem; font-weight: 950; }
+    .experience-item .company{ color: var(--muted); font-size: .9rem; margin-bottom: .3rem; font-weight: 800; display: flex; align-items: center; flex-wrap: wrap; gap: .35rem; }
+    .experience-item .company img{ height: 20px; vertical-align: middle; }
+    .experience-item .duration{ color: #7c8797; font-size: .88rem; margin-bottom: 1rem; font-weight: 650; }
+    .experience-item ul{ list-style: none; }
     .experience-item li{
-      color:#3d4a5a;
-      margin-bottom:.75rem;
-      padding-left: 1.45rem;
-      position:relative;
-      line-height: 1.75;
+      color: #3d4a5a;
+      margin-bottom: .65rem;
+      padding-left: 1.35rem;
+      position: relative;
+      line-height: 1.7;
       font-weight: 560;
-      max-width: 98ch;
+      font-size: .93rem;
     }
     .experience-item li:before{
-      content:"→";
-      position:absolute;
-      left:0;
+      content: "→";
+      position: absolute;
+      left: 0;
       color: var(--primary);
       font-weight: 950;
     }
 
     /* =========================================================
-      RESEARCH (CARDS + GRID)
+      RESEARCH
     ========================================================== */
     .research-grid{
-      display:grid;
-      grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
-      gap: 1.7rem;
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 1.4rem;
     }
     .research-card{
       background: var(--card);
-      padding: 2.1rem;
+      padding: 1.6rem 1.4rem;
       border-radius: var(--radius);
       box-shadow: var(--shadow);
       border-top: 5px solid var(--primary);
       border: 1px solid var(--border);
       transition: all .2s ease;
     }
-    .research-card:hover{ transform: translateY(-6px); box-shadow: var(--shadow-strong); }
-    .research-card h3{
-      color: var(--primary);
-      font-size: 1.08rem;
-      margin-bottom: .9rem;
-      font-weight: 950;
-      line-height: 1.45;
-    }
+    .research-card:hover{ transform: translateY(-4px); box-shadow: var(--shadow-strong); }
+    .research-card h3{ color: var(--primary); font-size: 1rem; margin-bottom: .9rem; font-weight: 950; line-height: 1.45; }
     .status{
-      display:inline-block;
+      display: inline-block;
       background: #e6f2ff;
       color: var(--primary);
-      padding: .35rem .9rem;
+      padding: .32rem .85rem;
       border-radius: 999px;
-      font-size: .85rem;
+      font-size: .83rem;
       font-weight: 900;
       margin-bottom: .9rem;
       border: 1px solid rgba(11,102,195,0.18);
     }
     .abstract p{
-      color:#3d4a5a;
-      font-size: .95rem;
+      color: #3d4a5a;
+      font-size: .92rem;
       line-height: 1.75;
-      margin-bottom: 1.2rem;
+      margin-bottom: 1.1rem;
       font-weight: 560;
-      max-width: 90ch;
     }
     .keywords{
       background: #f6f8fb;
-      padding: 1rem;
+      padding: .9rem;
       border-radius: 10px;
       margin-bottom: .9rem;
       border: 1px solid var(--border);
     }
-    .keywords-label{
-      color: var(--primary);
-      font-weight: 950;
-      font-size: .9rem;
-      margin-bottom: .55rem;
-      display:block;
-    }
+    .keywords-label{ color: var(--primary); font-weight: 950; font-size: .88rem; margin-bottom: .5rem; display: block; }
     .keyword{
-      display:inline-block;
+      display: inline-block;
       background: #e6f2ff;
       color: var(--primary);
-      padding: .28rem .75rem;
+      padding: .25rem .7rem;
       border-radius: 999px;
-      font-size: .84rem;
-      margin-right: .45rem;
-      margin-bottom: .45rem;
+      font-size: .82rem;
+      margin-right: .4rem;
+      margin-bottom: .4rem;
       font-weight: 900;
       border: 1px solid rgba(11,102,195,0.18);
     }
-    .doi{ color:#7c8797; font-size: .9rem; font-style: italic; font-weight: 650; }
+    .doi{ color: #7c8797; font-size: .88rem; font-style: italic; font-weight: 650; }
 
     /* =========================================================
-      PROJECTS (UPDATED FLIP CARDS — FIXED HEIGHT + NO CLIPPING)
+      PROJECTS — FLIP CARDS  (Mobile-safe)
     ========================================================== */
     .projects-grid{
-      display:grid;
-      grid-template-columns: repeat(auto-fit, minmax(330px, 1fr));
-      gap: 1.7rem;
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 1.4rem;
     }
 
     .flip-card{ perspective: 1200px; }
@@ -465,12 +480,10 @@
     .flip-inner{
       position: relative;
       width: 100%;
-      height: 560px;          /* SAME HEIGHT for every card */
+      height: auto;          /* AUTO height on mobile — grows with content */
+      min-height: 520px;
       transform-style: preserve-3d;
       transition: transform .55s ease;
-    }
-    @media (max-width: 768px){
-      .flip-inner{ height: 620px; } /* more room on mobile */
     }
 
     .flip-card.flipped .flip-inner{ transform: rotateY(180deg); }
@@ -480,16 +493,15 @@
       inset: 0;
       background: var(--card);
       border-radius: var(--radius);
-      overflow: hidden;       /* keep rounded corners clean */
+      overflow: hidden;
       box-shadow: var(--shadow);
       border: 1px solid var(--border);
       backface-visibility: hidden;
-      display:flex;
-      flex-direction:column;
+      display: flex;
+      flex-direction: column;
     }
 
     .flip-front{ border-top: 5px solid var(--primary); }
-
     .flip-back{
       transform: rotateY(180deg);
       border-top: 5px solid var(--primary-dark);
@@ -497,220 +509,191 @@
 
     .project-header{
       background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
-      color:#fff;
-      padding: 1.5rem 1.6rem;
-      display:flex;
-      align-items:flex-start;
-      justify-content:space-between;
-      gap: 1rem;
+      color: #fff;
+      padding: 1.25rem 1.35rem;
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      gap: .75rem;
+      flex-shrink: 0;
     }
-
     .project-header h3{
-      margin-bottom:.25rem;
-      font-size: 1.08rem;
+      margin-bottom: .2rem;
+      font-size: 1rem;
       font-weight: 950;
-      line-height:1.35;
+      line-height: 1.35;
     }
-    .project-duration{ color:#d2e9ff; font-size: .9rem; font-weight: 700; }
+    .project-duration{ color: #d2e9ff; font-size: .85rem; font-weight: 700; }
 
-    /* ✅ KEY: body scrolls instead of text being cut */
     .project-body{
-      padding: 1.7rem 1.6rem 1.25rem;
+      padding: 1.35rem 1.35rem 1rem;
       flex: 1;
-      display:flex;
-      flex-direction:column;
+      display: flex;
+      flex-direction: column;
       overflow-y: auto;
     }
     .project-body > p{
-      color:#3d4a5a;
-      margin-bottom: .95rem;
-      line-height:1.75;
+      color: #3d4a5a;
+      margin-bottom: .85rem;
+      line-height: 1.72;
       font-weight: 560;
-      max-width: 95ch;
+      font-size: .93rem;
     }
     .project-body h4{
       color: var(--primary);
-      font-size: .98rem;
-      margin: 1.05rem 0 .65rem 0;
+      font-size: .94rem;
+      margin: .9rem 0 .55rem;
       font-weight: 950;
     }
-    .project-body ul{ list-style:none; margin-bottom:.9rem; }
+    .project-body ul{ list-style: none; margin-bottom: .8rem; }
     .project-body li{
-      color:#3d4a5a;
-      margin-bottom:.6rem;
-      padding-left:1.35rem;
-      position:relative;
-      line-height:1.7;
-      font-size:.95rem;
+      color: #3d4a5a;
+      margin-bottom: .5rem;
+      padding-left: 1.25rem;
+      position: relative;
+      line-height: 1.65;
+      font-size: .91rem;
       font-weight: 560;
     }
     .project-body li:before{
-      content:"•";
-      position:absolute;
-      left:0;
+      content: "•";
+      position: absolute;
+      left: 0;
       color: var(--primary);
       font-weight: 950;
     }
 
     .project-skills{
-      display:flex;
-      gap:.5rem;
-      flex-wrap:wrap;
+      display: flex;
+      gap: .45rem;
+      flex-wrap: wrap;
       margin-top: auto;
-      padding-top: 1rem;
+      padding-top: .85rem;
       border-top: 1px solid rgba(0,0,0,0.08);
     }
     .project-skill{
       background: #e6f2ff;
       color: var(--primary);
-      padding: .35rem .85rem;
+      padding: .3rem .75rem;
       border-radius: 999px;
-      font-size: .84rem;
+      font-size: .82rem;
       font-weight: 950;
       border: 1px solid rgba(11,102,195,0.18);
     }
 
-    /* ✅ Buttons always visible */
     .project-actions{
-      padding: 1rem 1.6rem 1.4rem;
-      display:flex;
-      gap: .75rem;
-      flex-wrap:wrap;
+      padding: .85rem 1.35rem 1.1rem;
+      display: flex;
+      gap: .65rem;
+      flex-wrap: wrap;
       border-top: 1px solid rgba(0,0,0,0.08);
       background: #fff;
+      flex-shrink: 0;
     }
 
     .btn-small{
-      padding: .78rem 1.2rem;
+      padding: .7rem 1.1rem;
       border-radius: 10px;
-      font-size: .95rem;
+      font-size: .9rem;
       font-weight: 950;
       border: 1px solid var(--border);
-      background:#fff;
+      background: #fff;
       color: var(--primary);
-      cursor:pointer;
+      cursor: pointer;
       transition: all .2s ease;
-      display:inline-flex;
-      align-items:center;
-      justify-content:center;
-      gap:.45rem;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: .4rem;
     }
     .btn-small:hover{ transform: translateY(-2px); box-shadow: var(--shadow); }
-    .btn-small:focus-visible{ outline:none; box-shadow: var(--focus-ring); }
-
-    .btn-solid{
-      background: var(--primary);
-      color:#fff;
-      border: 1px solid rgba(255,255,255,0.0);
-    }
+    .btn-solid{ background: var(--primary); color: #fff; border-color: transparent; }
     .btn-solid:hover{ background: var(--primary-dark); }
 
-    /* Back side media */
     .project-media{
-      padding: 1.35rem 1.35rem 1.25rem;
+      padding: 1.25rem;
       flex: 1;
       overflow-y: auto;
-      display:flex;
-      flex-direction:column;
-      gap: .9rem;
+      display: flex;
+      flex-direction: column;
+      gap: .85rem;
     }
     .media-frame{
-      border-radius: 12px;
-      overflow:hidden;
+      border-radius: 10px;
+      overflow: hidden;
       border: 1px solid var(--border);
       box-shadow: var(--shadow);
-      background:#fff;
     }
-    .media-frame img{ width:100%; height:auto; display:block; }
-    .media-caption{
-      color: var(--muted);
-      font-weight: 750;
-      font-size: .92rem;
-      line-height: 1.6;
-    }
+    .media-frame img{ width: 100%; height: auto; display: block; }
+    .media-caption{ color: var(--muted); font-weight: 750; font-size: .88rem; line-height: 1.6; }
 
-    /* Optional: nicer scrollbar for projects only */
     .project-body::-webkit-scrollbar,
-    .project-media::-webkit-scrollbar{ width: 10px; }
+    .project-media::-webkit-scrollbar{ width: 8px; }
     .project-body::-webkit-scrollbar-thumb,
-    .project-media::-webkit-scrollbar-thumb{
-      background: rgba(11,102,195,0.25);
-      border-radius: 999px;
-    }
+    .project-media::-webkit-scrollbar-thumb{ background: rgba(11,102,195,0.2); border-radius: 999px; }
 
     /* =========================================================
-      SKILLS (CARDS + GRID)
+      SKILLS
     ========================================================== */
     .skills-grid{
-      display:grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 1.2rem;
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 1rem;
     }
     .skill-category{
       background: var(--card);
-      padding: 1.8rem;
+      padding: 1.4rem;
       border-radius: var(--radius);
       box-shadow: var(--shadow);
       border-top: 4px solid var(--primary);
       border: 1px solid var(--border);
       transition: all .2s ease;
     }
-    .skill-category:hover{ transform: translateY(-4px); box-shadow: var(--shadow-strong); }
-    .skill-category h3{
-      color: var(--primary);
-      margin-bottom: .8rem;
-      font-size: 1.05rem;
-      font-weight: 950;
-    }
-    .skill-category p{
-      color:#3d4a5a;
-      line-height:1.85;
-      font-size:.95rem;
-      max-width: 85ch;
-      font-weight: 560;
-    }
+    .skill-category:hover{ transform: translateY(-3px); box-shadow: var(--shadow-strong); }
+    .skill-category h3{ color: var(--primary); margin-bottom: .7rem; font-size: 1rem; font-weight: 950; }
+    .skill-category p{ color: #3d4a5a; line-height: 1.8; font-size: .92rem; font-weight: 560; }
 
     /* =========================================================
-      CERTIFICATIONS (CARDS + GRID)
+      CERTIFICATIONS
     ========================================================== */
     .cert-grid{
-      display:grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 1.1rem;
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 1rem;
     }
     .cert-item{
       background: var(--card);
-      padding: 1.6rem;
+      padding: 1.35rem;
       border-radius: var(--radius);
       box-shadow: var(--shadow);
       border-left: 4px solid var(--primary);
       border: 1px solid var(--border);
       transition: all .2s ease;
     }
-    .cert-item:hover{ transform: translateX(5px); box-shadow: var(--shadow-strong); }
-    .cert-item h4{ color: var(--primary); margin-bottom:.45rem; font-size: 1rem; font-weight: 950; }
-    .cert-item p{ color: var(--muted); font-size: .95rem; font-weight: 650; line-height:1.75; }
+    .cert-item:hover{ box-shadow: var(--shadow-strong); }
+    .cert-item h4{ color: var(--primary); margin-bottom: .4rem; font-size: .97rem; font-weight: 950; line-height: 1.35; }
+    .cert-item p{ color: var(--muted); font-size: .9rem; font-weight: 650; line-height: 1.7; }
 
     /* =========================================================
-      REFERENCES (CARDS + GRID)
+      REFERENCES
     ========================================================== */
     .references-grid{
-      display:grid;
-      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-      gap: 1.2rem;
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 1.1rem;
     }
     .reference-card{
       background: var(--card);
-      padding: 1.9rem;
+      padding: 1.5rem;
       border-radius: var(--radius);
       box-shadow: var(--shadow);
       border-left: 5px solid var(--primary);
       border: 1px solid var(--border);
     }
-    .reference-card h4{ color: var(--primary); margin-bottom:.25rem; font-size: 1.03rem; font-weight: 950; }
-    .reference-card .position{ color: var(--muted); font-size: .9rem; margin-bottom: 1rem; font-weight: 800; }
-    .reference-card p{ color:#3d4a5a; font-size: .92rem; margin-bottom: .5rem; font-weight: 650; }
-    .reference-card a{ color: var(--primary); text-decoration:none; transition: color .2s; }
+    .reference-card h4{ color: var(--primary); margin-bottom: .25rem; font-size: 1rem; font-weight: 950; }
+    .reference-card .position{ color: var(--muted); font-size: .88rem; margin-bottom: .9rem; font-weight: 800; }
+    .reference-card p{ color: #3d4a5a; font-size: .9rem; margin-bottom: .45rem; font-weight: 650; }
+    .reference-card a{ color: var(--primary); text-decoration: none; transition: color .2s; }
     .reference-card a:hover{ color: var(--primary-dark); }
 
     /* =========================================================
@@ -718,131 +701,186 @@
     ========================================================== */
     .contact{
       background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
-      color:#fff;
-      text-align:center;
+      color: #fff;
+      text-align: center;
     }
-    .contact h2{ color:#fff; }
-    .contact h2::after{ background:#fff; }
-
+    .contact h2{ color: #fff; }
+    .contact h2::after{ background: #fff; }
     .contact > .container > p{
-      color:#d2e9ff;
-      font-size: 1.03rem;
-      margin-bottom: 2.1rem;
+      color: #d2e9ff;
+      font-size: .97rem;
+      margin-bottom: 1.8rem;
       font-weight: 650;
-      max-width: 92ch;
-      margin-left:auto;
-      margin-right:auto;
+      line-height: 1.7;
     }
     .contact-info{
-      display:flex;
-      justify-content:center;
-      gap: 2.6rem;
-      flex-wrap:wrap;
-      margin-top: 1.4rem;
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 1.25rem 1rem;
+      margin-top: 1.2rem;
+      text-align: left;
     }
-    .contact-item h4{ color:#fff; margin-bottom: .45rem; font-weight: 950; }
+    .contact-item h4{ color: #fff; margin-bottom: .4rem; font-weight: 950; font-size: .95rem; }
     .contact-item a, .contact-item p{
-      color:#d2e9ff;
-      text-decoration:none;
+      color: #d2e9ff;
+      text-decoration: none;
       transition: color .2s;
       font-weight: 750;
+      font-size: .92rem;
+      word-break: break-all;
     }
-    .contact-item a:hover{ color:#fff; }
+    .contact-item a:hover{ color: #fff; }
 
     /* =========================================================
       FOOTER
     ========================================================== */
     footer{
-      background:#1f2b3a;
-      color:#b9c2cf;
-      text-align:center;
-      padding: 2.2rem;
-      font-size: .92rem;
+      background: #1f2b3a;
+      color: #b9c2cf;
+      text-align: center;
+      padding: 1.8rem 1.25rem;
+      font-size: .88rem;
     }
-    footer p{ margin-bottom:.35rem; font-weight: 650; }
+    footer p{ margin-bottom: .35rem; font-weight: 650; line-height: 1.6; }
 
     /* =========================================================
-      BACK TO TOP BUTTON
+      BACK TO TOP
     ========================================================== */
     .to-top{
       position: fixed;
-      right: 18px;
-      bottom: 18px;
-      width: 44px;
-      height: 44px;
+      right: 14px;
+      bottom: 14px;
+      width: 42px;
+      height: 42px;
       border-radius: 999px;
       border: 1px solid var(--border);
       background: #fff;
       color: var(--primary);
       box-shadow: var(--shadow);
-      cursor:pointer;
-      display:flex;
-      align-items:center;
-      justify-content:center;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
       font-weight: 950;
+      font-size: 1.1rem;
       opacity: 0;
       pointer-events: none;
       transform: translateY(10px);
       transition: all .2s ease;
       z-index: 1001;
     }
-    .to-top.show{
-      opacity: 1;
-      pointer-events: auto;
-      transform: translateY(0);
+    .to-top.show{ opacity: 1; pointer-events: auto; transform: translateY(0); }
+
+    /* =========================================================
+      RESPONSIVE — TABLET  ≥ 640px
+    ========================================================== */
+    @media (min-width: 640px){
+      .hero-badges{ grid-template-columns: repeat(3, 1fr); }
+      .stats-grid{ grid-template-columns: repeat(4, 1fr); }
+      .cert-grid{ grid-template-columns: repeat(2, 1fr); }
+      .references-grid{ grid-template-columns: repeat(2, 1fr); }
+      .contact-info{ grid-template-columns: repeat(2, 1fr); }
     }
 
     /* =========================================================
-      RESPONSIVE
+      RESPONSIVE — DESKTOP  ≥ 900px
     ========================================================== */
-    @media (max-width: 980px){
-      .vision-wrap{ grid-template-columns: 1fr; }
-      .about-grid{ grid-template-columns: 1fr; }
+    @media (min-width: 900px){
+      section{ padding: 4.8rem 2rem; }
+      .container{ padding: 0 2rem; }
+
+      .hero{ padding: 5.2rem 2rem 4.2rem; }
+
+      .vision-wrap{ grid-template-columns: 1.2fr .8fr; gap: 1.4rem; }
+      .about-grid{ grid-template-columns: .9fr 1.1fr; gap: 1.4rem; }
+      .research-grid{ grid-template-columns: repeat(2, 1fr); }
+
+      .projects-grid{ grid-template-columns: repeat(auto-fit, minmax(330px, 1fr)); }
+      .flip-inner{ min-height: 560px; }
+
+      .skills-grid{ grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); }
+      .cert-grid{ grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); }
+      .contact-info{ display: flex; justify-content: center; gap: 2.6rem; flex-wrap: wrap; text-align: center; }
+
+      .education-item:hover{ transform: translateX(5px); }
+      .stat-box:hover{ transform: translateY(-5px); }
     }
-    @media (max-width: 768px){
-      .hero h1{ font-size: 2.25rem; }
-      .hero .subtitle{ font-size: 1.05rem; }
-      section h2{ font-size: 1.85rem; }
-      nav ul{ gap: .9rem; }
-      .stats-grid{ grid-template-columns: repeat(2, 1fr); }
+
+    /* =========================================================
+      MOBILE NAV — hamburger below 640px
+    ========================================================== */
+    @media (max-width: 639px){
+      .nav-toggle{ display: block; }
+      .nav-brand{ display: block; }
+      .nav-inner{ justify-content: space-between; }
+
+      nav ul{
+        display: none;
+        flex-direction: column;
+        gap: 0;
+        background: #fff;
+        border-top: 1px solid var(--border);
+        padding: .5rem 0 .75rem;
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 100%;
+        box-shadow: 0 8px 24px rgba(0,0,0,0.12);
+        z-index: 999;
+      }
+      nav ul.open{ display: flex; }
+      nav ul li a{
+        display: block;
+        padding: .7rem 1.5rem;
+        font-size: .95rem;
+        border-bottom: none;
+        border-left: 3px solid transparent;
+      }
+      nav ul li a:hover,
+      nav ul li a.active{
+        border-left-color: var(--primary);
+        background: #f0f7ff;
+        color: var(--primary);
+        border-bottom-color: transparent;
+      }
+      nav{ position: sticky; top: 0; }
+      .nav-inner{ position: relative; }
     }
   </style>
 </head>
 
 <body>
-  <!-- =========================================================
-    NAVIGATION LINKS
-  ========================================================== -->
+  <!-- NAVIGATION -->
   <nav>
-    <ul>
-      <li><a href="#home" class="nav-link">Home</a></li>
-      <li><a href="#vision" class="nav-link">Vision</a></li>
-      <li><a href="#about" class="nav-link">About</a></li>
-      <li><a href="#highlights" class="nav-link">Highlights</a></li>
-      <li><a href="#education" class="nav-link">Education</a></li>
-      <li><a href="#experience" class="nav-link">Experience</a></li>
-      <li><a href="#projects" class="nav-link">Projects</a></li>
-      <li><a href="#research" class="nav-link">Research</a></li>
-      <li><a href="#skills" class="nav-link">Skills</a></li>
-      <li><a href="#certifications" class="nav-link">Certifications</a></li>
-      <li><a href="#references" class="nav-link">References</a></li>
-      <li><a href="#contact" class="nav-link">Contact</a></li>
-    </ul>
+    <div class="nav-inner">
+      <span class="nav-brand">Kazi Fahim</span>
+      <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">☰</button>
+      <ul id="navList">
+        <li><a href="#home" class="nav-link">Home</a></li>
+        <li><a href="#vision" class="nav-link">Vision</a></li>
+        <li><a href="#about" class="nav-link">About</a></li>
+        <li><a href="#highlights" class="nav-link">Highlights</a></li>
+        <li><a href="#education" class="nav-link">Education</a></li>
+        <li><a href="#experience" class="nav-link">Experience</a></li>
+        <li><a href="#projects" class="nav-link">Projects</a></li>
+        <li><a href="#research" class="nav-link">Research</a></li>
+        <li><a href="#skills" class="nav-link">Skills</a></li>
+        <li><a href="#certifications" class="nav-link">Certifications</a></li>
+        <li><a href="#references" class="nav-link">References</a></li>
+        <li><a href="#contact" class="nav-link">Contact</a></li>
+      </ul>
+    </div>
   </nav>
 
-  <!-- =========================================================
-    HERO SECTION
-  ========================================================== -->
+  <!-- HERO -->
   <section class="hero" id="home">
     <div class="container">
       <h1>Kazi Fahim</h1>
-      <p class="subtitle">Industrial &amp; Manufacturing Engineer | Lean 4.0 • DVSM • IIoT • Decision Engineering</p>
-
+      <p class="subtitle">Industrial &amp; Manufacturing Engineer<br>Lean 4.0 • DVSM • IIoT • Decision Engineering</p>
       <p class="tagline">
         I design and implement practical, data-informed manufacturing improvements—integrating Lean methodologies, IIoT-enabled visibility,
         ERP-connected workflows, and machine learning–assisted decision systems to strengthen productivity, quality assurance, and operational control in modern manufacturing environments.
       </p>
-
       <div class="hero-badges">
         <div class="badge-card">
           <h3>Lean 4.0 Execution</h3>
@@ -857,25 +895,21 @@
           <p>Structured evaluation (MCDM, learning behavior, anomaly signals) to support reliable and predictive operational decisions.</p>
         </div>
       </div>
-
       <div class="hero-buttons">
         <a href="#projects" class="btn btn-primary">View Selected Work</a>
         <a href="#contact" class="btn btn-secondary">Contact</a>
-        <a href="#" class="btn btn-secondary" title="Add your CV PDF and link it here">Download CV</a>
+        <a href="#" class="btn btn-secondary" title="CV Download">Download CV</a>
       </div>
     </div>
   </section>
 
-  <!-- =========================================================
-    VISION SECTION
-  ========================================================== -->
+  <!-- VISION -->
   <section class="light-bg" id="vision">
     <div class="container">
       <h2>Vision</h2>
       <p class="section-subtitle">
         A leadership direction focused on resource efficiency, digital transparency, and predictive decision-making—executed with rigorous industrial engineering methods.
       </p>
-
       <div class="vision-wrap">
         <div class="card">
           <h3>What is my vision?</h3>
@@ -886,7 +920,6 @@
           <p>
             My approach is built around engineering fundamentals: stable flow, constraint awareness, repeatable standards, and decisions validated by structured analysis.
           </p>
-
           <ul class="pill-list">
             <li class="pill">DVSM</li>
             <li class="pill">Digital Twin Readiness</li>
@@ -897,7 +930,6 @@
             <li class="pill">Lean 4.0 Execution</li>
           </ul>
         </div>
-
         <div class="card">
           <h3>How I lead transformation</h3>
           <p>
@@ -914,24 +946,18 @@
     </div>
   </section>
 
-  <!-- =========================================================
-    ABOUT SECTION
-    - Replace profile-placeholder.jpg with your real photo file
-  ========================================================== -->
+  <!-- ABOUT -->
   <section class="light-bg" id="about">
     <div class="container">
       <h2>About Me</h2>
       <p class="section-subtitle">
         Industrial engineering practice grounded in systems thinking, structured problem-solving, and implementation discipline.
       </p>
-
       <div class="about-grid">
         <div class="profile">
           <figure class="profile-figure">
-            <img src="assets/images/KAZI.jpg.jpeg"  loading="lazy">
-  
+            <img src="assets/images/KAZI.jpg.jpeg" loading="lazy" alt="Kazi Fahim">
           </figure>
-
           <div class="card">
             <h3>Professional identity</h3>
             <p>
@@ -940,14 +966,12 @@
             </p>
           </div>
         </div>
-
         <div class="card">
           <h3>Engineering approach</h3>
           <p>
             My work emphasizes operational stability: clear standards, balanced flow, disciplined control routines, and systems that support consistent execution.
             I develop improvement plans that align people, process, and information—so performance gains are repeatable and scalable.
           </p>
-
           <ul class="highlights">
             <li>Design ERP-integrated workflows that improve coordination and execution discipline</li>
             <li>Engineer balanced production workflows using RPW and Kilbridge methods</li>
@@ -961,14 +985,11 @@
     </div>
   </section>
 
-  <!-- =========================================================
-    HIGHLIGHTS SECTION
-  ========================================================== -->
+  <!-- HIGHLIGHTS -->
   <section class="light-bg" id="highlights">
     <div class="container">
       <h2>Professional Highlights</h2>
       <p class="section-subtitle">A snapshot of industrial execution, research direction, and measurable impact</p>
-
       <div class="stats-grid">
         <div class="stat-box">
           <div class="stat-number">3</div>
@@ -990,26 +1011,21 @@
     </div>
   </section>
 
-  <!-- =========================================================
-    EDUCATION SECTION
-  ========================================================== -->
+  <!-- EDUCATION -->
   <section id="education">
     <div class="container">
       <h2>Education</h2>
       <p class="section-subtitle">Academic foundation in Industrial &amp; Production Engineering and analytical problem-solving</p>
-
       <div class="education-item">
         <h3>🎓 B.Sc. in Industrial &amp; Production Engineering</h3>
         <p class="institution">National Institute of Textile Engineering &amp; Research (NITER), Dhaka</p>
         <p class="details"><strong>2018 – 2022</strong> | CGPA: 3.24/4.00</p>
       </div>
-
       <div class="education-item">
         <h3>📚 Higher Secondary Certificate (Science)</h3>
         <p class="institution">Milestone College, Dhaka</p>
         <p class="details"><strong>2015 – 2017</strong> | GPA: 5.00/5.00</p>
       </div>
-
       <div class="education-item">
         <h3>📚 Secondary School Certificate (Science)</h3>
         <p class="institution">Milestone College, Dhaka</p>
@@ -1018,19 +1034,15 @@
     </div>
   </section>
 
-  <!-- =========================================================
-    EXPERIENCE SECTION
-    - Snowtex logo is placed here (as you requested)
-  ========================================================== -->
+  <!-- EXPERIENCE -->
   <section class="light-bg" id="experience">
     <div class="container">
       <h2>Professional Experience</h2>
       <p class="section-subtitle">Execution leadership across systems design, digital enablement, and operational control</p>
-
       <div class="experience-item">
         <h3>Production Engineer</h3>
         <p class="company">
-          <img src="assets/images/Snowtex%20Logo.jfif" alt="Snowtex Group Logo" style="height:22px; vertical-align:middle; margin-right:10px;">
+          <img src="assets/images/Snowtex%20Logo.jfif" alt="Snowtex Group Logo">
           Snowtex Group, Dhaka
         </p>
         <p class="duration">December 2023 – Present</p>
@@ -1043,11 +1055,10 @@
           <li>Establish SOPs and KPI governance to improve data accuracy, traceability, and decision turnaround time.</li>
         </ul>
       </div>
-
       <div class="experience-item">
         <h3>Management Trainee Officer (MTO)</h3>
         <p class="company">
-          <img src="assets/images/Snowtex%20Logo.jfif" alt="Snowtex Group Logo" style="height:22px; vertical-align:middle; margin-right:10px;">
+          <img src="assets/images/Snowtex%20Logo.jfif" alt="Snowtex Group Logo">
           Snowtex Group, Dhaka
         </p>
         <p class="duration">April 2023 – November 2023</p>
@@ -1064,25 +1075,18 @@
     </div>
   </section>
 
-  <!-- =========================================================
-    PROJECTS SECTION (FLIP CARDS)
-    - Click "View Details" to flip and see images properly
-    - Replace placeholder images later if needed
-  ========================================================== -->
+  <!-- PROJECTS -->
   <section class="light-bg" id="projects">
     <div class="container">
       <h2>Industry Projects &amp; Achievements</h2>
       <p class="section-subtitle">
-        Click <strong>View Details</strong> on any project to flip the card and view images clearly (no clipping, consistent card size).
+        Tap <strong>View Details</strong> on any project to flip the card and view images.
       </p>
-
       <div class="projects-grid">
 
         <!-- PROJECT 1 -->
         <div class="flip-card" id="proj1">
           <div class="flip-inner">
-
-            <!-- FRONT -->
             <article class="flip-face flip-front">
               <div class="project-header">
                 <div>
@@ -1090,23 +1094,19 @@
                   <p class="project-duration">Aug 2024 – Present | Snowtex Group</p>
                 </div>
               </div>
-
               <div class="project-body">
                 <p><strong>Objective:</strong> Build a repeatable layout and work allocation workflow to improve balancing accuracy and reduce design cycle time.</p>
-
                 <h4>Engineering Method</h4>
                 <ul>
                   <li>Precedence-driven task assignment using Ranked Positional Weight (RPW)</li>
                   <li>Workload balancing strengthened with Kilbridge sequencing logic</li>
                   <li>Constraint-aware outputs aligned with shop-floor feasibility</li>
                 </ul>
-
                 <h4>Operational Value</h4>
                 <ul>
                   <li>Improved consistency and speed of layout decisions</li>
                   <li>Reduced idle time through better workload distribution</li>
                 </ul>
-
                 <div class="project-skills">
                   <span class="project-skill">Python</span>
                   <span class="project-skill">RPW</span>
@@ -1114,13 +1114,10 @@
                   <span class="project-skill">Precedence Logic</span>
                 </div>
               </div>
-
               <div class="project-actions">
                 <button class="btn-small btn-solid" data-flip-target="proj1" type="button">View Details</button>
               </div>
             </article>
-
-            <!-- BACK -->
             <article class="flip-face flip-back">
               <div class="project-header">
                 <div>
@@ -1128,30 +1125,22 @@
                   <p class="project-duration">Details view</p>
                 </div>
               </div>
-
               <div class="project-media">
                 <div class="media-frame">
-                  <!-- Replace later with layout output image -->
-                  <img src="assets/images/IOT.jpeg" alt="Placeholder image for layout workflow (replace with your layout output image)" loading="lazy">
+                  <img src="assets/images/IOT.jpeg" alt="Layout workflow" loading="lazy">
                 </div>
-                <p class="media-caption">
-                  Replace this image with a workflow screenshot (layout sheet, precedence chart, or algorithm output) when available.
-                </p>
+                <p class="media-caption">Replace with your layout output image when available.</p>
               </div>
-
               <div class="project-actions">
-                <button class="btn-small" data-flip-target="proj1" type="button">Back</button>
+                <button class="btn-small" data-flip-target="proj1" type="button">← Back</button>
               </div>
             </article>
-
           </div>
         </div>
 
         <!-- PROJECT 2 -->
         <div class="flip-card" id="proj2">
           <div class="flip-inner">
-
-            <!-- FRONT -->
             <article class="flip-face flip-front">
               <div class="project-header">
                 <div>
@@ -1159,23 +1148,19 @@
                   <p class="project-duration">Mar 2024 – Jun 2025 | Snowtex Group</p>
                 </div>
               </div>
-
               <div class="project-body">
                 <p><strong>Objective:</strong> Establish real-time shop-floor visibility to accelerate response, reduce downtime losses, and strengthen daily operational control.</p>
-
                 <h4>System Design</h4>
                 <ul>
                   <li>Workstation-level piece tracking to identify constraints and response priorities</li>
                   <li>Machine utilization and downtime monitoring to improve recovery discipline</li>
                   <li>Quality-event traceability linked to operators and machines</li>
                 </ul>
-
                 <h4>Impact</h4>
                 <ul>
                   <li>Delivered a 7% efficiency gain via faster downtime recovery and stronger daily control</li>
                   <li>Enabled ERP-connected visibility for better planning alignment and escalation speed</li>
                 </ul>
-
                 <div class="project-skills">
                   <span class="project-skill">IIoT</span>
                   <span class="project-skill">Visibility Systems</span>
@@ -1183,13 +1168,10 @@
                   <span class="project-skill">Operations Control</span>
                 </div>
               </div>
-
               <div class="project-actions">
                 <button class="btn-small btn-solid" data-flip-target="proj2" type="button">View Details</button>
               </div>
             </article>
-
-            <!-- BACK -->
             <article class="flip-face flip-back">
               <div class="project-header">
                 <div>
@@ -1197,37 +1179,26 @@
                   <p class="project-duration">Details view</p>
                 </div>
               </div>
-
               <div class="project-media">
                 <div class="media-frame">
-                  <!-- NOTE: file name includes spaces, keep %20 -->
-                  <img src="assets/images/Iot%20visual%20board.jpeg" alt="Visual performance board supporting daily management" loading="lazy">
+                  <img src="assets/images/Iot%20visual%20board.jpeg" alt="Visual performance board" loading="lazy">
                 </div>
-                <p class="media-caption">
-                  Visual performance reporting to shorten response time and strengthen daily management discipline.
-                </p>
-
+                <p class="media-caption">Visual performance reporting to shorten response time and strengthen daily management discipline.</p>
                 <div class="media-frame">
-                  <img src="assets/images/IOT.jpeg" alt="IIoT-enabled monitoring supporting production visibility" loading="lazy">
+                  <img src="assets/images/IOT.jpeg" alt="IIoT monitoring" loading="lazy">
                 </div>
-                <p class="media-caption">
-                  IIoT monitoring supporting faster escalation, loss recovery, and controlled execution.
-                </p>
+                <p class="media-caption">IIoT monitoring supporting faster escalation, loss recovery, and controlled execution.</p>
               </div>
-
               <div class="project-actions">
-                <button class="btn-small" data-flip-target="proj2" type="button">Back</button>
+                <button class="btn-small" data-flip-target="proj2" type="button">← Back</button>
               </div>
             </article>
-
           </div>
         </div>
 
         <!-- PROJECT 3 -->
         <div class="flip-card" id="proj3">
           <div class="flip-inner">
-
-            <!-- FRONT -->
             <article class="flip-face flip-front">
               <div class="project-header">
                 <div>
@@ -1235,35 +1206,28 @@
                   <p class="project-duration">Ongoing | Snowtex Group</p>
                 </div>
               </div>
-
               <div class="project-body">
                 <p><strong>Objective:</strong> Improve inventory accuracy and material traceability through QR-enabled digital store workflows.</p>
-
                 <h4>Implementation</h4>
                 <ul>
                   <li>QR identification and movement history for controlled material handling</li>
                   <li>Standardized GRN and status logic to reduce processing delays</li>
                   <li>Digitized bin discipline supporting real-time reconciliation</li>
                 </ul>
-
                 <h4>Outcome</h4>
                 <ul>
                   <li>Reduced inventory errors and strengthened traceability for downstream planning</li>
                 </ul>
-
                 <div class="project-skills">
                   <span class="project-skill">Traceability</span>
                   <span class="project-skill">Inventory Control</span>
                   <span class="project-skill">Workflow Standardization</span>
                 </div>
               </div>
-
               <div class="project-actions">
                 <button class="btn-small btn-solid" data-flip-target="proj3" type="button">View Details</button>
               </div>
             </article>
-
-            <!-- BACK -->
             <article class="flip-face flip-back">
               <div class="project-header">
                 <div>
@@ -1271,29 +1235,22 @@
                   <p class="project-duration">Details view</p>
                 </div>
               </div>
-
               <div class="project-media">
                 <div class="media-frame">
-                  <img src="assets/images/IOT.jpeg" alt="Placeholder image (replace with store workflow screenshot)" loading="lazy">
+                  <img src="assets/images/IOT.jpeg" alt="Store workflow" loading="lazy">
                 </div>
-                <p class="media-caption">
-                  Replace with a store dashboard / QR workflow screenshot when available.
-                </p>
+                <p class="media-caption">Replace with a store dashboard / QR workflow screenshot when available.</p>
               </div>
-
               <div class="project-actions">
-                <button class="btn-small" data-flip-target="proj3" type="button">Back</button>
+                <button class="btn-small" data-flip-target="proj3" type="button">← Back</button>
               </div>
             </article>
-
           </div>
         </div>
 
         <!-- PROJECT 4 -->
         <div class="flip-card" id="proj4">
           <div class="flip-inner">
-
-            <!-- FRONT -->
             <article class="flip-face flip-front">
               <div class="project-header">
                 <div>
@@ -1301,35 +1258,28 @@
                   <p class="project-duration">Ongoing | Snowtex Group</p>
                 </div>
               </div>
-
               <div class="project-body">
                 <p><strong>Objective:</strong> Establish OEE measurement and reporting to improve equipment effectiveness, accountability, and reliability action.</p>
-
                 <h4>Method</h4>
                 <ul>
                   <li>Defined Availability, Performance, and Quality rules aligned with operational reality</li>
                   <li>Built daily reporting routines and escalation visibility for corrective action</li>
                   <li>Structured downtime categorization to identify reliability priorities</li>
                 </ul>
-
                 <h4>Result</h4>
                 <ul>
                   <li>Raised OEE from 40% to 55% (relative improvement: +37.5%)</li>
                 </ul>
-
                 <div class="project-skills">
                   <span class="project-skill">OEE</span>
                   <span class="project-skill">Loss Analysis</span>
                   <span class="project-skill">Reliability Governance</span>
                 </div>
               </div>
-
               <div class="project-actions">
                 <button class="btn-small btn-solid" data-flip-target="proj4" type="button">View Details</button>
               </div>
             </article>
-
-            <!-- BACK -->
             <article class="flip-face flip-back">
               <div class="project-header">
                 <div>
@@ -1337,29 +1287,22 @@
                   <p class="project-duration">Details view</p>
                 </div>
               </div>
-
               <div class="project-media">
                 <div class="media-frame">
-                  <img src="assets/images/IOT.jpeg" alt="Placeholder image (replace with OEE dashboard screenshot)" loading="lazy">
+                  <img src="assets/images/IOT.jpeg" alt="OEE dashboard" loading="lazy">
                 </div>
-                <p class="media-caption">
-                  Replace with an OEE dashboard/report snapshot when available.
-                </p>
+                <p class="media-caption">Replace with an OEE dashboard/report snapshot when available.</p>
               </div>
-
               <div class="project-actions">
-                <button class="btn-small" data-flip-target="proj4" type="button">Back</button>
+                <button class="btn-small" data-flip-target="proj4" type="button">← Back</button>
               </div>
             </article>
-
           </div>
         </div>
 
         <!-- PROJECT 5 -->
         <div class="flip-card" id="proj5">
           <div class="flip-inner">
-
-            <!-- FRONT -->
             <article class="flip-face flip-front">
               <div class="project-header">
                 <div>
@@ -1367,35 +1310,28 @@
                   <p class="project-duration">Ongoing | Snowtex Group</p>
                 </div>
               </div>
-
               <div class="project-body">
                 <p><strong>Objective:</strong> Improve execution speed and coordination using structured T&amp;A planning integrated with milestone visibility.</p>
-
                 <h4>Implementation</h4>
                 <ul>
                   <li>Designed a T&amp;A calendar aligning milestones across stakeholders</li>
                   <li>Applied CPM logic to highlight schedule risks and dependency priorities</li>
                   <li>Planned ERP-aligned milestone tracking to reduce delays and ambiguity</li>
                 </ul>
-
                 <h4>Outcome</h4>
                 <ul>
                   <li>Improved coordination and strengthened milestone ownership</li>
                 </ul>
-
                 <div class="project-skills">
                   <span class="project-skill">T&amp;A Planning</span>
                   <span class="project-skill">CPM</span>
                   <span class="project-skill">Execution Governance</span>
                 </div>
               </div>
-
               <div class="project-actions">
                 <button class="btn-small btn-solid" data-flip-target="proj5" type="button">View Details</button>
               </div>
             </article>
-
-            <!-- BACK -->
             <article class="flip-face flip-back">
               <div class="project-header">
                 <div>
@@ -1403,21 +1339,16 @@
                   <p class="project-duration">Details view</p>
                 </div>
               </div>
-
               <div class="project-media">
                 <div class="media-frame">
-                  <img src="assets/images/IOT.jpeg" alt="Placeholder image (replace with T&A calendar screenshot)" loading="lazy">
+                  <img src="assets/images/IOT.jpeg" alt="T&A calendar" loading="lazy">
                 </div>
-                <p class="media-caption">
-                  Replace with a T&amp;A calendar / milestone dashboard snapshot when available.
-                </p>
+                <p class="media-caption">Replace with a T&amp;A calendar / milestone dashboard snapshot when available.</p>
               </div>
-
               <div class="project-actions">
-                <button class="btn-small" data-flip-target="proj5" type="button">Back</button>
+                <button class="btn-small" data-flip-target="proj5" type="button">← Back</button>
               </div>
             </article>
-
           </div>
         </div>
 
@@ -1425,25 +1356,19 @@
     </div>
   </section>
 
-  <!-- =========================================================
-    RESEARCH SECTION
-  ========================================================== -->
+  <!-- RESEARCH -->
   <section id="research">
     <div class="container">
       <h2>Research &amp; Publications</h2>
       <p class="section-subtitle">
         Research centered on Lean 4.0, IIoT-enabled manufacturing visibility, operator learning behavior, and optimization methods for balanced and equitable production systems.
       </p>
-
       <div class="research-grid">
         <div class="research-card">
           <span class="status">Under Review</span>
           <h3>An IoT-Enabled Lean 4.0 Framework for Learning-Based Process Difficulty Standardization and Difficulty-Adjusted Operator Skill Evaluation in Sewing Lines</h3>
           <div class="abstract">
-            <p>
-              <strong>Summary:</strong> Proposes a Lean 4.0 framework integrating IIoT data with learning-curve modeling and robust anomaly detection to build objective performance standards.
-              A hybrid MCDM model (CRITIC, Entropy, TOPSIS, VIKOR) produces a Process Difficulty Index to support fair evaluation and improved task-workstation alignment.
-            </p>
+            <p><strong>Summary:</strong> Proposes a Lean 4.0 framework integrating IIoT data with learning-curve modeling and robust anomaly detection to build objective performance standards. A hybrid MCDM model (CRITIC, Entropy, TOPSIS, VIKOR) produces a Process Difficulty Index to support fair evaluation and improved task-workstation alignment.</p>
           </div>
           <div class="keywords">
             <span class="keywords-label">Keywords</span>
@@ -1455,15 +1380,11 @@
           </div>
           <p class="doi">Status: Manuscript under review (publication details to be added upon acceptance).</p>
         </div>
-
         <div class="research-card">
           <span class="status">Under Review</span>
           <h3>Optimizing Assembly Line Efficiency Using RPW and Evolutionary Algorithms: A Comparative Analysis</h3>
           <div class="abstract">
-            <p>
-              <strong>Summary:</strong> Develops an integrated balancing approach using RPW with evolutionary optimization and discrete-event simulation validation.
-              Results demonstrate improved workstation allocation and higher efficiency while preserving precedence feasibility for industrial deployment.
-            </p>
+            <p><strong>Summary:</strong> Develops an integrated balancing approach using RPW with evolutionary optimization and discrete-event simulation validation. Results demonstrate improved workstation allocation and higher efficiency while preserving precedence feasibility for industrial deployment.</p>
           </div>
           <div class="keywords">
             <span class="keywords-label">Keywords</span>
@@ -1479,52 +1400,40 @@
     </div>
   </section>
 
-  <!-- =========================================================
-    SKILLS SECTION
-  ========================================================== -->
+  <!-- SKILLS -->
   <section id="skills">
     <div class="container">
       <h2>Core Competencies &amp; Technical Skills</h2>
-      <p class="section-subtitle">
-        A focused capability set for industrial execution, digital manufacturing enablement, and improvement leadership.
-      </p>
-
+      <p class="section-subtitle">A focused capability set for industrial execution, digital manufacturing enablement, and improvement leadership.</p>
       <div class="skills-grid">
         <div class="skill-category">
           <h3>🏭 Industrial Engineering Methods</h3>
           <p>SIPOC • Value Stream Mapping (VSM) • Standard Work • Work Measurement • Method Study • Bottleneck &amp; Constraint Analysis • Process Capability Basics • Control Plans</p>
         </div>
-
         <div class="skill-category">
           <h3>🔧 Flow, Balance &amp; Execution</h3>
           <p>RPW • Kilbridge Method • Workstation Allocation • Throughput Stability • WIP Control Concepts • Heuristic-Based Workflow Structuring • Scheduling Discipline (CPM)</p>
         </div>
-
         <div class="skill-category">
           <h3>🌐 Digital Manufacturing Systems</h3>
           <p>ERP Integration • Real-time Monitoring • IIoT Visibility • Traceability Design • QR-Based Material Control • Digital Reporting • Data Governance for Shop-floor Decisions</p>
         </div>
-
         <div class="skill-category">
           <h3>📊 Operational Analytics</h3>
           <p>Power BI • Looker Studio • Advanced Excel • KPI Architecture • OEE Systems • Loss Analysis • Trend Tracking • Root Cause Support</p>
         </div>
-
         <div class="skill-category">
           <h3>🤖 Machine Learning (Applied)</h3>
           <p>Learning-Curve Modeling • Anomaly Detection (Isolation Forest, LOF, HDBSCAN) • Pattern Signals for Predictive Decisions • Data Preparation in Python</p>
         </div>
-
         <div class="skill-category">
           <h3>🎯 Decision Engineering</h3>
           <p>MCDM (TOPSIS, VIKOR) • CRITIC &amp; Entropy Weighting • Risk Assessment • Structured Prioritization • Decision Robustness via Scenario Testing</p>
         </div>
-
         <div class="skill-category">
           <h3>🔄 Simulation (Validation)</h3>
-          <p>Discrete Event Simulation (Arena) • Model Validation Concepts • “What-if” Scenario Evaluation • Improvement Verification before Deployment</p>
+          <p>Discrete Event Simulation (Arena) • Model Validation Concepts • "What-if" Scenario Evaluation • Improvement Verification before Deployment</p>
         </div>
-
         <div class="skill-category">
           <h3>💼 Leadership &amp; Delivery</h3>
           <p>Cross-functional Coordination • Stakeholder Communication • Improvement Governance • SOP Development • KPI Ownership • Change Management Discipline</p>
@@ -1533,42 +1442,35 @@
     </div>
   </section>
 
-  <!-- =========================================================
-    CERTIFICATIONS SECTION
-  ========================================================== -->
+  <!-- CERTIFICATIONS -->
   <section class="light-bg" id="certifications">
     <div class="container">
       <h2>Certifications &amp; Recognitions</h2>
-
       <div class="cert-grid">
         <div class="cert-item">
           <h4>🏆 Finalist — Supply Chain Category</h4>
           <p><strong>Blockchain Olympiad Bangladesh (BCOLBD 2022)</strong><br>Recognition for research excellence in blockchain-enabled supply chain solutions</p>
         </div>
-
         <div class="cert-item">
           <h4>📜 Advanced Microsoft Office</h4>
           <p><strong>Coursera</strong><br>Advanced proficiency in Word, PowerPoint, and Excel for professional reporting and analysis</p>
         </div>
-
         <div class="cert-item">
           <h4>📜 Process Improvement in Industry 4.0</h4>
           <p><strong>NITER Career Club</strong><br>Training on modern process improvement methods and Industry 4.0 implementation concepts</p>
         </div>
-
         <div class="cert-item">
           <h4>📜 Industrial Engineering &amp; Lean Management (SEIP)</h4>
           <p><strong>BGMEA</strong><br>Specialized certification in Lean practices and industrial management fundamentals</p>
         </div>
       </div>
 
-      <h2 style="margin-top: 3.6rem;">Language Proficiency</h2>
+      <h2 style="margin-top: 3.2rem;">Language Proficiency</h2>
       <div class="cert-grid">
         <div class="cert-item">
           <h4>🌐 Bangla</h4>
           <p><strong>Native</strong><br>Fluent in reading, writing, and professional communication</p>
         </div>
-
         <div class="cert-item">
           <h4>🌐 English</h4>
           <p><strong>Professional Proficiency</strong><br>Advanced technical writing, presentation, and international collaboration</p>
@@ -1577,60 +1479,50 @@
     </div>
   </section>
 
-  <!-- =========================================================
-    REFERENCES SECTION
-  ========================================================== -->
+  <!-- REFERENCES -->
   <section id="references">
     <div class="container">
       <h2>Professional References</h2>
       <p class="section-subtitle">References are available upon request.</p>
-
       <div class="references-grid">
         <div class="reference-card">
           <h4>Sohedul Islam Shahin</h4>
           <p class="position">Senior A.G.M, Operational Project &amp; CI — Snowtex Group</p>
           <p><strong>Snowtex Group, Dhaka</strong></p>
-          <p>📧 Email: <a href="mailto:Shahin.ci@gmail.com">Shahin.ci@gmail.com</a></p>
-          <p>📱 Phone: <a href="tel:+8801833300697">+880 183 330 0697</a></p>
+          <p>📧 <a href="mailto:Shahin.ci@gmail.com">Shahin.ci@gmail.com</a></p>
+          <p>📱 <a href="tel:+8801833300697">+880 183 330 0697</a></p>
         </div>
-
         <div class="reference-card">
           <h4>Md. Mahabub Hasan</h4>
           <p class="position">Academic In-Charge, Assistant Professor — NITER</p>
           <p><strong>National Institute of Textile Engineering &amp; Research (NITER)</strong></p>
-          <p>📧 Email: <a href="mailto:merajtex20@gmail.com">merajtex20@gmail.com</a></p>
-          <p>📱 Phone: <a href="tel:+8801916146208">+880 1916 146 208</a></p>
+          <p>📧 <a href="mailto:merajtex20@gmail.com">merajtex20@gmail.com</a></p>
+          <p>📱 <a href="tel:+8801916146208">+880 1916 146 208</a></p>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- =========================================================
-    CONTACT SECTION
-  ========================================================== -->
+  <!-- CONTACT -->
   <section class="contact" id="contact">
     <div class="container">
       <h2>Contact</h2>
       <p>
         Open to collaboration and opportunities in manufacturing systems improvement, digital production engineering, and research-driven industrial transformation.
       </p>
-
       <div class="contact-info">
         <div class="contact-item">
           <h4>📧 Email</h4>
           <a href="mailto:kazifahim.ipe@gmail.com">kazifahim.ipe@gmail.com</a>
         </div>
-
         <div class="contact-item">
           <h4>📱 Phone</h4>
           <a href="tel:+8801726970125">+880 1726 970 125</a>
         </div>
-
         <div class="contact-item">
           <h4>💼 LinkedIn</h4>
           <a href="https://www.linkedin.com/in/kazi-fahim-b56270210/" target="_blank" rel="noopener">kazi-fahim-b56270210</a>
         </div>
-
         <div class="contact-item">
           <h4>📍 Location</h4>
           <p>Dhaka, Bangladesh</p>
@@ -1639,30 +1531,23 @@
     </div>
   </section>
 
-  <!-- =========================================================
-    FOOTER
-  ========================================================== -->
+  <!-- FOOTER -->
   <footer>
     <p>&copy; 2026 Kazi Fahim. All rights reserved.</p>
     <p>Industrial &amp; Manufacturing Engineer • Lean 4.0 • DVSM • IIoT • ERP-Integrated Operations</p>
   </footer>
 
-  <!-- Back-to-top button -->
   <button class="to-top" id="toTop" aria-label="Back to top">↑</button>
 
   <script>
-    /* =========================================================
-      NAV ACTIVE LINK ON SCROLL (LIGHTWEIGHT)
-    ========================================================== */
+    /* NAV ACTIVE */
     const sections = document.querySelectorAll("section[id]");
     const navLinks = document.querySelectorAll(".nav-link");
-
     function setActiveLink(){
       let currentId = "home";
-      const offset = 120; // accounts for sticky nav height
+      const offset = 100;
       sections.forEach(sec => {
-        const top = sec.offsetTop - offset;
-        if (window.scrollY >= top) currentId = sec.id;
+        if (window.scrollY >= sec.offsetTop - offset) currentId = sec.id;
       });
       navLinks.forEach(a => {
         a.classList.toggle("active", a.getAttribute("href") === "#" + currentId);
@@ -1671,27 +1556,52 @@
     window.addEventListener("scroll", setActiveLink);
     window.addEventListener("load", setActiveLink);
 
-    /* =========================================================
-      BACK TO TOP BUTTON
-    ========================================================== */
+    /* BACK TO TOP */
     const toTop = document.getElementById("toTop");
     window.addEventListener("scroll", () => {
-      if (window.scrollY > 600) toTop.classList.add("show");
-      else toTop.classList.remove("show");
+      toTop.classList.toggle("show", window.scrollY > 600);
     });
     toTop.addEventListener("click", () => window.scrollTo({ top: 0, behavior: "smooth" }));
 
-    /* =========================================================
-      PROJECT FLIP HANDLER
-      - Any button with data-flip-target="projX" flips that card
-    ========================================================== */
+    /* HAMBURGER NAV TOGGLE */
+    const navToggle = document.getElementById("navToggle");
+    const navList = document.getElementById("navList");
+    navToggle.addEventListener("click", () => {
+      navList.classList.toggle("open");
+      navToggle.textContent = navList.classList.contains("open") ? "✕" : "☰";
+    });
+    // Close menu on link click
+    navList.querySelectorAll("a").forEach(a => {
+      a.addEventListener("click", () => {
+        navList.classList.remove("open");
+        navToggle.textContent = "☰";
+      });
+    });
+
+    /* FLIP CARDS */
     document.addEventListener("click", (e) => {
       const btn = e.target.closest("[data-flip-target]");
       if (!btn) return;
-      const targetId = btn.getAttribute("data-flip-target");
-      const card = document.getElementById(targetId);
+      const card = document.getElementById(btn.getAttribute("data-flip-target"));
       if (!card) return;
       card.classList.toggle("flipped");
+      // Sync card height when flipping
+      const inner = card.querySelector(".flip-inner");
+      const faces = card.querySelectorAll(".flip-face");
+      let maxH = 0;
+      faces.forEach(f => { f.style.position = "relative"; maxH = Math.max(maxH, f.offsetHeight); f.style.position = ""; });
+      inner.style.minHeight = maxH + "px";
+    });
+
+    /* Auto-size flip cards on load */
+    window.addEventListener("load", () => {
+      document.querySelectorAll(".flip-card").forEach(card => {
+        const inner = card.querySelector(".flip-inner");
+        const faces = card.querySelectorAll(".flip-face");
+        let maxH = 0;
+        faces.forEach(f => { f.style.position = "relative"; maxH = Math.max(maxH, f.offsetHeight); f.style.position = ""; });
+        inner.style.minHeight = Math.max(maxH, 480) + "px";
+      });
     });
   </script>
 </body>
