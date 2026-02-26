@@ -3,9 +3,9 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Kazi Fahim — Industrial & Production Engineer | Lean 4.0 & Smart Manufacturing</title>
+  <title>Kazi Fahim — Industrial & Manufacturing Engineer | Lean 4.0 • DVSM • IIoT • Decision Engineering</title>
 
-  <meta name="description" content="Kazi Fahim — Industrial & Production Engineer specializing in Lean 4.0, IIoT-enabled manufacturing, line balancing, simulation, and ERP-integrated process optimization." />
+  <meta name="description" content="Kazi Fahim — Industrial & Manufacturing Engineer focused on Lean 4.0, DVSM, IIoT-enabled visibility, ERP-integrated workflows, machine learning–assisted decision systems, and measurable operational improvement." />
 
   <style>
     :root{
@@ -18,20 +18,19 @@
       --border:#e7ebf2;
       --shadow: 0 6px 18px rgba(17,24,39,0.08);
       --shadow-strong: 0 12px 26px rgba(17,24,39,0.14);
-      --radius: 10px;
+      --radius: 12px;
+      --focus-ring: 0 0 0 4px rgba(11,102,195,0.18);
     }
 
     *{ margin:0; padding:0; box-sizing:border-box; }
-
     html{ scroll-behavior:smooth; }
-
     body{
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
       line-height: 1.65;
       color: var(--text);
       background: var(--bg);
     }
-
+    a{ color: inherit; }
     .container{
       max-width: 1180px;
       margin: 0 auto;
@@ -48,29 +47,26 @@
       border-bottom: 3px solid var(--primary);
       z-index: 1000;
     }
-
     nav ul{
       list-style:none;
       display:flex;
       justify-content:center;
-      gap: 1.6rem;
+      gap: 1.25rem;
       flex-wrap:wrap;
       max-width:1400px;
       margin:0 auto;
       padding:0 1.5rem;
     }
-
     nav a{
       color: var(--text);
       text-decoration:none;
-      font-weight:700;
-      font-size:0.95rem;
-      transition: all .25s ease;
+      font-weight:800;
+      font-size:0.92rem;
+      transition: all .2s ease;
       padding: .45rem 0;
       border-bottom: 2px solid transparent;
-      opacity: .92;
+      opacity: .9;
     }
-
     nav a:hover{ color: var(--primary); border-bottom-color: var(--primary); opacity:1; }
     nav a.active{ color: var(--primary); border-bottom-color: var(--primary); opacity:1; }
 
@@ -78,237 +74,203 @@
     .hero{
       background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
       color:#fff;
-      padding: 5.5rem 2rem 4.5rem;
+      padding: 5.2rem 2rem 4.2rem;
       text-align:center;
     }
-
-    .hero-top{
-      display:flex;
-      flex-direction:column;
-      align-items:center;
-      gap: 1.25rem;
-      margin-bottom: 1.25rem;
-    }
-
-    .hero-logo{
-      display:flex;
-      align-items:center;
-      justify-content:center;
-      gap: 1rem;
-      flex-wrap:wrap;
-      opacity:.98;
-    }
-
-    .logo-badge{
-      background: rgba(255,255,255,0.12);
-      border: 1px solid rgba(255,255,255,0.22);
-      padding: .65rem .9rem;
-      border-radius: 999px;
-      display:flex;
-      align-items:center;
-      gap:.65rem;
-    }
-
-    .logo-badge img{
-      width: 28px;
-      height: 28px;
-      object-fit: contain;
-      filter: drop-shadow(0 6px 10px rgba(0,0,0,0.15));
-    }
-
-    .logo-badge span{
-      font-size: .92rem;
-      color: #e9f3ff;
-      font-weight: 650;
-      letter-spacing: .2px;
-    }
-
     .hero h1{
       font-size: 3.1rem;
-      margin-bottom:.4rem;
-      font-weight: 850;
+      margin-bottom:.5rem;
+      font-weight: 900;
       letter-spacing: -1px;
     }
-
     .hero .subtitle{
-      font-size: 1.25rem;
-      margin-bottom: .8rem;
+      font-size: 1.18rem;
+      margin-bottom: 1rem;
       color: #e6f2ff;
-      font-weight: 450;
+      font-weight: 500;
     }
-
     .hero .tagline{
       font-size: 1.05rem;
-      margin: 0 auto 1.8rem;
+      margin: 0 auto 1.9rem;
       color: #d2e9ff;
-      max-width: 76ch;
-      line-height: 1.8;
+      max-width: 80ch;
+      line-height: 1.85;
+      font-weight: 520;
     }
-
-    .hero-focus{
-      max-width: 900px;
+    .hero-badges{
+      max-width: 980px;
       margin: 0 auto 2.2rem;
       display:grid;
       grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
       gap: 1rem;
+      text-align:left;
     }
-
-    .focus-pill{
+    .badge-card{
       background: rgba(255,255,255,0.12);
       border: 1px solid rgba(255,255,255,0.22);
       border-radius: var(--radius);
-      padding: 1rem 1.1rem;
-      text-align:left;
+      padding: 1rem 1.15rem;
     }
-
-    .focus-pill h3{
+    .badge-card h3{
       font-size: .98rem;
       margin-bottom:.35rem;
       color:#ffffff;
-      font-weight: 800;
+      font-weight: 900;
       letter-spacing:.2px;
     }
-
-    .focus-pill p{
+    .badge-card p{
       font-size: .92rem;
       color:#e6f2ff;
       line-height:1.65;
+      font-weight: 520;
     }
-
     .hero-buttons{
       display:flex;
       gap: 1rem;
       justify-content:center;
       flex-wrap:wrap;
     }
-
     .btn{
-      padding: .9rem 2rem;
+      padding: .92rem 2rem;
       border:none;
-      border-radius: 8px;
+      border-radius: 10px;
       cursor:pointer;
       font-size: 1rem;
       text-decoration:none;
-      transition: all .25s ease;
-      font-weight: 750;
+      transition: all .2s ease;
+      font-weight: 850;
       display:inline-flex;
       align-items:center;
       justify-content:center;
       gap:.55rem;
+      user-select:none;
     }
-
-    .btn-primary{
-      background:#fff;
-      color: var(--primary);
-    }
-    .btn-primary:hover{ transform: translateY(-3px); box-shadow: 0 12px 28px rgba(0,0,0,0.25); }
-
+    .btn:focus-visible{ outline: none; box-shadow: var(--focus-ring); }
+    .btn-primary{ background:#fff; color: var(--primary); }
+    .btn-primary:hover{ transform: translateY(-3px); box-shadow: 0 14px 30px rgba(0,0,0,0.25); }
     .btn-secondary{
       background: rgba(255,255,255,0.14);
       color:#fff;
-      border: 2px solid rgba(255,255,255,0.9);
+      border: 2px solid rgba(255,255,255,0.92);
     }
     .btn-secondary:hover{ background:#fff; color: var(--primary); }
 
     /* Sections */
     section{ padding: 4.8rem 2rem; background: var(--bg); }
     section.light-bg{ background: #fff; }
-
     section h2{
       font-size: 2.35rem;
-      margin-bottom: 2.4rem;
+      margin-bottom: 2.2rem;
       text-align:center;
       color: var(--primary);
-      font-weight: 900;
+      font-weight: 950;
       position:relative;
       padding-bottom: .9rem;
     }
-
     section h2::after{
       content:'';
       position:absolute;
       bottom:0;
       left:50%;
       transform: translateX(-50%);
-      width: 86px;
+      width: 92px;
       height: 3px;
       background: var(--primary);
       border-radius: 99px;
     }
-
     .section-subtitle{
       text-align:center;
       color: var(--muted);
-      margin: -1.2rem auto 2.6rem;
+      margin: -1.1rem auto 2.6rem;
       font-size: 1.02rem;
-      font-weight: 550;
-      max-width: 90ch;
+      font-weight: 650;
+      max-width: 95ch;
     }
 
-    /* Quick Stats */
-    .stats-grid{
+    /* Vision */
+    .vision-wrap{
       display:grid;
-      grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
-      gap: 1.2rem;
-      margin-bottom: .5rem;
+      grid-template-columns: 1.2fr .8fr;
+      gap: 1.4rem;
+      align-items: start;
     }
-
-    .stat-box{
-      background: var(--card);
-      padding: 1.8rem 1.6rem;
-      border-radius: var(--radius);
-      text-align:center;
-      box-shadow: var(--shadow);
-      border-top: 4px solid var(--primary);
-      transition: all .25s ease;
-      border-left: 1px solid var(--border);
-      border-right: 1px solid var(--border);
-      border-bottom: 1px solid var(--border);
-    }
-    .stat-box:hover{ transform: translateY(-5px); box-shadow: var(--shadow-strong); }
-
-    .stat-number{ font-size: 2.1rem; color: var(--primary); font-weight: 900; margin-bottom: .35rem; }
-    .stat-label{ color: var(--muted); font-size: .95rem; font-weight: 650; }
-
-    /* About */
-    .about-grid{
-      display:grid;
-      grid-template-columns: 1.15fr .85fr;
-      gap: 2.6rem;
-      align-items:start;
-    }
-
-    .about-card{
+    .card{
       background: var(--card);
       border: 1px solid var(--border);
       border-radius: var(--radius);
       box-shadow: var(--shadow);
       padding: 2.1rem;
     }
-
-    .about-card h3{
-      font-size: 1.55rem;
+    .card h3{
+      font-size: 1.25rem;
       color: var(--primary);
-      margin-bottom: .85rem;
-      font-weight: 850;
+      margin-bottom: .75rem;
+      font-weight: 950;
       letter-spacing: -.2px;
     }
-
-    .about-card p{
-      margin-bottom: 1.1rem;
-      color: #3d4a5a;
-      line-height: 1.85;
-      max-width: 72ch;
+    .card p{
+      color:#3d4a5a;
+      line-height: 1.9;
+      font-weight: 560;
+      margin-bottom: 1rem;
+      max-width: 95ch;
+    }
+    .pill-list{
+      list-style:none;
+      display:flex;
+      flex-wrap:wrap;
+      gap: .55rem;
+      margin-top: .65rem;
+    }
+    .pill{
+      background: #e6f2ff;
+      color: var(--primary);
+      padding: .38rem .85rem;
+      border-radius: 999px;
+      font-size: .86rem;
+      font-weight: 900;
+      border: 1px solid rgba(11,102,195,0.18);
+      white-space: nowrap;
     }
 
+    /* About */
+    .about-grid{
+      display:grid;
+      grid-template-columns: .9fr 1.1fr;
+      gap: 1.4rem;
+      align-items:start;
+    }
+    .profile{
+      display:flex;
+      flex-direction:column;
+      gap: 1rem;
+    }
+    .profile-figure{
+      border-radius: var(--radius);
+      overflow:hidden;
+      border: 1px solid var(--border);
+      box-shadow: var(--shadow);
+      background:#fff;
+    }
+    .profile-figure img{
+      width:100%;
+      height:auto;
+      display:block;
+    }
+    .profile-figure figcaption{
+      padding: .9rem 1rem;
+      color: var(--muted);
+      font-size: .92rem;
+      font-weight: 700;
+    }
     .highlights{
       list-style:none;
-      margin-top: 1.1rem;
+      margin-top: .9rem;
     }
     .highlights li{
-      padding: .55rem 0;
+      padding: .6rem 0;
       color: var(--text);
-      font-weight: 600;
+      font-weight: 650;
       display:flex;
       align-items:flex-start;
       gap: .75rem;
@@ -321,27 +283,29 @@
       font-size: 1.25rem;
       line-height: 1.2;
       margin-top: .05rem;
+      font-weight: 950;
     }
 
-    .mini-figure{
-      margin-top: 1.2rem;
+    /* Highlights / Stats */
+    .stats-grid{
+      display:grid;
+      grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+      gap: 1.2rem;
+      margin-bottom: .5rem;
+    }
+    .stat-box{
+      background: var(--card);
+      padding: 1.8rem 1.6rem;
       border-radius: var(--radius);
-      overflow:hidden;
-      border: 1px solid var(--border);
+      text-align:center;
       box-shadow: var(--shadow);
-      background:#fff;
+      border-top: 4px solid var(--primary);
+      transition: all .2s ease;
+      border: 1px solid var(--border);
     }
-    .mini-figure img{
-      width:100%;
-      height:auto;
-      display:block;
-    }
-    .mini-figure figcaption{
-      padding: .9rem 1rem;
-      color: var(--muted);
-      font-size: .92rem;
-      font-weight: 600;
-    }
+    .stat-box:hover{ transform: translateY(-5px); box-shadow: var(--shadow-strong); }
+    .stat-number{ font-size: 2.1rem; color: var(--primary); font-weight: 950; margin-bottom: .35rem; }
+    .stat-label{ color: var(--muted); font-size: .95rem; font-weight: 750; }
 
     /* Education */
     .education-item{
@@ -352,15 +316,37 @@
       border-left: 5px solid var(--primary);
       border: 1px solid var(--border);
       box-shadow: var(--shadow);
-      transition: all .25s ease;
+      transition: all .2s ease;
     }
     .education-item:hover{ transform: translateX(5px); box-shadow: var(--shadow-strong); }
-
-    .education-item h3{ color: var(--primary); margin-bottom:.25rem; font-size: 1.15rem; font-weight: 850; }
-    .education-item .institution{ color: var(--muted); font-size: .95rem; margin-bottom: .45rem; font-weight: 650; }
-    .education-item .details{ color: #7c8797; font-size: .92rem; }
+    .education-item h3{ color: var(--primary); margin-bottom:.25rem; font-size: 1.15rem; font-weight: 950; }
+    .education-item .institution{ color: var(--muted); font-size: .95rem; margin-bottom: .45rem; font-weight: 750; }
+    .education-item .details{ color: #7c8797; font-size: .92rem; font-weight: 650; }
 
     /* Experience */
+    .exp-head{
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap: 1rem;
+      flex-wrap:wrap;
+      margin-bottom: .35rem;
+    }
+    .company-badge{
+      display:flex;
+      align-items:center;
+      gap: .75rem;
+      flex-wrap:wrap;
+    }
+    .company-badge img{
+      width: 54px;
+      height: 54px;
+      object-fit: contain;
+      border-radius: 10px;
+      background:#fff;
+      border: 1px solid rgba(255,255,255,0.0);
+      filter: drop-shadow(0 10px 14px rgba(17,24,39,0.12));
+    }
     .experience-item{
       background: var(--card);
       padding: 2.2rem 2rem;
@@ -369,14 +355,12 @@
       border-left: 5px solid var(--primary);
       border: 1px solid var(--border);
       box-shadow: var(--shadow);
-      transition: all .25s ease;
+      transition: all .2s ease;
     }
     .experience-item:hover{ box-shadow: var(--shadow-strong); }
-
-    .experience-item h3{ color: var(--primary); font-size: 1.22rem; margin-bottom:.25rem; font-weight: 900; }
-    .experience-item .company{ color: var(--muted); font-size: .95rem; margin-bottom:.35rem; font-weight: 750; }
-    .experience-item .duration{ color: #7c8797; font-size: .92rem; margin-bottom: 1.2rem; }
-
+    .experience-item h3{ color: var(--primary); font-size: 1.22rem; margin-bottom:.25rem; font-weight: 950; }
+    .experience-item .company{ color: var(--muted); font-size: .95rem; margin-bottom:.35rem; font-weight: 800; }
+    .experience-item .duration{ color: #7c8797; font-size: .92rem; margin-bottom: 1.2rem; font-weight: 650; }
     .experience-item ul{ list-style:none; }
     .experience-item li{
       color:#3d4a5a;
@@ -384,15 +368,15 @@
       padding-left: 1.45rem;
       position:relative;
       line-height: 1.75;
-      font-weight: 550;
-      max-width: 95ch;
+      font-weight: 560;
+      max-width: 98ch;
     }
     .experience-item li:before{
       content:"→";
       position:absolute;
       left:0;
       color: var(--primary);
-      font-weight: 900;
+      font-weight: 950;
     }
 
     /* Research */
@@ -401,26 +385,16 @@
       grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
       gap: 1.7rem;
     }
-
     .research-card{
       background: var(--card);
       padding: 2.1rem;
       border-radius: var(--radius);
       box-shadow: var(--shadow);
-      border-top: 5px solid var(--primary);
       border: 1px solid var(--border);
-      transition: all .25s ease;
+      border-top: 5px solid var(--primary);
+      transition: all .2s ease;
     }
     .research-card:hover{ transform: translateY(-6px); box-shadow: var(--shadow-strong); }
-
-    .research-card h3{
-      color: var(--primary);
-      font-size: 1.08rem;
-      margin-bottom: .9rem;
-      font-weight: 900;
-      line-height: 1.45;
-    }
-
     .status{
       display:inline-block;
       background: #e6f2ff;
@@ -428,29 +402,35 @@
       padding: .35rem .9rem;
       border-radius: 999px;
       font-size: .85rem;
-      font-weight: 800;
+      font-weight: 950;
       margin-bottom: .9rem;
       border: 1px solid rgba(11,102,195,0.18);
     }
-
+    .research-card h3{
+      color: var(--primary);
+      font-size: 1.08rem;
+      margin-bottom: .9rem;
+      font-weight: 950;
+      line-height: 1.45;
+    }
     .abstract p{
       color:#3d4a5a;
       font-size: .95rem;
       line-height: 1.75;
       margin-bottom: 1.2rem;
-      max-width: 90ch;
+      font-weight: 560;
+      max-width: 92ch;
     }
-
     .keywords{
       background: #f6f8fb;
       padding: 1rem;
-      border-radius: 10px;
+      border-radius: 12px;
       margin-bottom: .9rem;
       border: 1px solid var(--border);
     }
     .keywords-label{
       color: var(--primary);
-      font-weight: 900;
+      font-weight: 950;
       font-size: .9rem;
       margin-bottom: .55rem;
       display:block;
@@ -464,29 +444,49 @@
       font-size: .84rem;
       margin-right: .45rem;
       margin-bottom: .45rem;
-      font-weight: 800;
+      font-weight: 950;
       border: 1px solid rgba(11,102,195,0.18);
     }
+    .doi{ color:#7c8797; font-size: .9rem; font-style: italic; font-weight: 650; }
 
-    .doi{ color:#7c8797; font-size: .9rem; font-style: italic; }
-
-    /* Projects */
+    /* Projects (Flip Cards) */
     .projects-grid{
       display:grid;
       grid-template-columns: repeat(auto-fit, minmax(330px, 1fr));
       gap: 1.7rem;
     }
 
-    .project-card{
+    .flip-card{
+      perspective: 1200px;
+    }
+    .flip-inner{
+      position: relative;
+      width: 100%;
+      min-height: 520px;
+      transform-style: preserve-3d;
+      transition: transform .55s ease;
+    }
+    .flip-card.flipped .flip-inner{
+      transform: rotateY(180deg);
+    }
+
+    .flip-face{
+      position: absolute;
+      inset: 0;
       background: var(--card);
       border-radius: var(--radius);
       overflow:hidden;
       box-shadow: var(--shadow);
-      border-top: 5px solid var(--primary);
       border: 1px solid var(--border);
-      transition: all .25s ease;
+      backface-visibility: hidden;
+      display:flex;
+      flex-direction:column;
     }
-    .project-card:hover{ transform: translateY(-6px); box-shadow: var(--shadow-strong); }
+    .flip-front{ border-top: 5px solid var(--primary); }
+    .flip-back{
+      transform: rotateY(180deg);
+      border-top: 5px solid var(--primary-dark);
+    }
 
     .project-header{
       background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
@@ -497,26 +497,33 @@
       justify-content:space-between;
       gap: 1rem;
     }
+    .project-header h3{
+      margin-bottom:.25rem;
+      font-size: 1.08rem;
+      font-weight: 950;
+      line-height:1.35;
+    }
+    .project-duration{ color:#d2e9ff; font-size: .9rem; font-weight: 700; }
 
-    .project-header h3{ margin-bottom:.25rem; font-size: 1.08rem; font-weight: 900; line-height:1.35; }
-    .project-duration{ color:#d2e9ff; font-size: .9rem; font-weight: 650; }
-
-    .project-body{ padding: 1.7rem 1.6rem; }
-
+    .project-body{
+      padding: 1.7rem 1.6rem 1.25rem;
+      flex: 1;
+      display:flex;
+      flex-direction:column;
+    }
     .project-body > p{
       color:#3d4a5a;
       margin-bottom: .95rem;
       line-height:1.75;
-      max-width: 90ch;
+      font-weight: 560;
+      max-width: 95ch;
     }
-
     .project-body h4{
       color: var(--primary);
       font-size: .98rem;
-      margin: 1.2rem 0 .7rem 0;
-      font-weight: 900;
+      margin: 1.05rem 0 .65rem 0;
+      font-weight: 950;
     }
-
     .project-body ul{ list-style:none; margin-bottom:.9rem; }
     .project-body li{
       color:#3d4a5a;
@@ -525,42 +532,21 @@
       position:relative;
       line-height:1.7;
       font-size:.95rem;
-      font-weight: 550;
+      font-weight: 560;
     }
     .project-body li:before{
       content:"•";
       position:absolute;
       left:0;
       color: var(--primary);
-      font-weight: 900;
+      font-weight: 950;
     }
-
-    .project-image{
-      margin-top: 1.05rem;
-      border-radius: 10px;
-      overflow:hidden;
-      border: 1px solid var(--border);
-      box-shadow: var(--shadow);
-      background:#fff;
-    }
-    .project-image img{
-      width:100%;
-      height:auto;
-      display:block;
-    }
-    .project-image figcaption{
-      padding: .85rem 1rem;
-      color: var(--muted);
-      font-size: .92rem;
-      font-weight: 650;
-    }
-
     .project-skills{
       display:flex;
       gap:.5rem;
       flex-wrap:wrap;
-      margin-top: 1.1rem;
-      padding-top: 1.1rem;
+      margin-top: auto;
+      padding-top: 1rem;
       border-top: 1px solid rgba(0,0,0,0.08);
     }
     .project-skill{
@@ -569,40 +555,108 @@
       padding: .35rem .85rem;
       border-radius: 999px;
       font-size: .84rem;
-      font-weight: 850;
+      font-weight: 950;
       border: 1px solid rgba(11,102,195,0.18);
     }
 
-    /* Skills */
-    .skills-grid{
+    .project-actions{
+      padding: 0 1.6rem 1.5rem;
+      display:flex;
+      gap: .75rem;
+      flex-wrap:wrap;
+    }
+    .btn-small{
+      padding: .78rem 1.2rem;
+      border-radius: 10px;
+      font-size: .95rem;
+      font-weight: 950;
+      border: 1px solid var(--border);
+      background:#fff;
+      color: var(--primary);
+      cursor:pointer;
+      transition: all .2s ease;
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      gap:.45rem;
+    }
+    .btn-small:hover{ transform: translateY(-2px); box-shadow: var(--shadow); }
+    .btn-small:focus-visible{ outline:none; box-shadow: var(--focus-ring); }
+    .btn-solid{
+      background: var(--primary);
+      color:#fff;
+      border: 1px solid rgba(255,255,255,0.0);
+    }
+    .btn-solid:hover{ background: var(--primary-dark); }
+
+    /* Back side image */
+    .project-media{
+      padding: 1.35rem 1.35rem 1.25rem;
+      display:flex;
+      flex-direction:column;
+      gap: .9rem;
+      flex: 1;
+    }
+    .media-frame{
+      border-radius: 12px;
+      overflow:hidden;
+      border: 1px solid var(--border);
+      box-shadow: var(--shadow);
+      background:#fff;
+    }
+    .media-frame img{
+      width:100%;
+      height:auto;
+      display:block;
+    }
+    .media-caption{
+      color: var(--muted);
+      font-weight: 750;
+      font-size: .92rem;
+      line-height: 1.6;
+    }
+
+    /* Work in Progress */
+    .wip-grid{
+      display:grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 1.4rem;
+    }
+    .wip-badge{
+      display:flex;
+      gap:.6rem;
+      flex-wrap:wrap;
+      margin-top:.4rem;
+    }
+
+    /* Competency Matrix */
+    .matrix-grid{
       display:grid;
       grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
       gap: 1.2rem;
     }
-
-    .skill-category{
+    .matrix-item{
       background: var(--card);
       padding: 1.8rem;
       border-radius: var(--radius);
       box-shadow: var(--shadow);
-      border-top: 4px solid var(--primary);
       border: 1px solid var(--border);
-      transition: all .25s ease;
+      border-top: 4px solid var(--primary);
+      transition: all .2s ease;
     }
-    .skill-category:hover{ transform: translateY(-4px); box-shadow: var(--shadow-strong); }
-
-    .skill-category h3{
+    .matrix-item:hover{ transform: translateY(-4px); box-shadow: var(--shadow-strong); }
+    .matrix-item h3{
       color: var(--primary);
-      margin-bottom: .8rem;
+      margin-bottom: .75rem;
       font-size: 1.05rem;
-      font-weight: 900;
+      font-weight: 950;
     }
-    .skill-category p{
+    .matrix-item p{
       color:#3d4a5a;
       line-height:1.85;
       font-size:.95rem;
-      max-width: 85ch;
-      font-weight: 550;
+      font-weight: 560;
+      max-width: 92ch;
     }
 
     /* Certifications */
@@ -618,32 +672,11 @@
       box-shadow: var(--shadow);
       border-left: 4px solid var(--primary);
       border: 1px solid var(--border);
-      transition: all .25s ease;
+      transition: all .2s ease;
     }
     .cert-item:hover{ transform: translateX(5px); box-shadow: var(--shadow-strong); }
-
-    .cert-item h4{ color: var(--primary); margin-bottom:.45rem; font-size: 1rem; font-weight: 900; }
-    .cert-item p{ color: var(--muted); font-size: .95rem; font-weight: 600; line-height:1.75; }
-
-    /* References */
-    .references-grid{
-      display:grid;
-      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-      gap: 1.2rem;
-    }
-    .reference-card{
-      background: var(--card);
-      padding: 1.9rem;
-      border-radius: var(--radius);
-      box-shadow: var(--shadow);
-      border-left: 5px solid var(--primary);
-      border: 1px solid var(--border);
-    }
-    .reference-card h4{ color: var(--primary); margin-bottom:.25rem; font-size: 1.03rem; font-weight: 900; }
-    .reference-card .position{ color: var(--muted); font-size: .9rem; margin-bottom: 1rem; font-weight: 750; }
-    .reference-card p{ color:#3d4a5a; font-size: .92rem; margin-bottom: .5rem; font-weight: 600; }
-    .reference-card a{ color: var(--primary); text-decoration:none; transition: color .25s; }
-    .reference-card a:hover{ color: var(--primary-dark); }
+    .cert-item h4{ color: var(--primary); margin-bottom:.45rem; font-size: 1rem; font-weight: 950; }
+    .cert-item p{ color: var(--muted); font-size: .95rem; font-weight: 650; line-height:1.75; }
 
     /* Contact */
     .contact{
@@ -653,30 +686,28 @@
     }
     .contact h2{ color:#fff; }
     .contact h2::after{ background:#fff; }
-
     .contact > .container > p{
       color:#d2e9ff;
       font-size: 1.03rem;
       margin-bottom: 2.1rem;
-      font-weight: 600;
-      max-width: 92ch;
+      font-weight: 650;
+      max-width: 95ch;
       margin-left:auto;
       margin-right:auto;
     }
-
     .contact-info{
       display:flex;
       justify-content:center;
-      gap: 2.6rem;
+      gap: 2.4rem;
       flex-wrap:wrap;
-      margin-top: 1.4rem;
+      margin-top: 1.2rem;
     }
-    .contact-item h4{ color:#fff; margin-bottom: .45rem; font-weight: 900; }
+    .contact-item h4{ color:#fff; margin-bottom: .45rem; font-weight: 950; }
     .contact-item a, .contact-item p{
       color:#d2e9ff;
       text-decoration:none;
-      transition: color .25s;
-      font-weight: 650;
+      transition: color .2s;
+      font-weight: 750;
     }
     .contact-item a:hover{ color:#fff; }
 
@@ -688,7 +719,7 @@
       padding: 2.2rem;
       font-size: .92rem;
     }
-    footer p{ margin-bottom:.35rem; font-weight: 600; }
+    footer p{ margin-bottom:.35rem; font-weight: 650; }
 
     /* Back to top */
     .to-top{
@@ -706,11 +737,11 @@
       display:flex;
       align-items:center;
       justify-content:center;
-      font-weight: 900;
+      font-weight: 950;
       opacity: 0;
       pointer-events: none;
       transform: translateY(10px);
-      transition: all .2s ease;
+      transition: all .18s ease;
       z-index: 1001;
     }
     .to-top.show{
@@ -720,15 +751,18 @@
     }
 
     /* Responsive */
-    @media (max-width: 900px){
+    @media (max-width: 980px){
+      .vision-wrap{ grid-template-columns: 1fr; }
       .about-grid{ grid-template-columns: 1fr; }
+      .flip-inner{ min-height: 540px; }
     }
     @media (max-width: 768px){
       .hero h1{ font-size: 2.25rem; }
-      .hero .subtitle{ font-size: 1.08rem; }
+      .hero .subtitle{ font-size: 1.05rem; }
       section h2{ font-size: 1.85rem; }
       nav ul{ gap: .9rem; }
       .stats-grid{ grid-template-columns: repeat(2, 1fr); }
+      .flip-inner{ min-height: 560px; }
     }
   </style>
 </head>
@@ -738,89 +772,94 @@
   <nav>
     <ul>
       <li><a href="#home" class="nav-link">Home</a></li>
-      <li><a href="#stats" class="nav-link">Highlights</a></li>
+      <li><a href="#vision" class="nav-link">Vision</a></li>
       <li><a href="#about" class="nav-link">About</a></li>
-      <li><a href="#education" class="nav-link">Education</a></li>
+      <li><a href="#highlights" class="nav-link">Highlights</a></li>
       <li><a href="#experience" class="nav-link">Experience</a></li>
-      <li><a href="#research" class="nav-link">Research</a></li>
       <li><a href="#projects" class="nav-link">Projects</a></li>
-      <li><a href="#skills" class="nav-link">Skills</a></li>
+      <li><a href="#research" class="nav-link">Research</a></li>
+      <li><a href="#wip" class="nav-link">Work in Progress</a></li>
+      <li><a href="#competency" class="nav-link">Competency Matrix</a></li>
       <li><a href="#certifications" class="nav-link">Certifications</a></li>
-      <li><a href="#references" class="nav-link">References</a></li>
       <li><a href="#contact" class="nav-link">Contact</a></li>
     </ul>
   </nav>
 
-  <!-- Hero Section -->
+  <!-- Hero -->
   <section class="hero" id="home">
     <div class="container">
-      <div class="hero-top">
-        <div class="hero-logo">
-          <!-- NOTE: Your file name includes a space; %20 handles it safely -->
-          <div class="logo-badge">
-            <img src="assets/images/Snowtex%20Logo.jfif" alt="Snowtex Group logo">
-            <span>Production Engineering • Continuous Improvement</span>
-          </div>
-        </div>
-
-        <div>
-          <h1>Kazi Fahim</h1>
-          <p class="subtitle">Industrial & Production Engineer | Lean 4.0 & Smart Manufacturing</p>
-        </div>
-      </div>
+      <h1>Kazi Fahim</h1>
+      <p class="subtitle">Industrial &amp; Manufacturing Engineer | Lean 4.0 • DVSM • IIoT • Decision Engineering</p>
 
       <p class="tagline">
-        I design and implement practical, data-informed manufacturing improvements—integrating Lean methodologies, IIoT-enabled visibility, ERP-connected workflows,
-        and machine learning–supported decision systems to enhance productivity, quality, and operational control in modern manufacturing environments.
+        I design and implement practical, data-informed manufacturing improvements—integrating Lean methodologies, IIoT-enabled visibility,
+        ERP-connected workflows, and machine learning–assisted decision systems to strengthen productivity, quality assurance, and operational control in modern manufacturing environments.
       </p>
 
-      <div class="hero-focus">
-        <div class="focus-pill">
-          <h3>Lean & Operational Excellence</h3>
-          <p>Line balancing, standard work, KPI systems, and waste elimination with measurable performance outcomes.</p>
+      <div class="hero-badges" aria-label="Core focus areas">
+        <div class="badge-card">
+          <h3>Lean 4.0 Execution</h3>
+          <p>Standard work, loss elimination, and performance governance built for repeatable results—not one-time fixes.</p>
         </div>
-        <div class="focus-pill">
-          <h3>Digital Manufacturing Systems</h3>
-          <p>ERP integration, real-time monitoring, traceability, and shop-floor data workflows for faster decisions.</p>
+        <div class="badge-card">
+          <h3>Digital Value Stream</h3>
+          <p>DVSM-ready workflows and data transparency to improve daily management, escalation speed, and decision quality.</p>
         </div>
-        <div class="focus-pill">
-          <h3>Industrial Systems Structuring</h3>
-          <p>Develop structured production frameworks that integrate workflow logic,
-            performance control, and resource alignment for scalable manufacturing execution.</p>
+        <div class="badge-card">
+          <h3>Decision Engineering</h3>
+          <p>Structured evaluation (MCDM, learning behavior, anomaly signals) to support reliable and predictive operational decisions.</p>
         </div>
       </div>
 
       <div class="hero-buttons">
         <a href="#projects" class="btn btn-primary">View Selected Work</a>
         <a href="#contact" class="btn btn-secondary">Contact</a>
-        <!-- Optional: if you add a CV PDF later, just replace the href -->
         <a href="#" class="btn btn-secondary" title="Add your CV PDF and link it here">Download CV</a>
       </div>
     </div>
   </section>
 
-  <!-- Quick Stats -->
-  <section class="light-bg" id="stats">
+  <!-- Vision -->
+  <section class="light-bg" id="vision">
     <div class="container">
-      <h2>Professional Highlights</h2>
-      <p class="section-subtitle">A snapshot of impact, research direction, and implementation experience</p>
+      <h2>Vision</h2>
+      <p class="section-subtitle">
+        A leadership direction focused on resource efficiency, digital transparency, and predictive decision-making—executed with rigorous industrial engineering methods.
+      </p>
 
-      <div class="stats-grid">
-        <div class="stat-box">
-          <div class="stat-number">2+</div>
-          <div class="stat-label">Years in Industry</div>
+      <div class="vision-wrap">
+        <div class="card">
+          <h3>What is my vision?</h3>
+          <p>
+            Transforming industrial systems to achieve higher efficiency using minimal resources—through digital transformation,
+            disciplined data governance, transparent operational control, and predictive decision-making enabled by cutting-edge Lean 4.0 practices.
+          </p>
+          <p>
+            My approach is built around engineering fundamentals: stable flow, constraint awareness, repeatable standards, and decisions validated by structured analysis.
+          </p>
+
+          <ul class="pill-list" aria-label="Vision pillars">
+            <li class="pill">DVSM</li>
+            <li class="pill">Digital Twin Readiness</li>
+            <li class="pill">IIoT Transparency</li>
+            <li class="pill">Data Accuracy &amp; Traceability</li>
+            <li class="pill">Machine Learning for Prediction</li>
+            <li class="pill">MCDM Decision Tools</li>
+            <li class="pill">Lean 4.0 Execution</li>
+          </ul>
         </div>
-        <div class="stat-box">
-          <div class="stat-number">2</div>
-          <div class="stat-label">Research Manuscripts</div>
-        </div>
-        <div class="stat-box">
-          <div class="stat-number">5</div>
-          <div class="stat-label">Industry Projects</div>
-        </div>
-        <div class="stat-box">
-          <div class="stat-number">+37.5%</div>
-          <div class="stat-label">OEE Improvement</div>
+
+        <div class="card">
+          <h3>How I lead transformation</h3>
+          <p>
+            I focus on building systems that sustain performance: workflow ownership, KPI integrity, and escalation logic—so improvements remain effective after deployment.
+          </p>
+          <ul class="highlights">
+            <li>Translate operational constraints into scalable control frameworks</li>
+            <li>Build visibility that drives actions, not only dashboards</li>
+            <li>Engineer standards that support fairness and stability in execution</li>
+            <li>Integrate digital workflows with shop-floor reality</li>
+          </ul>
         </div>
       </div>
     </div>
@@ -831,50 +870,70 @@
     <div class="container">
       <h2>About Me</h2>
       <p class="section-subtitle">
-        Industrial & Production Engineering practice grounded in Lean systems thinking, structured problem-solving, and scalable digital operations.
+        Industrial engineering practice grounded in systems thinking, structured problem-solving, and implementation discipline.
       </p>
 
       <div class="about-grid">
-        <div class="about-card">
-          <h3>Industrial & Production Engineer</h3>
-          <p>
-            I work as a Production Engineer at Snowtex Group, focusing on operational excellence, process design, and digital manufacturing enablement.
-            My role connects shop-floor realities with structured improvement frameworks—translating data and constraints into practical systems that improve performance.
-          </p>
-          <p>
-            I combine Lean tools (SIPOC, VSM, SOPs, KPI systems, line balancing) with implementation-focused analytics and simulation approaches to deliver outcomes that
-            improve reliability, throughput, and decision speed across manufacturing functions.
-          </p>
-          <p>
-            I am academically and professionally oriented toward advanced manufacturing systems and smart production engineering—where rigorous methods meet real-world deployment.
-          </p>
+        <!-- Profile / Image -->
+        <div class="profile">
+          <figure class="profile-figure">
+            <!-- Replace the src with your own photo filename, e.g., assets/images/fahim.jpg -->
+            <img src="assets/images/profile-placeholder.jpg" alt="Portrait of Kazi Fahim (add your photo file to replace placeholder)" loading="lazy">
+            <figcaption>Add your professional photo here (replace <strong>profile-placeholder.jpg</strong>).</figcaption>
+          </figure>
 
-          <ul class="highlights">
-            <li>Lean 4.0 implementation with measurable operational impact</li>
-            <li>ERP-integrated workflows and digital performance reporting</li>
-            <li>Optimize production workflows using heuristic-based methods such as RPW,
-              Kilbridge, and Critical Path Method (CPM) to enhance operational balance and execution efficiency.</li>
-            <li>Discrete-event simulation to validate improvement decisions</li>
-            <li>IIoT-enabled production visibility and downtime response</li>
-            <li>Cross-functional execution across multiple departments</li>
-          </ul>
+          <div class="card">
+            <h3>Professional identity</h3>
+            <p>
+              I work as a Production Engineer at Snowtex Group, focused on designing reliable manufacturing systems and executing measurable improvement programs.
+              My role bridges shop-floor constraints with structured engineering methods—turning data and operational realities into practical systems that sustain performance.
+            </p>
+          </div>
         </div>
 
-        <div class="about-card">
-          <h3>What I Deliver</h3>
-          <ul class="highlights">
-            <li><strong>Operational systems:</strong> Standard work, KPI governance, SOPs, and reporting discipline</li>
-            <li><strong>Process redesign:</strong> As-Is/To-Be mapping, constraint-based flow improvements, and control plans</li>
-            <li><strong>Digital enablement:</strong> ERP integration, shop-floor visibility, and traceability design</li>
-            <li><strong>Decision support:</strong> Simulation and optimization methods for robust planning</li>
-            <li><strong>Improvement leadership:</strong> Kaizen execution, alignment, and stakeholder coordination</li>
-          </ul>
+        <!-- About narrative -->
+        <div class="card">
+          <h3>Engineering approach</h3>
+          <p>
+            My work emphasizes operational stability: clear standards, balanced flow, disciplined control routines, and systems that support consistent execution.
+            I develop improvement plans that align people, process, and information—so performance gains are repeatable and scalable.
+          </p>
 
-          <!-- Your uploaded image used as a professional visual -->
-          <figure class="mini-figure">
-            <img src="assets/images/lot%20visual%20board.jpeg" alt="Shop-floor visual performance board" loading="lazy">
-            <figcaption>Example: visual performance reporting to strengthen daily management and faster corrective action.</figcaption>
-          </figure>
+          <ul class="highlights">
+            <li>Design ERP-integrated workflows that improve coordination and execution discipline</li>
+            <li>Engineer balanced production workflows using RPW and Kilbridge methods</li>
+            <li>Apply Critical Path Method (CPM) for structured scheduling and dependency control</li>
+            <li>Build OEE systems that drive reliability actions and accountable daily management</li>
+            <li>Enable IIoT-based visibility for faster loss recovery and improved response time</li>
+            <li>Develop decision-support logic using machine learning signals and structured evaluation tools</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Highlights / Stats -->
+  <section class="light-bg" id="highlights">
+    <div class="container">
+      <h2>Professional Highlights</h2>
+      <p class="section-subtitle">A snapshot of industrial execution, research direction, and measurable impact</p>
+
+      <div class="stats-grid">
+        <div class="stat-box">
+          <div class="stat-number">3</div>
+          <div class="stat-label">Years in Industry</div>
+        </div>
+        <div class="stat-box">
+          <div class="stat-number">2</div>
+          <div class="stat-label">Research Manuscripts</div>
+        </div>
+        <div class="stat-box">
+          <div class="stat-number">5</div>
+          <div class="stat-label">Key Industry Projects</div>
+        </div>
+        <div class="stat-box">
+          <div class="stat-number">+37.5%</div>
+          <div class="stat-label">OEE Improvement</div>
         </div>
       </div>
     </div>
@@ -886,9 +945,8 @@
       <h2>Education</h2>
 
       <div class="education-item">
-        <h3>🎓 B.Sc. in Industrial & Production Engineering</h3>
-        <p class="institution">University of Dhaka</p>
-        <p class="institution">National Institute of Textile Engineering & Research (NITER), Dhaka</p>
+        <h3>🎓 B.Sc. in Industrial &amp; Production Engineering</h3>
+        <p class="institution">National Institute of Textile Engineering &amp; Research (NITER), Dhaka</p>
         <p class="details"><strong>2018 – 2022</strong> | CGPA: 3.24/4.00</p>
       </div>
 
@@ -910,34 +968,431 @@
   <section class="light-bg" id="experience">
     <div class="container">
       <h2>Professional Experience</h2>
+      <p class="section-subtitle">Execution leadership across systems design, digital enablement, and operational control</p>
 
       <div class="experience-item">
-        <h3>Production Engineer</h3>
-        <p class="company">Snowtex Group, Dhaka</p>
+        <div class="exp-head">
+          <div>
+            <h3>Production Engineer</h3>
+            <p class="company">Snowtex Group, Dhaka</p>
+          </div>
+          <div class="company-badge" aria-label="Company identity">
+            <img src="assets/images/Snowtex%20Logo.jfif" alt="Snowtex Group logo">
+          </div>
+        </div>
+
         <p class="duration">December 2023 – Present</p>
         <ul>
-          <li>Lead the Snowtex Sustainable & Autonomy initiative—coordinating execution plans across 26 departments to align improvement actions with organizational objectives.</li>
-          <li>Conduct As-Is/To-Be process analyses using SIPOC, Value Stream Mapping (VSM), and Critical Path Method to identify bottlenecks and redesign high-impact workflows.</li>
-          <li>Design ERP-integrated process models for multiple departments to strengthen cross-functional coordination and enable consistent digital workflows.</li>
+          <li>Lead the Sustainable &amp; Autonomy initiative—coordinating execution plans across 26 departments to align improvement actions with organizational objectives.</li>
+          <li>Perform As-Is/To-Be analyses using SIPOC and Value Stream Mapping to redesign workflows with measurable operational impact.</li>
+          <li>Design ERP-integrated process models to strengthen cross-functional coordination and ensure consistent digital execution.</li>
           <li>Develop operational dashboards for OEE, production efficiency, and machine utilization to support daily management and leadership review.</li>
-          <li>Apply line balancing methods including RPW, Kilbridge, and CPM-based analysis to improve labor productivity and reduce workload variation.</li>
-          <li>Establish SOPs and KPI-based reporting systems to improve data accuracy, traceability, and decision turnaround time.</li>
+          <li>Balance production workflows using RPW and Kilbridge approaches to reduce workload variation and improve throughput stability.</li>
+          <li>Establish SOPs and KPI governance to improve data accuracy, traceability, and decision turnaround time.</li>
         </ul>
       </div>
 
       <div class="experience-item">
-        <h3>Management Trainee Officer (MTO)</h3>
-        <p class="company">Snowtex Group, Dhaka</p>
+        <div class="exp-head">
+          <div>
+            <h3>Management Trainee Officer (MTO)</h3>
+            <p class="company">Snowtex Group, Dhaka</p>
+          </div>
+          <div class="company-badge" aria-label="Company identity">
+            <img src="assets/images/Snowtex%20Logo.jfif" alt="Snowtex Group logo">
+          </div>
+        </div>
+
         <p class="duration">April 2023 – November 2023</p>
         <ul>
-          <li>Designed optimized sewing line layouts across garment styles and performed time & motion studies to support standardization and balanced flow.</li>
-          <li>Introduced ERP-linked real-time production monitoring boards to improve visibility and enable faster operational responses.</li>
-          <li>Applied Lean Six Sigma, Kaizen, and 5S practices to reduce waste and stabilize performance through structured improvement routines.</li>
+          <li>Designed optimized sewing line layouts and conducted time &amp; motion studies to support standardization and stable flow.</li>
+          <li>Introduced ERP-linked real-time monitoring boards to improve visibility and enable faster operational responses.</li>
+          <li>Executed Lean routines (Kaizen, 5S) to reduce losses and stabilize performance through structured improvement cycles.</li>
           <li>Collaborated with international process engineering teams to support capability upgrades and strengthen quality consistency.</li>
-          <li>Performed risk assessments and process capability studies, developing mitigation actions to improve production reliability.</li>
-          <li>Supported pre-production planning through ERP-based skill matrix development and intelligent machine allocation principles.</li>
-          <li>Improved Quick Changeover (QCO) performance via cross-functional coordination and standardized setup practices.</li>
+          <li>Performed risk and capability analyses, developing mitigation actions to improve production reliability.</li>
+          <li>Supported pre-production planning using ERP-based skill matrix logic and machine allocation principles.</li>
+          <li>Improved Quick Changeover performance through coordination and standardized setup practices.</li>
         </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- Projects -->
+  <section class="light-bg" id="projects">
+    <div class="container">
+      <h2>Industry Projects &amp; Achievements</h2>
+      <p class="section-subtitle">
+        Selected initiatives demonstrating systems thinking, digital integration, and measurable operational improvement.
+      </p>
+
+      <div class="projects-grid">
+        <!-- Project 1 -->
+        <div class="flip-card" id="proj1">
+          <div class="flip-inner">
+            <!-- FRONT -->
+            <article class="flip-face flip-front" aria-label="Project summary: Automatic Layout Design">
+              <div class="project-header">
+                <div>
+                  <h3>🤖 Automated Layout &amp; Work Allocation</h3>
+                  <p class="project-duration">Aug 2024 – Present | Snowtex Group</p>
+                </div>
+              </div>
+
+              <div class="project-body">
+                <p><strong>Objective:</strong> Build a repeatable layout and work allocation workflow to improve balancing accuracy and reduce design cycle time.</p>
+
+                <h4>Engineering Method</h4>
+                <ul>
+                  <li>Precedence-driven task assignment using Ranked Positional Weight (RPW)</li>
+                  <li>Workload balancing strengthened with Kilbridge sequencing logic</li>
+                  <li>Constraint-aware outputs aligned with shop-floor feasibility</li>
+                </ul>
+
+                <h4>Operational Value</h4>
+                <ul>
+                  <li>Improved consistency and speed of layout decisions</li>
+                  <li>Reduced idle time through better workload distribution</li>
+                </ul>
+
+                <div class="project-skills" aria-label="Project skills">
+                  <span class="project-skill">Python</span>
+                  <span class="project-skill">RPW</span>
+                  <span class="project-skill">Kilbridge</span>
+                  <span class="project-skill">Precedence Logic</span>
+                </div>
+              </div>
+
+              <div class="project-actions">
+                <button class="btn-small btn-solid" data-flip-target="proj1" type="button">View Details</button>
+              </div>
+            </article>
+
+            <!-- BACK -->
+            <article class="flip-face flip-back" aria-label="Project details: Automatic Layout Design">
+              <div class="project-header">
+                <div>
+                  <h3>🤖 Automated Layout &amp; Work Allocation</h3>
+                  <p class="project-duration">Details view</p>
+                </div>
+              </div>
+
+              <div class="project-media">
+                <div class="media-frame">
+                  <!-- If you later add a specific image for this project, replace the src below -->
+                  <img src="assets/images/IOT.jpeg" alt="Placeholder image (replace with layout design workflow image if available)" loading="lazy">
+                </div>
+                <p class="media-caption">
+                  Replace this image with a workflow screenshot (layout sheet, precedence chart, or algorithm output) when available.
+                </p>
+
+                <div class="project-skills" aria-label="Project skills">
+                  <span class="project-skill">Work Allocation</span>
+                  <span class="project-skill">Standard Data</span>
+                  <span class="project-skill">Line Design</span>
+                </div>
+              </div>
+
+              <div class="project-actions">
+                <button class="btn-small" data-flip-target="proj1" type="button">Back</button>
+              </div>
+            </article>
+          </div>
+        </div>
+
+        <!-- Project 2 (IIoT + Visual Board image on back) -->
+        <div class="flip-card" id="proj2">
+          <div class="flip-inner">
+            <!-- FRONT -->
+            <article class="flip-face flip-front" aria-label="Project summary: IIoT-Driven Optimization">
+              <div class="project-header">
+                <div>
+                  <h3>🌐 IIoT-Enabled Visibility &amp; Control</h3>
+                  <p class="project-duration">Mar 2024 – Jun 2025 | Snowtex Group</p>
+                </div>
+              </div>
+
+              <div class="project-body">
+                <p><strong>Objective:</strong> Establish real-time shop-floor visibility to accelerate response, reduce downtime losses, and strengthen daily operational control.</p>
+
+                <h4>System Design</h4>
+                <ul>
+                  <li>Workstation-level piece tracking to identify constraints and response priorities</li>
+                  <li>Machine utilization and downtime monitoring to improve recovery discipline</li>
+                  <li>Quality-event traceability linked to operators and machines</li>
+                </ul>
+
+                <h4>Impact</h4>
+                <ul>
+                  <li>Achieved a 7% efficiency improvement through faster downtime recovery and stronger daily control</li>
+                  <li>Enabled ERP-connected visibility for better planning alignment and escalation speed</li>
+                </ul>
+
+                <div class="project-skills">
+                  <span class="project-skill">IIoT</span>
+                  <span class="project-skill">Visibility Systems</span>
+                  <span class="project-skill">Traceability</span>
+                  <span class="project-skill">Operations Control</span>
+                </div>
+              </div>
+
+              <div class="project-actions">
+                <button class="btn-small btn-solid" data-flip-target="proj2" type="button">View Details</button>
+              </div>
+            </article>
+
+            <!-- BACK -->
+            <article class="flip-face flip-back" aria-label="Project details: IIoT-Driven Optimization">
+              <div class="project-header">
+                <div>
+                  <h3>🌐 IIoT-Enabled Visibility &amp; Control</h3>
+                  <p class="project-duration">Details view</p>
+                </div>
+              </div>
+
+              <div class="project-media">
+                <div class="media-frame">
+                  <img src="assets/images/Iot%20visual%20board.jpeg" alt="Visual performance board supporting daily management and faster corrective action" loading="lazy">
+                </div>
+                <p class="media-caption">
+                  High-visibility performance reporting designed to shorten response time and strengthen daily management discipline.
+                </p>
+
+                <div class="media-frame">
+                  <img src="assets/images/IOT.jpeg" alt="IIoT-enabled monitoring view supporting production visibility" loading="lazy">
+                </div>
+                <p class="media-caption">
+                  IIoT-enabled monitoring supporting faster escalation, loss recovery, and controlled execution.
+                </p>
+
+                <div class="project-actions" style="padding:0;">
+                  <div class="project-skills">
+                    <span class="project-skill">IIoT</span>
+                    <span class="project-skill">Daily Management</span>
+                    <span class="project-skill">Data Transparency</span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="project-actions">
+                <button class="btn-small" data-flip-target="proj2" type="button">Back</button>
+              </div>
+            </article>
+          </div>
+        </div>
+
+        <!-- Project 3 -->
+        <div class="flip-card" id="proj3">
+          <div class="flip-inner">
+            <!-- FRONT -->
+            <article class="flip-face flip-front" aria-label="Project summary: Digital Store Management with QR Traceability">
+              <div class="project-header">
+                <div>
+                  <h3>📊 Digital Store Management &amp; QR Traceability</h3>
+                  <p class="project-duration">Ongoing | Snowtex Group</p>
+                </div>
+              </div>
+
+              <div class="project-body">
+                <p><strong>Objective:</strong> Improve inventory accuracy and material traceability through QR-enabled digital store workflows.</p>
+
+                <h4>Implementation</h4>
+                <ul>
+                  <li>QR identification and movement history for controlled material handling</li>
+                  <li>Standardized GRN and status logic to reduce processing delays</li>
+                  <li>Digitized bin discipline supporting real-time reconciliation</li>
+                </ul>
+
+                <h4>Outcome</h4>
+                <ul>
+                  <li>Reduced inventory errors and strengthened traceability for downstream planning</li>
+                </ul>
+
+                <div class="project-skills">
+                  <span class="project-skill">Traceability</span>
+                  <span class="project-skill">Inventory Control</span>
+                  <span class="project-skill">Workflow Standardization</span>
+                </div>
+              </div>
+
+              <div class="project-actions">
+                <button class="btn-small btn-solid" data-flip-target="proj3" type="button">View Details</button>
+              </div>
+            </article>
+
+            <!-- BACK -->
+            <article class="flip-face flip-back" aria-label="Project details: Digital Store Management">
+              <div class="project-header">
+                <div>
+                  <h3>📊 Digital Store Management &amp; QR Traceability</h3>
+                  <p class="project-duration">Details view</p>
+                </div>
+              </div>
+
+              <div class="project-media">
+                <div class="media-frame">
+                  <!-- Add your QR / store workflow image later -->
+                  <img src="assets/images/IOT.jpeg" alt="Placeholder image (replace with QR traceability or store workflow screenshot)" loading="lazy">
+                </div>
+                <p class="media-caption">
+                  Replace with a store dashboard / QR workflow screenshot when available.
+                </p>
+
+                <div class="project-skills">
+                  <span class="project-skill">Material Control</span>
+                  <span class="project-skill">Data Integrity</span>
+                  <span class="project-skill">Auditability</span>
+                </div>
+              </div>
+
+              <div class="project-actions">
+                <button class="btn-small" data-flip-target="proj3" type="button">Back</button>
+              </div>
+            </article>
+          </div>
+        </div>
+
+        <!-- Project 4 -->
+        <div class="flip-card" id="proj4">
+          <div class="flip-inner">
+            <!-- FRONT -->
+            <article class="flip-face flip-front" aria-label="Project summary: OEE Implementation for Cutting Operations">
+              <div class="project-header">
+                <div>
+                  <h3>📈 OEE System for Cutting Operations</h3>
+                  <p class="project-duration">Ongoing | Snowtex Group</p>
+                </div>
+              </div>
+
+              <div class="project-body">
+                <p><strong>Objective:</strong> Establish OEE measurement and reporting to improve equipment effectiveness, accountability, and reliability action.</p>
+
+                <h4>Method</h4>
+                <ul>
+                  <li>Defined Availability, Performance, and Quality rules aligned with operational reality</li>
+                  <li>Built daily reporting routines and escalation visibility for corrective action</li>
+                  <li>Structured downtime categorization to identify reliability priorities</li>
+                </ul>
+
+                <h4>Result</h4>
+                <ul>
+                  <li>Raised OEE from 40% to 55% (relative improvement: +37.5%)</li>
+                </ul>
+
+                <div class="project-skills">
+                  <span class="project-skill">OEE</span>
+                  <span class="project-skill">Loss Analysis</span>
+                  <span class="project-skill">Reliability Governance</span>
+                </div>
+              </div>
+
+              <div class="project-actions">
+                <button class="btn-small btn-solid" data-flip-target="proj4" type="button">View Details</button>
+              </div>
+            </article>
+
+            <!-- BACK -->
+            <article class="flip-face flip-back" aria-label="Project details: OEE Implementation">
+              <div class="project-header">
+                <div>
+                  <h3>📈 OEE System for Cutting Operations</h3>
+                  <p class="project-duration">Details view</p>
+                </div>
+              </div>
+
+              <div class="project-media">
+                <div class="media-frame">
+                  <!-- Add your OEE sheet/dashboard image later -->
+                  <img src="assets/images/IOT.jpeg" alt="Placeholder image (replace with OEE dashboard or report screenshot)" loading="lazy">
+                </div>
+                <p class="media-caption">
+                  Replace with OEE dashboard/report screenshot for cutting operations when available.
+                </p>
+
+                <div class="project-skills">
+                  <span class="project-skill">Performance Management</span>
+                  <span class="project-skill">Downtime Discipline</span>
+                  <span class="project-skill">Action Closure</span>
+                </div>
+              </div>
+
+              <div class="project-actions">
+                <button class="btn-small" data-flip-target="proj4" type="button">Back</button>
+              </div>
+            </article>
+          </div>
+        </div>
+
+        <!-- Project 5 -->
+        <div class="flip-card" id="proj5">
+          <div class="flip-inner">
+            <!-- FRONT -->
+            <article class="flip-face flip-front" aria-label="Project summary: Sample Section Optimization with T&A Planning">
+              <div class="project-header">
+                <div>
+                  <h3>⏱️ Time &amp; Action Planning for Sample Execution</h3>
+                  <p class="project-duration">Ongoing | Snowtex Group</p>
+                </div>
+              </div>
+
+              <div class="project-body">
+                <p><strong>Objective:</strong> Improve execution speed and coordination using structured T&amp;A planning integrated with milestone visibility.</p>
+
+                <h4>Implementation</h4>
+                <ul>
+                  <li>Designed a T&amp;A calendar aligning milestones across stakeholders</li>
+                  <li>Applied CPM logic to highlight schedule risks and dependency priorities</li>
+                  <li>Planned ERP-aligned milestone tracking to reduce delays and ambiguity</li>
+                </ul>
+
+                <h4>Outcome</h4>
+                <ul>
+                  <li>Improved coordination and strengthened milestone ownership</li>
+                </ul>
+
+                <div class="project-skills">
+                  <span class="project-skill">T&amp;A Planning</span>
+                  <span class="project-skill">CPM</span>
+                  <span class="project-skill">Execution Governance</span>
+                </div>
+              </div>
+
+              <div class="project-actions">
+                <button class="btn-small btn-solid" data-flip-target="proj5" type="button">View Details</button>
+              </div>
+            </article>
+
+            <!-- BACK -->
+            <article class="flip-face flip-back" aria-label="Project details: T&A Planning">
+              <div class="project-header">
+                <div>
+                  <h3>⏱️ Time &amp; Action Planning for Sample Execution</h3>
+                  <p class="project-duration">Details view</p>
+                </div>
+              </div>
+
+              <div class="project-media">
+                <div class="media-frame">
+                  <!-- Add a T&A calendar screenshot later -->
+                  <img src="assets/images/IOT.jpeg" alt="Placeholder image (replace with T&A calendar or milestone dashboard screenshot)" loading="lazy">
+                </div>
+                <p class="media-caption">
+                  Replace with a T&amp;A calendar / milestone dashboard snapshot when available.
+                </p>
+
+                <div class="project-skills">
+                  <span class="project-skill">Dependency Control</span>
+                  <span class="project-skill">Schedule Risk</span>
+                  <span class="project-skill">Delivery Discipline</span>
+                </div>
+              </div>
+
+              <div class="project-actions">
+                <button class="btn-small" data-flip-target="proj5" type="button">Back</button>
+              </div>
+            </article>
+          </div>
+        </div>
+
       </div>
     </div>
   </section>
@@ -945,19 +1400,19 @@
   <!-- Research -->
   <section id="research">
     <div class="container">
-      <h2>Research & Publications</h2>
+      <h2>Research &amp; Publications</h2>
       <p class="section-subtitle">
-        Research focused on Lean 4.0, IIoT-enabled manufacturing visibility, operator learning behavior, and optimization methods for balanced and equitable production systems.
+        Research emphasizing Lean 4.0, IIoT-enabled visibility, learning behavior, anomaly signals, and structured decision frameworks for stable and fair production systems.
       </p>
 
       <div class="research-grid">
         <div class="research-card">
           <span class="status">Under Review</span>
-          <h3>An IoT-Enabled Lean 4.0 Framework for Learning-Based Process Difficulty Standardization and Difficulty-Adjusted Operator Skill Evaluation in Garment Sewing Lines</h3>
+          <h3>IoT-Enabled Lean 4.0 Framework for Learning-Based Process Difficulty Standardization and Difficulty-Adjusted Operator Skill Evaluation in Sewing Lines</h3>
           <div class="abstract">
             <p>
-              <strong>Summary:</strong> Proposes a Lean 4.0 framework integrating IIoT data with learning-curve modeling and robust anomaly detection to build objective performance standards.
-              A hybrid MCDM model (CRITIC, Entropy, TOPSIS, VIKOR) generates a Process Difficulty Index to support fair evaluation and the “right operator to right workstation” strategy.
+              <strong>Contribution:</strong> Proposes a Lean 4.0 framework integrating IIoT data with learning-curve modeling and robust anomaly detection to establish objective performance standards.
+              A hybrid MCDM model (CRITIC, Entropy, TOPSIS, VIKOR) generates a Process Difficulty Index to support fair evaluation and improved task-to-skill assignment.
             </p>
           </div>
           <div class="keywords">
@@ -973,19 +1428,19 @@
 
         <div class="research-card">
           <span class="status">Under Review</span>
-          <h3>Optimizing Garment Assembly Line Efficiency Using Ranked Positional Weight and Evolutionary Algorithms: A Comparative Analysis</h3>
+          <h3>Optimizing Assembly Line Efficiency Using RPW and Evolutionary Algorithms: A Comparative Analysis with Validation</h3>
           <div class="abstract">
             <p>
-              <strong>Summary:</strong> Develops an integrated line balancing approach using RPW with evolutionary algorithms and discrete-event simulation validation.
-              Comparative results demonstrate improved workstation allocation and line efficiency while maintaining precedence feasibility for industrial conditions.
+              <strong>Contribution:</strong> Develops an integrated balancing approach using RPW with evolutionary optimization and validation through discrete-event modeling.
+              Results demonstrate improved workstation allocation and line efficiency while maintaining precedence feasibility under industrial constraints.
             </p>
           </div>
           <div class="keywords">
             <span class="keywords-label">Keywords</span>
-            <span class="keyword">Line Balancing</span>
             <span class="keyword">RPW</span>
             <span class="keyword">Evolutionary Algorithms</span>
-            <span class="keyword">Simulation</span>
+            <span class="keyword">Line Efficiency</span>
+            <span class="keyword">Validation</span>
             <span class="keyword">Optimization</span>
           </div>
           <p class="doi">Status: Manuscript under review (publication details to be added upon acceptance).</p>
@@ -994,237 +1449,84 @@
     </div>
   </section>
 
-  <!-- Projects -->
-  <section class="light-bg" id="projects">
+  <!-- Work in Progress -->
+  <section class="light-bg" id="wip">
     <div class="container">
-      <h2>Industry Projects & Achievements</h2>
+      <h2>Work in Progress</h2>
       <p class="section-subtitle">
-        Selected initiatives demonstrating process engineering depth, digital integration, and measurable operational improvement.
+        Current engineering development focused on predictive capability and decision reliability.
       </p>
 
-      <div class="projects-grid">
-        <!-- Project 1 -->
-        <div class="project-card">
-          <div class="project-header">
-            <div>
-              <h3>🤖 Automatic Garment Layout Design</h3>
-              <p class="project-duration">Aug 2024 – Present | Snowtex Group</p>
-            </div>
-          </div>
-          <div class="project-body">
-            <p><strong>Objective:</strong> Build an automated, repeatable layout design workflow to improve line balancing accuracy and reduce design cycle time.</p>
-
-            <h4>Approach</h4>
-            <ul>
-              <li>Developed a Python-based algorithm implementing Ranked Positional Weight (RPW) for precedence-driven task assignment.</li>
-              <li>Integrated the Kilbridge method to strengthen workload balancing under bottleneck processing time constraints.</li>
-              <li>Automated layout documentation outputs aligned with real production constraints and precedence logic.</li>
-            </ul>
-
-            <h4>Impact</h4>
-            <ul>
-              <li>Improved consistency and speed of layout design through automated calculations.</li>
-              <li>Reduced idle time and workload variance by improving balance decisions.</li>
-              <li>Established a scalable workflow applicable across garment styles and operation sets.</li>
-            </ul>
-
-            <div class="project-skills">
-              <span class="project-skill">Python</span>
-              <span class="project-skill">RPW</span>
-              <span class="project-skill">Line Balancing</span>
-              <span class="project-skill">Automation</span>
-            </div>
+      <div class="wip-grid">
+        <div class="card">
+          <h3>Machine Learning for Cutting Speed Prediction</h3>
+          <p>
+            <strong>Status:</strong> In Development
+          </p>
+          <p>
+            <strong>Purpose:</strong> Build predictive decision support for cutting operations by modeling speed-performance relationships, variability drivers, and controllable factors.
+          </p>
+          <p style="color: var(--muted); font-weight: 700;">
+            Description will be added (you will provide the detailed technical statement).
+          </p>
+          <div class="wip-badge" aria-label="Work-in-progress tags">
+            <span class="pill">Machine Learning</span>
+            <span class="pill">Predictive Control</span>
+            <span class="pill">Process Signals</span>
+            <span class="pill">Decision Support</span>
           </div>
         </div>
 
-        <!-- Project 2 -->
-        <div class="project-card">
-          <div class="project-header">
-            <div>
-              <h3>🌐 Smart Manufacturing: IIoT-Driven Optimization</h3>
-              <p class="project-duration">Mar 2024 – Jun 2025 | Snowtex Group</p>
-            </div>
-          </div>
-          <div class="project-body">
-            <p><strong>Objective:</strong> Establish real-time shop-floor visibility to accelerate response, reduce downtime losses, and support data-informed decisions.</p>
-
-            <h4>Data Capture & System Design</h4>
-            <ul>
-              <li>Real-time piece tracking by workstation to identify flow constraints and response priorities.</li>
-              <li>Machine utilization and downtime monitoring to improve recovery routines and reliability actions.</li>
-              <li>Operator activity and performance visibility supporting targeted coaching and balancing.</li>
-              <li>Quality events linked to operators and machines to strengthen traceability and preventive action.</li>
-            </ul>
-
-            <h4>Impact</h4>
-            <ul>
-              <li>Delivered a 7% efficiency improvement through faster downtime recovery and stronger daily control.</li>
-              <li>Enabled ERP-connected visibility for better planning alignment and faster escalation.</li>
-              <li>Strengthened preventive maintenance capability using recurring pattern signals.</li>
-            </ul>
-
-            <figure class="project-image">
-              <img src="assets/images/IOT.jpeg" alt="IIoT-enabled production visibility" loading="lazy">
-              <figcaption>IIoT-enabled monitoring supporting faster response and production control.</figcaption>
-            </figure>
-
-            <div class="project-skills">
-              <span class="project-skill">IIoT</span>
-              <span class="project-skill">Industry 4.0</span>
-              <span class="project-skill">ERP Integration</span>
-              <span class="project-skill">Operations Control</span>
-            </div>
-          </div>
+        <div class="card">
+          <h3>DVSM &amp; Digital Twin Readiness</h3>
+          <p>
+            Establishing the foundations for DVSM and digital twin readiness by defining data validity rules, event definitions, and standardized workflows that support accurate virtual validation.
+          </p>
+          <ul class="highlights">
+            <li>Define event taxonomy for flow, losses, and rework</li>
+            <li>Ensure data integrity for reliable decision models</li>
+            <li>Connect operational governance with digital visibility</li>
+          </ul>
         </div>
-
-        <!-- Project 3 -->
-        <div class="project-card">
-          <div class="project-header">
-            <div>
-              <h3>📊 Digital Store Management with QR Traceability</h3>
-              <p class="project-duration">Ongoing | Snowtex Group</p>
-            </div>
-          </div>
-          <div class="project-body">
-            <p><strong>Objective:</strong> Improve inventory accuracy and material traceability through QR-enabled digital store workflows.</p>
-
-            <h4>System Features</h4>
-            <ul>
-              <li>QR code generation and tracking for fabric roll identification and movement history.</li>
-              <li>Improved GRN handling with clear status indicators to reduce processing delays.</li>
-              <li>Digitized bin card discipline supporting real-time inventory reconciliation.</li>
-              <li>Mobile-friendly updates to reduce manual handoffs and improve responsiveness.</li>
-            </ul>
-
-            <h4>Outcomes</h4>
-            <ul>
-              <li>Reduced inventory errors and improved traceability across store operations.</li>
-              <li>Strengthened material control supporting downstream planning and quality assurance.</li>
-              <li>Improved operational speed through better visibility and standardized handling.</li>
-            </ul>
-
-            <div class="project-skills">
-              <span class="project-skill">QR Traceability</span>
-              <span class="project-skill">Inventory Control</span>
-              <span class="project-skill">Digital Workflow</span>
-            </div>
-          </div>
-        </div>
-
-        <!-- Project 4 -->
-        <div class="project-card">
-          <div class="project-header">
-            <div>
-              <h3>📈 OEE Implementation for Cutting Operations</h3>
-              <p class="project-duration">Ongoing | Snowtex Group</p>
-            </div>
-          </div>
-          <div class="project-body">
-            <p><strong>Objective:</strong> Establish a structured OEE measurement and reporting system to improve equipment effectiveness and reliability.</p>
-
-            <h4>Method</h4>
-            <ul>
-              <li>Defined Availability, Performance, and Quality measurement rules aligned with operational realities.</li>
-              <li>Built daily reporting routines and escalation visibility to support corrective actions.</li>
-              <li>Used downtime categorization to identify reliability priorities and maintenance insights.</li>
-            </ul>
-
-            <h4>Result</h4>
-            <ul>
-              <li>Raised cutting section OEE from 40% to 55% (relative improvement: +37.5%).</li>
-              <li>Improved accountability and reliability decision-making through consistent performance visibility.</li>
-            </ul>
-
-            <div class="project-skills">
-              <span class="project-skill">OEE</span>
-              <span class="project-skill">KPI Systems</span>
-              <span class="project-skill">Reliability</span>
-            </div>
-          </div>
-        </div>
-
-        <!-- Project 5 -->
-        <div class="project-card">
-          <div class="project-header">
-            <div>
-              <h3>⏱️ Sample Section Optimization with T&amp;A Planning</h3>
-              <p class="project-duration">Ongoing | Snowtex Group</p>
-            </div>
-          </div>
-          <div class="project-body">
-            <p><strong>Objective:</strong> Improve sample development speed and coordination using structured Time &amp; Action planning integrated with execution visibility.</p>
-
-            <h4>Implementation</h4>
-            <ul>
-              <li>Designed a T&amp;A calendar to align milestones across product development stakeholders.</li>
-              <li>Applied critical path logic to highlight schedule risks and priority dependencies.</li>
-              <li>Planned ERP-aligned milestone tracking to improve visibility and reduce delays.</li>
-              <li>Introduced risk mitigation actions supporting on-time delivery consistency.</li>
-            </ul>
-
-            <h4>Outcomes</h4>
-            <ul>
-              <li>Improved coordination and reduced uncertainty in sample execution timelines.</li>
-              <li>Strengthened execution discipline through clearer milestone ownership.</li>
-            </ul>
-
-            <div class="project-skills">
-              <span class="project-skill">T&amp;A Planning</span>
-              <span class="project-skill">Critical Path</span>
-              <span class="project-skill">ERP Alignment</span>
-            </div>
-          </div>
-        </div>
-
       </div>
     </div>
   </section>
 
-  <!-- Skills -->
-  <section id="skills">
+  <!-- Competency Matrix -->
+  <section id="competency">
     <div class="container">
-      <h2>Core Competencies & Technical Skills</h2>
-      <p class="section-subtitle">A practical skill set built for industrial execution, digital manufacturing enablement, and continuous improvement leadership</p>
+      <h2>Competency Matrix</h2>
+      <p class="section-subtitle">
+        A structured capability set with clear separation of methods, systems, and decision tools—without overlapping concepts.
+      </p>
 
-      <div class="skills-grid">
-        <div class="skill-category">
-          <h3>🏭 Operations & Process Engineering</h3>
-          <p>Production Planning • Capacity Planning • Line Balancing • RPW/Kilbridge • Method Study • Workflow Optimization • SIPOC • VSM • Work Standardization • SOP &amp; KPI Systems</p>
+      <div class="matrix-grid">
+        <div class="matrix-item">
+          <h3>🏭 Industrial Engineering Methods</h3>
+          <p>
+            DVSM • SIPOC • Value Stream Mapping • Work Study • Time &amp; Motion Study • Standard Data • RPW • Kilbridge • Bottleneck Analysis • Flow Control • Workstation Design
+          </p>
         </div>
 
-        <div class="skill-category">
-          <h3>🔄 Simulation & Optimization</h3>
-          <p>Discrete Event Simulation (Arena) • Optimization Methods • Algorithmic Thinking in Python • Constraint-based Planning • Scenario Evaluation for Robust Decision Making</p>
+        <div class="matrix-item">
+          <h3>🌐 Digital Manufacturing Systems</h3>
+          <p>
+            ERP Workflow Modeling • Traceability Architecture • IIoT Data Pipelines • Data Governance • KPI Integrity • Digital Reporting Discipline • Operational Dashboards
+          </p>
         </div>
 
-        <div class="skill-category">
-          <h3>🌐 ERP & Digital Manufacturing Systems</h3>
-          <p>ERP Integration • Real-time Production Monitoring • QR-Code Traceability • Digital Reporting • Data Collection Workflows • Process Digitization • Database Concepts</p>
+        <div class="matrix-item">
+          <h3>🎯 Decision Engineering</h3>
+          <p>
+            MCDM (TOPSIS, VIKOR) • CRITIC &amp; Entropy Weighting • Risk Evaluation • Control Plans • Anomaly Signals • Learning Behavior Modeling • Structured Decision Rules
+          </p>
         </div>
 
-        <div class="skill-category">
-          <h3>📊 Analytics & Business Intelligence</h3>
-          <p>Power BI • Looker Studio • Advanced Excel • Performance Metrics • KPI Development • Trend Analysis • Operational Dashboards • Root Cause Support</p>
-        </div>
-
-        <div class="skill-category">
-          <h3>⚡ Lean, CI &amp; Industry 4.0</h3>
-          <p>Lean Six Sigma • Lean 4.0 • Kaizen • 5S • Quick Changeover (QCO) • Cost Per Minute (CPM) • Smart Manufacturing Principles</p>
-        </div>
-
-        <div class="skill-category">
-          <h3>🎯 Decision Frameworks &amp; Problem Solving</h3>
-          <p>MCDM (TOPSIS, VIKOR) • CRITIC/Entropy Weighting • Risk Assessment • Critical Path Method • Structured Problem Solving &amp; Control Plans</p>
-        </div>
-
-        <div class="skill-category">
-          <h3>💻 Programming & Tools</h3>
-          <p>Python • Algorithm Development • Automation • Microsoft Office Suite • ERP Tools  • Professional Documentation</p>
-        </div>
-
-        <div class="skill-category">
-          <h3>💼 Project & Stakeholder Management</h3>
-          <p>Project Planning • Cross-functional Collaboration • Stakeholder Communication • Change Management • Process Documentation • Execution Governance</p>
+        <div class="matrix-item">
+          <h3>💻 Tools &amp; Platforms</h3>
+          <p>
+            Python • Arena (Discrete Event Modeling) • Power BI • Looker Studio • Advanced Excel • Professional Documentation • ERP Tools
+          </p>
         </div>
       </div>
     </div>
@@ -1233,7 +1535,7 @@
   <!-- Certifications -->
   <section class="light-bg" id="certifications">
     <div class="container">
-      <h2>Certifications & Recognitions</h2>
+      <h2>Certifications &amp; Recognitions</h2>
 
       <div class="cert-grid">
         <div class="cert-item">
@@ -1252,13 +1554,13 @@
         </div>
 
         <div class="cert-item">
-          <h4>📜 Industrial Engineering & Lean Management (SEIP)</h4>
+          <h4>📜 Industrial Engineering &amp; Lean Management (SEIP)</h4>
           <p><strong>BGMEA</strong><br>Specialized certification in Lean practices and industrial management fundamentals</p>
         </div>
       </div>
 
       <h2 style="margin-top: 3.6rem;">Language Proficiency</h2>
-      <div style="display:grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1.1rem;">
+      <div class="cert-grid">
         <div class="cert-item">
           <h4>🌐 Bangla</h4>
           <p><strong>Native</strong><br>Fluent in reading, writing, and professional communication</p>
@@ -1267,32 +1569,6 @@
         <div class="cert-item">
           <h4>🌐 English</h4>
           <p><strong>Professional Proficiency</strong><br>Advanced technical writing, presentation, and international collaboration</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- References -->
-  <section id="references">
-    <div class="container">
-      <h2>Professional References</h2>
-      <p class="section-subtitle">References are available upon request. (If you prefer, I can keep the full contact details visible.)</p>
-
-      <div class="references-grid">
-        <div class="reference-card">
-          <h4>Sohedul Islam Shahin</h4>
-          <p class="position">Senior A.G.M, Operational Project &amp; CI — Snowtex Group</p>
-          <p><strong>Snowtex Group, Dhaka</strong></p>
-          <p>📧 Email: <a href="mailto:Shahin.ci@gmail.com">Shahin.ci@gmail.com</a></p>
-          <p>📱 Phone: <a href="tel:+8801833300697">+880 183 330 0697</a></p>
-        </div>
-
-        <div class="reference-card">
-          <h4>Md. Mahabub Hasan</h4>
-          <p class="position">Academic In-Charge, Assistant Professor — NITER</p>
-          <p><strong>National Institute of Textile Engineering &amp; Research (NITER)</strong></p>
-          <p>📧 Email: <a href="mailto:merajtex20@gmail.com">merajtex20@gmail.com</a></p>
-          <p>📱 Phone: <a href="tel:+8801916146208">+880 191 614 6208</a></p>
         </div>
       </div>
     </div>
@@ -1332,7 +1608,7 @@
 
   <footer>
     <p>&copy; 2026 Kazi Fahim. All rights reserved.</p>
-    <p>Industrial &amp; Production Engineer • Lean 4.0 • Smart Manufacturing • ERP &amp; Operational Excellence</p>
+    <p>Industrial &amp; Manufacturing Engineer • Lean 4.0 • DVSM • IIoT • Decision Engineering</p>
   </footer>
 
   <button class="to-top" id="toTop" aria-label="Back to top">↑</button>
@@ -1344,27 +1620,45 @@
 
     function setActiveLink(){
       let currentId = "home";
-      const offset = 120; // accounts for sticky nav
+      const offset = 130; // accounts for sticky nav
       sections.forEach(sec => {
         const top = sec.offsetTop - offset;
         if (window.scrollY >= top) currentId = sec.id;
       });
-
       navLinks.forEach(a => {
         a.classList.toggle("active", a.getAttribute("href") === "#" + currentId);
       });
     }
-
     window.addEventListener("scroll", setActiveLink);
     window.addEventListener("load", setActiveLink);
 
     // Back-to-top button
     const toTop = document.getElementById("toTop");
     window.addEventListener("scroll", () => {
-      if (window.scrollY > 600) toTop.classList.add("show");
+      if (window.scrollY > 650) toTop.classList.add("show");
       else toTop.classList.remove("show");
     });
     toTop.addEventListener("click", () => window.scrollTo({ top: 0, behavior: "smooth" }));
+
+    // Flip-card controller (button click)
+    function toggleFlip(cardId){
+      const el = document.getElementById(cardId);
+      if (!el) return;
+      el.classList.toggle("flipped");
+    }
+
+    document.addEventListener("click", (e) => {
+      const btn = e.target.closest("[data-flip-target]");
+      if (!btn) return;
+      const targetId = btn.getAttribute("data-flip-target");
+      toggleFlip(targetId);
+    });
+
+    // Optional: ESC closes any flipped card for faster navigation
+    document.addEventListener("keydown", (e) => {
+      if (e.key !== "Escape") return;
+      document.querySelectorAll(".flip-card.flipped").forEach(c => c.classList.remove("flipped"));
+    });
   </script>
 </body>
 </html>
