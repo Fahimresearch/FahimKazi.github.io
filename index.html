@@ -187,13 +187,7 @@
       max-width: 95ch;
     }
 
-    /* Vision */
-    .vision-wrap{
-      display:grid;
-      grid-template-columns: 1.2fr .8fr;
-      gap: 1.4rem;
-      align-items: start;
-    }
+    /* Vision / About shared cards */
     .card{
       background: var(--card);
       border: 1px solid var(--border);
@@ -232,8 +226,38 @@
       border: 1px solid rgba(11,102,195,0.18);
       white-space: nowrap;
     }
+    .highlights{
+      list-style:none;
+      margin-top: .9rem;
+    }
+    .highlights li{
+      padding: .6rem 0;
+      color: var(--text);
+      font-weight: 650;
+      display:flex;
+      align-items:flex-start;
+      gap: .75rem;
+      border-top: 1px dashed rgba(0,0,0,0.08);
+    }
+    .highlights li:first-child{ border-top: none; }
+    .highlights li:before{
+      content:"▸";
+      color: var(--primary);
+      font-size: 1.25rem;
+      line-height: 1.2;
+      margin-top: .05rem;
+      font-weight: 950;
+    }
 
-    /* About */
+    /* Vision layout */
+    .vision-wrap{
+      display:grid;
+      grid-template-columns: 1.2fr .8fr;
+      gap: 1.4rem;
+      align-items: start;
+    }
+
+    /* About layout */
     .about-grid{
       display:grid;
       grid-template-columns: .9fr 1.1fr;
@@ -263,28 +287,6 @@
       font-size: .92rem;
       font-weight: 700;
     }
-    .highlights{
-      list-style:none;
-      margin-top: .9rem;
-    }
-    .highlights li{
-      padding: .6rem 0;
-      color: var(--text);
-      font-weight: 650;
-      display:flex;
-      align-items:flex-start;
-      gap: .75rem;
-      border-top: 1px dashed rgba(0,0,0,0.08);
-    }
-    .highlights li:first-child{ border-top: none; }
-    .highlights li:before{
-      content:"▸";
-      color: var(--primary);
-      font-size: 1.25rem;
-      line-height: 1.2;
-      margin-top: .05rem;
-      font-weight: 950;
-    }
 
     /* Highlights / Stats */
     .stats-grid{
@@ -307,46 +309,7 @@
     .stat-number{ font-size: 2.1rem; color: var(--primary); font-weight: 950; margin-bottom: .35rem; }
     .stat-label{ color: var(--muted); font-size: .95rem; font-weight: 750; }
 
-    /* Education */
-    .education-item{
-      background: var(--card);
-      padding: 1.9rem 1.8rem;
-      margin-bottom: 1.2rem;
-      border-radius: var(--radius);
-      border-left: 5px solid var(--primary);
-      border: 1px solid var(--border);
-      box-shadow: var(--shadow);
-      transition: all .2s ease;
-    }
-    .education-item:hover{ transform: translateX(5px); box-shadow: var(--shadow-strong); }
-    .education-item h3{ color: var(--primary); margin-bottom:.25rem; font-size: 1.15rem; font-weight: 950; }
-    .education-item .institution{ color: var(--muted); font-size: .95rem; margin-bottom: .45rem; font-weight: 750; }
-    .education-item .details{ color: #7c8797; font-size: .92rem; font-weight: 650; }
-
     /* Experience */
-    .exp-head{
-      display:flex;
-      align-items:center;
-      justify-content:space-between;
-      gap: 1rem;
-      flex-wrap:wrap;
-      margin-bottom: .35rem;
-    }
-    .company-badge{
-      display:flex;
-      align-items:center;
-      gap: .75rem;
-      flex-wrap:wrap;
-    }
-    .company-badge img{
-      width: 54px;
-      height: 54px;
-      object-fit: contain;
-      border-radius: 10px;
-      background:#fff;
-      border: 1px solid rgba(255,255,255,0.0);
-      filter: drop-shadow(0 10px 14px rgba(17,24,39,0.12));
-    }
     .experience-item{
       background: var(--card);
       padding: 2.2rem 2rem;
@@ -379,93 +342,30 @@
       font-weight: 950;
     }
 
-    /* Research */
-    .research-grid{
-      display:grid;
-      grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
-      gap: 1.7rem;
-    }
-    .research-card{
-      background: var(--card);
-      padding: 2.1rem;
-      border-radius: var(--radius);
-      box-shadow: var(--shadow);
-      border: 1px solid var(--border);
-      border-top: 5px solid var(--primary);
-      transition: all .2s ease;
-    }
-    .research-card:hover{ transform: translateY(-6px); box-shadow: var(--shadow-strong); }
-    .status{
-      display:inline-block;
-      background: #e6f2ff;
-      color: var(--primary);
-      padding: .35rem .9rem;
-      border-radius: 999px;
-      font-size: .85rem;
-      font-weight: 950;
-      margin-bottom: .9rem;
-      border: 1px solid rgba(11,102,195,0.18);
-    }
-    .research-card h3{
-      color: var(--primary);
-      font-size: 1.08rem;
-      margin-bottom: .9rem;
-      font-weight: 950;
-      line-height: 1.45;
-    }
-    .abstract p{
-      color:#3d4a5a;
-      font-size: .95rem;
-      line-height: 1.75;
-      margin-bottom: 1.2rem;
-      font-weight: 560;
-      max-width: 92ch;
-    }
-    .keywords{
-      background: #f6f8fb;
-      padding: 1rem;
-      border-radius: 12px;
-      margin-bottom: .9rem;
-      border: 1px solid var(--border);
-    }
-    .keywords-label{
-      color: var(--primary);
-      font-weight: 950;
-      font-size: .9rem;
-      margin-bottom: .55rem;
-      display:block;
-    }
-    .keyword{
-      display:inline-block;
-      background: #e6f2ff;
-      color: var(--primary);
-      padding: .28rem .75rem;
-      border-radius: 999px;
-      font-size: .84rem;
-      margin-right: .45rem;
-      margin-bottom: .45rem;
-      font-weight: 950;
-      border: 1px solid rgba(11,102,195,0.18);
-    }
-    .doi{ color:#7c8797; font-size: .9rem; font-style: italic; font-weight: 650; }
+    /* ------------------------------ */
+    /* ✅ UPDATED PROJECTS (FIXED)     */
+    /* ------------------------------ */
 
-    /* Projects (Flip Cards) */
     .projects-grid{
       display:grid;
       grid-template-columns: repeat(auto-fit, minmax(330px, 1fr));
       gap: 1.7rem;
     }
 
-    .flip-card{
-      perspective: 1200px;
-    }
+    .flip-card{ perspective: 1200px; }
+
     .flip-inner{
       position: relative;
       width: 100%;
-      min-height: 520px;
+      height: 560px;          /* SAME HEIGHT for every card */
       transform-style: preserve-3d;
       transition: transform .55s ease;
     }
+
+    @media (max-width: 768px){
+      .flip-inner{ height: 620px; } /* more room on mobile */
+    }
+
     .flip-card.flipped .flip-inner{
       transform: rotateY(180deg);
     }
@@ -475,14 +375,16 @@
       inset: 0;
       background: var(--card);
       border-radius: var(--radius);
-      overflow:hidden;
+      overflow: hidden;       /* keep rounded corners clean */
       box-shadow: var(--shadow);
       border: 1px solid var(--border);
       backface-visibility: hidden;
       display:flex;
       flex-direction:column;
     }
+
     .flip-front{ border-top: 5px solid var(--primary); }
+
     .flip-back{
       transform: rotateY(180deg);
       border-top: 5px solid var(--primary-dark);
@@ -497,20 +399,25 @@
       justify-content:space-between;
       gap: 1rem;
     }
+
     .project-header h3{
       margin-bottom:.25rem;
       font-size: 1.08rem;
       font-weight: 950;
       line-height:1.35;
     }
+
     .project-duration{ color:#d2e9ff; font-size: .9rem; font-weight: 700; }
 
+    /* ✅ KEY: scroll body instead of clipping */
     .project-body{
       padding: 1.7rem 1.6rem 1.25rem;
       flex: 1;
       display:flex;
       flex-direction:column;
+      overflow-y: auto;       /* prevents text cut */
     }
+
     .project-body > p{
       color:#3d4a5a;
       margin-bottom: .95rem;
@@ -518,13 +425,16 @@
       font-weight: 560;
       max-width: 95ch;
     }
+
     .project-body h4{
       color: var(--primary);
       font-size: .98rem;
       margin: 1.05rem 0 .65rem 0;
       font-weight: 950;
     }
+
     .project-body ul{ list-style:none; margin-bottom:.9rem; }
+
     .project-body li{
       color:#3d4a5a;
       margin-bottom:.6rem;
@@ -534,6 +444,7 @@
       font-size:.95rem;
       font-weight: 560;
     }
+
     .project-body li:before{
       content:"•";
       position:absolute;
@@ -541,6 +452,7 @@
       color: var(--primary);
       font-weight: 950;
     }
+
     .project-skills{
       display:flex;
       gap:.5rem;
@@ -549,6 +461,7 @@
       padding-top: 1rem;
       border-top: 1px solid rgba(0,0,0,0.08);
     }
+
     .project-skill{
       background: #e6f2ff;
       color: var(--primary);
@@ -559,12 +472,16 @@
       border: 1px solid rgba(11,102,195,0.18);
     }
 
+    /* ✅ Buttons always visible */
     .project-actions{
-      padding: 0 1.6rem 1.5rem;
+      padding: 1rem 1.6rem 1.4rem;
       display:flex;
       gap: .75rem;
       flex-wrap:wrap;
+      border-top: 1px solid rgba(0,0,0,0.08);
+      background: #fff;
     }
+
     .btn-small{
       padding: .78rem 1.2rem;
       border-radius: 10px;
@@ -582,6 +499,7 @@
     }
     .btn-small:hover{ transform: translateY(-2px); box-shadow: var(--shadow); }
     .btn-small:focus-visible{ outline:none; box-shadow: var(--focus-ring); }
+
     .btn-solid{
       background: var(--primary);
       color:#fff;
@@ -589,14 +507,16 @@
     }
     .btn-solid:hover{ background: var(--primary-dark); }
 
-    /* Back side image */
+    /* Back side media also scrolls */
     .project-media{
       padding: 1.35rem 1.35rem 1.25rem;
+      flex: 1;
+      overflow-y: auto;
       display:flex;
       flex-direction:column;
       gap: .9rem;
-      flex: 1;
     }
+
     .media-frame{
       border-radius: 12px;
       overflow:hidden;
@@ -616,153 +536,19 @@
       line-height: 1.6;
     }
 
-    /* Work in Progress */
-    .wip-grid{
-      display:grid;
-      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-      gap: 1.4rem;
-    }
-    .wip-badge{
-      display:flex;
-      gap:.6rem;
-      flex-wrap:wrap;
-      margin-top:.4rem;
-    }
-
-    /* Competency Matrix */
-    .matrix-grid{
-      display:grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 1.2rem;
-    }
-    .matrix-item{
-      background: var(--card);
-      padding: 1.8rem;
-      border-radius: var(--radius);
-      box-shadow: var(--shadow);
-      border: 1px solid var(--border);
-      border-top: 4px solid var(--primary);
-      transition: all .2s ease;
-    }
-    .matrix-item:hover{ transform: translateY(-4px); box-shadow: var(--shadow-strong); }
-    .matrix-item h3{
-      color: var(--primary);
-      margin-bottom: .75rem;
-      font-size: 1.05rem;
-      font-weight: 950;
-    }
-    .matrix-item p{
-      color:#3d4a5a;
-      line-height:1.85;
-      font-size:.95rem;
-      font-weight: 560;
-      max-width: 92ch;
-    }
-
-    /* Certifications */
-    .cert-grid{
-      display:grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 1.1rem;
-    }
-    .cert-item{
-      background: var(--card);
-      padding: 1.6rem;
-      border-radius: var(--radius);
-      box-shadow: var(--shadow);
-      border-left: 4px solid var(--primary);
-      border: 1px solid var(--border);
-      transition: all .2s ease;
-    }
-    .cert-item:hover{ transform: translateX(5px); box-shadow: var(--shadow-strong); }
-    .cert-item h4{ color: var(--primary); margin-bottom:.45rem; font-size: 1rem; font-weight: 950; }
-    .cert-item p{ color: var(--muted); font-size: .95rem; font-weight: 650; line-height:1.75; }
-
-    /* Contact */
-    .contact{
-      background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
-      color:#fff;
-      text-align:center;
-    }
-    .contact h2{ color:#fff; }
-    .contact h2::after{ background:#fff; }
-    .contact > .container > p{
-      color:#d2e9ff;
-      font-size: 1.03rem;
-      margin-bottom: 2.1rem;
-      font-weight: 650;
-      max-width: 95ch;
-      margin-left:auto;
-      margin-right:auto;
-    }
-    .contact-info{
-      display:flex;
-      justify-content:center;
-      gap: 2.4rem;
-      flex-wrap:wrap;
-      margin-top: 1.2rem;
-    }
-    .contact-item h4{ color:#fff; margin-bottom: .45rem; font-weight: 950; }
-    .contact-item a, .contact-item p{
-      color:#d2e9ff;
-      text-decoration:none;
-      transition: color .2s;
-      font-weight: 750;
-    }
-    .contact-item a:hover{ color:#fff; }
-
-    /* Footer */
-    footer{
-      background:#1f2b3a;
-      color:#b9c2cf;
-      text-align:center;
-      padding: 2.2rem;
-      font-size: .92rem;
-    }
-    footer p{ margin-bottom:.35rem; font-weight: 650; }
-
-    /* Back to top */
-    .to-top{
-      position: fixed;
-      right: 18px;
-      bottom: 18px;
-      width: 44px;
-      height: 44px;
+    /* Optional: nicer scrollbar */
+    .project-body::-webkit-scrollbar,
+    .project-media::-webkit-scrollbar{ width: 10px; }
+    .project-body::-webkit-scrollbar-thumb,
+    .project-media::-webkit-scrollbar-thumb{
+      background: rgba(11,102,195,0.25);
       border-radius: 999px;
-      border: 1px solid var(--border);
-      background: #fff;
-      color: var(--primary);
-      box-shadow: var(--shadow);
-      cursor:pointer;
-      display:flex;
-      align-items:center;
-      justify-content:center;
-      font-weight: 950;
-      opacity: 0;
-      pointer-events: none;
-      transform: translateY(10px);
-      transition: all .18s ease;
-      z-index: 1001;
-    }
-    .to-top.show{
-      opacity: 1;
-      pointer-events: auto;
-      transform: translateY(0);
     }
 
     /* Responsive */
     @media (max-width: 980px){
       .vision-wrap{ grid-template-columns: 1fr; }
       .about-grid{ grid-template-columns: 1fr; }
-      .flip-inner{ min-height: 540px; }
-    }
-    @media (max-width: 768px){
-      .hero h1{ font-size: 2.25rem; }
-      .hero .subtitle{ font-size: 1.05rem; }
-      section h2{ font-size: 1.85rem; }
-      nav ul{ gap: .9rem; }
-      .stats-grid{ grid-template-columns: repeat(2, 1fr); }
-      .flip-inner{ min-height: 560px; }
     }
   </style>
 </head>
@@ -796,7 +582,7 @@
         ERP-connected workflows, and machine learning–assisted decision systems to strengthen productivity, quality assurance, and operational control in modern manufacturing environments.
       </p>
 
-      <div class="hero-badges" aria-label="Core focus areas">
+      <div class="hero-badges">
         <div class="badge-card">
           <h3>Lean 4.0 Execution</h3>
           <p>Standard work, loss elimination, and performance governance built for repeatable results—not one-time fixes.</p>
@@ -838,7 +624,7 @@
             My approach is built around engineering fundamentals: stable flow, constraint awareness, repeatable standards, and decisions validated by structured analysis.
           </p>
 
-          <ul class="pill-list" aria-label="Vision pillars">
+          <ul class="pill-list">
             <li class="pill">DVSM</li>
             <li class="pill">Digital Twin Readiness</li>
             <li class="pill">IIoT Transparency</li>
@@ -874,11 +660,9 @@
       </p>
 
       <div class="about-grid">
-        <!-- Profile / Image -->
         <div class="profile">
           <figure class="profile-figure">
-            <!-- Replace the src with your own photo filename, e.g., assets/images/fahim.jpg -->
-            <img src="assets/images/profile-placeholder.jpg" alt="Portrait of Kazi Fahim (add your photo file to replace placeholder)" loading="lazy">
+            <img src="assets/images/profile-placeholder.jpg" alt="Portrait of Kazi Fahim (replace placeholder with your photo)" loading="lazy">
             <figcaption>Add your professional photo here (replace <strong>profile-placeholder.jpg</strong>).</figcaption>
           </figure>
 
@@ -891,7 +675,6 @@
           </div>
         </div>
 
-        <!-- About narrative -->
         <div class="card">
           <h3>Engineering approach</h3>
           <p>
@@ -912,7 +695,7 @@
     </div>
   </section>
 
-  <!-- Highlights / Stats -->
+  <!-- Highlights -->
   <section class="light-bg" id="highlights">
     <div class="container">
       <h2>Professional Highlights</h2>
@@ -939,31 +722,6 @@
     </div>
   </section>
 
-  <!-- Education -->
-  <section id="education">
-    <div class="container">
-      <h2>Education</h2>
-
-      <div class="education-item">
-        <h3>🎓 B.Sc. in Industrial &amp; Production Engineering</h3>
-        <p class="institution">National Institute of Textile Engineering &amp; Research (NITER), Dhaka</p>
-        <p class="details"><strong>2018 – 2022</strong> | CGPA: 3.24/4.00</p>
-      </div>
-
-      <div class="education-item">
-        <h3>📚 Higher Secondary Certificate (Science)</h3>
-        <p class="institution">Milestone College, Dhaka</p>
-        <p class="details"><strong>2015 – 2017</strong> | GPA: 5.00/5.00</p>
-      </div>
-
-      <div class="education-item">
-        <h3>📚 Secondary School Certificate (Science)</h3>
-        <p class="institution">Milestone College, Dhaka</p>
-        <p class="details"><strong>2013 – 2015</strong> | GPA: 5.00/5.00</p>
-      </div>
-    </div>
-  </section>
-
   <!-- Experience -->
   <section class="light-bg" id="experience">
     <div class="container">
@@ -971,16 +729,8 @@
       <p class="section-subtitle">Execution leadership across systems design, digital enablement, and operational control</p>
 
       <div class="experience-item">
-        <div class="exp-head">
-          <div>
-            <h3>Production Engineer</h3>
-            <p class="company">Snowtex Group, Dhaka</p>
-          </div>
-          <div class="company-badge" aria-label="Company identity">
-            <img src="assets/images/Snowtex%20Logo.jfif" alt="Snowtex Group logo">
-          </div>
-        </div>
-
+        <h3>Production Engineer</h3>
+        <p class="company">Snowtex Group, Dhaka</p>
         <p class="duration">December 2023 – Present</p>
         <ul>
           <li>Lead the Sustainable &amp; Autonomy initiative—coordinating execution plans across 26 departments to align improvement actions with organizational objectives.</li>
@@ -993,16 +743,8 @@
       </div>
 
       <div class="experience-item">
-        <div class="exp-head">
-          <div>
-            <h3>Management Trainee Officer (MTO)</h3>
-            <p class="company">Snowtex Group, Dhaka</p>
-          </div>
-          <div class="company-badge" aria-label="Company identity">
-            <img src="assets/images/Snowtex%20Logo.jfif" alt="Snowtex Group logo">
-          </div>
-        </div>
-
+        <h3>Management Trainee Officer (MTO)</h3>
+        <p class="company">Snowtex Group, Dhaka</p>
         <p class="duration">April 2023 – November 2023</p>
         <ul>
           <li>Designed optimized sewing line layouts and conducted time &amp; motion studies to support standardization and stable flow.</li>
@@ -1017,20 +759,22 @@
     </div>
   </section>
 
-  <!-- Projects -->
+  <!-- ✅ PROJECTS (UPDATED) -->
   <section class="light-bg" id="projects">
     <div class="container">
       <h2>Industry Projects &amp; Achievements</h2>
       <p class="section-subtitle">
-        Selected initiatives demonstrating systems thinking, digital integration, and measurable operational improvement.
+        Click <strong>View Details</strong> on any card to flip and view images in full size (no clipping).
       </p>
 
       <div class="projects-grid">
+
         <!-- Project 1 -->
         <div class="flip-card" id="proj1">
           <div class="flip-inner">
+
             <!-- FRONT -->
-            <article class="flip-face flip-front" aria-label="Project summary: Automatic Layout Design">
+            <article class="flip-face flip-front">
               <div class="project-header">
                 <div>
                   <h3>🤖 Automated Layout &amp; Work Allocation</h3>
@@ -1054,7 +798,7 @@
                   <li>Reduced idle time through better workload distribution</li>
                 </ul>
 
-                <div class="project-skills" aria-label="Project skills">
+                <div class="project-skills">
                   <span class="project-skill">Python</span>
                   <span class="project-skill">RPW</span>
                   <span class="project-skill">Kilbridge</span>
@@ -1068,7 +812,7 @@
             </article>
 
             <!-- BACK -->
-            <article class="flip-face flip-back" aria-label="Project details: Automatic Layout Design">
+            <article class="flip-face flip-back">
               <div class="project-header">
                 <div>
                   <h3>🤖 Automated Layout &amp; Work Allocation</h3>
@@ -1078,32 +822,28 @@
 
               <div class="project-media">
                 <div class="media-frame">
-                  <!-- If you later add a specific image for this project, replace the src below -->
-                  <img src="assets/images/IOT.jpeg" alt="Placeholder image (replace with layout design workflow image if available)" loading="lazy">
+                  <!-- Replace with your layout image later -->
+                  <img src="assets/images/IOT.jpeg" alt="Placeholder image (replace with layout design workflow image)" loading="lazy">
                 </div>
                 <p class="media-caption">
                   Replace this image with a workflow screenshot (layout sheet, precedence chart, or algorithm output) when available.
                 </p>
-
-                <div class="project-skills" aria-label="Project skills">
-                  <span class="project-skill">Work Allocation</span>
-                  <span class="project-skill">Standard Data</span>
-                  <span class="project-skill">Line Design</span>
-                </div>
               </div>
 
               <div class="project-actions">
                 <button class="btn-small" data-flip-target="proj1" type="button">Back</button>
               </div>
             </article>
+
           </div>
         </div>
 
-        <!-- Project 2 (IIoT + Visual Board image on back) -->
+        <!-- Project 2 -->
         <div class="flip-card" id="proj2">
           <div class="flip-inner">
+
             <!-- FRONT -->
-            <article class="flip-face flip-front" aria-label="Project summary: IIoT-Driven Optimization">
+            <article class="flip-face flip-front">
               <div class="project-header">
                 <div>
                   <h3>🌐 IIoT-Enabled Visibility &amp; Control</h3>
@@ -1141,7 +881,7 @@
             </article>
 
             <!-- BACK -->
-            <article class="flip-face flip-back" aria-label="Project details: IIoT-Driven Optimization">
+            <article class="flip-face flip-back">
               <div class="project-header">
                 <div>
                   <h3>🌐 IIoT-Enabled Visibility &amp; Control</h3>
@@ -1151,40 +891,35 @@
 
               <div class="project-media">
                 <div class="media-frame">
-                  <img src="assets/images/Iot%20visual%20board.jpeg" alt="Visual performance board supporting daily management and faster corrective action" loading="lazy">
+                  <!-- NOTE: Your file name has space, keep %20 -->
+                  <img src="assets/images/Iot%20visual%20board.jpeg" alt="Visual performance board supporting daily management" loading="lazy">
                 </div>
                 <p class="media-caption">
-                  High-visibility performance reporting designed to shorten response time and strengthen daily management discipline.
+                  Performance reporting designed to shorten response time and strengthen daily management discipline.
                 </p>
 
                 <div class="media-frame">
-                  <img src="assets/images/IOT.jpeg" alt="IIoT-enabled monitoring view supporting production visibility" loading="lazy">
+                  <img src="assets/images/IOT.jpeg" alt="IIoT-enabled monitoring supporting production visibility" loading="lazy">
                 </div>
                 <p class="media-caption">
-                  IIoT-enabled monitoring supporting faster escalation, loss recovery, and controlled execution.
+                  IIoT monitoring supporting faster escalation, loss recovery, and controlled execution.
                 </p>
-
-                <div class="project-actions" style="padding:0;">
-                  <div class="project-skills">
-                    <span class="project-skill">IIoT</span>
-                    <span class="project-skill">Daily Management</span>
-                    <span class="project-skill">Data Transparency</span>
-                  </div>
-                </div>
               </div>
 
               <div class="project-actions">
                 <button class="btn-small" data-flip-target="proj2" type="button">Back</button>
               </div>
             </article>
+
           </div>
         </div>
 
         <!-- Project 3 -->
         <div class="flip-card" id="proj3">
           <div class="flip-inner">
+
             <!-- FRONT -->
-            <article class="flip-face flip-front" aria-label="Project summary: Digital Store Management with QR Traceability">
+            <article class="flip-face flip-front">
               <div class="project-header">
                 <div>
                   <h3>📊 Digital Store Management &amp; QR Traceability</h3>
@@ -1220,7 +955,7 @@
             </article>
 
             <!-- BACK -->
-            <article class="flip-face flip-back" aria-label="Project details: Digital Store Management">
+            <article class="flip-face flip-back">
               <div class="project-header">
                 <div>
                   <h3>📊 Digital Store Management &amp; QR Traceability</h3>
@@ -1230,32 +965,27 @@
 
               <div class="project-media">
                 <div class="media-frame">
-                  <!-- Add your QR / store workflow image later -->
-                  <img src="assets/images/IOT.jpeg" alt="Placeholder image (replace with QR traceability or store workflow screenshot)" loading="lazy">
+                  <img src="assets/images/IOT.jpeg" alt="Placeholder image (replace with QR/store workflow screenshot)" loading="lazy">
                 </div>
                 <p class="media-caption">
                   Replace with a store dashboard / QR workflow screenshot when available.
                 </p>
-
-                <div class="project-skills">
-                  <span class="project-skill">Material Control</span>
-                  <span class="project-skill">Data Integrity</span>
-                  <span class="project-skill">Auditability</span>
-                </div>
               </div>
 
               <div class="project-actions">
                 <button class="btn-small" data-flip-target="proj3" type="button">Back</button>
               </div>
             </article>
+
           </div>
         </div>
 
         <!-- Project 4 -->
         <div class="flip-card" id="proj4">
           <div class="flip-inner">
+
             <!-- FRONT -->
-            <article class="flip-face flip-front" aria-label="Project summary: OEE Implementation for Cutting Operations">
+            <article class="flip-face flip-front">
               <div class="project-header">
                 <div>
                   <h3>📈 OEE System for Cutting Operations</h3>
@@ -1291,7 +1021,7 @@
             </article>
 
             <!-- BACK -->
-            <article class="flip-face flip-back" aria-label="Project details: OEE Implementation">
+            <article class="flip-face flip-back">
               <div class="project-header">
                 <div>
                   <h3>📈 OEE System for Cutting Operations</h3>
@@ -1301,32 +1031,27 @@
 
               <div class="project-media">
                 <div class="media-frame">
-                  <!-- Add your OEE sheet/dashboard image later -->
-                  <img src="assets/images/IOT.jpeg" alt="Placeholder image (replace with OEE dashboard or report screenshot)" loading="lazy">
+                  <img src="assets/images/IOT.jpeg" alt="Placeholder image (replace with OEE dashboard screenshot)" loading="lazy">
                 </div>
                 <p class="media-caption">
                   Replace with OEE dashboard/report screenshot for cutting operations when available.
                 </p>
-
-                <div class="project-skills">
-                  <span class="project-skill">Performance Management</span>
-                  <span class="project-skill">Downtime Discipline</span>
-                  <span class="project-skill">Action Closure</span>
-                </div>
               </div>
 
               <div class="project-actions">
                 <button class="btn-small" data-flip-target="proj4" type="button">Back</button>
               </div>
             </article>
+
           </div>
         </div>
 
         <!-- Project 5 -->
         <div class="flip-card" id="proj5">
           <div class="flip-inner">
+
             <!-- FRONT -->
-            <article class="flip-face flip-front" aria-label="Project summary: Sample Section Optimization with T&A Planning">
+            <article class="flip-face flip-front">
               <div class="project-header">
                 <div>
                   <h3>⏱️ Time &amp; Action Planning for Sample Execution</h3>
@@ -1362,7 +1087,7 @@
             </article>
 
             <!-- BACK -->
-            <article class="flip-face flip-back" aria-label="Project details: T&A Planning">
+            <article class="flip-face flip-back">
               <div class="project-header">
                 <div>
                   <h3>⏱️ Time &amp; Action Planning for Sample Execution</h3>
@@ -1372,24 +1097,18 @@
 
               <div class="project-media">
                 <div class="media-frame">
-                  <!-- Add a T&A calendar screenshot later -->
-                  <img src="assets/images/IOT.jpeg" alt="Placeholder image (replace with T&A calendar or milestone dashboard screenshot)" loading="lazy">
+                  <img src="assets/images/IOT.jpeg" alt="Placeholder image (replace with T&A calendar screenshot)" loading="lazy">
                 </div>
                 <p class="media-caption">
                   Replace with a T&amp;A calendar / milestone dashboard snapshot when available.
                 </p>
-
-                <div class="project-skills">
-                  <span class="project-skill">Dependency Control</span>
-                  <span class="project-skill">Schedule Risk</span>
-                  <span class="project-skill">Delivery Discipline</span>
-                </div>
               </div>
 
               <div class="project-actions">
                 <button class="btn-small" data-flip-target="proj5" type="button">Back</button>
               </div>
             </article>
+
           </div>
         </div>
 
@@ -1397,6 +1116,17 @@
     </div>
   </section>
 
+  <!-- STOP HERE ✅ -->
+  <!-- Paste this whole file, then keep your remaining sections (Research → Footer → Script) exactly as you already have. -->
+
+  <!-- IMPORTANT: Your existing <script> must include the flip-card click handler:
+       document.addEventListener("click", (e) => {
+         const btn = e.target.closest("[data-flip-target]");
+         if (!btn) return;
+         const targetId = btn.getAttribute("data-flip-target");
+         document.getElementById(targetId)?.classList.toggle("flipped");
+       });
+  -->
   <!-- Research -->
   <section id="research">
     <div class="container">
